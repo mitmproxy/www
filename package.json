@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bulma": "jgthms/bulma",
+    "node-sass": "^4.7.2"
+  }
+}

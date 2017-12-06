@@ -1,0 +1,5 @@
+baseURL = "https://mitmproxy.org/"
+languageCode = "en-us"
+title = "mitmproxy.org"
+theme = "mitmproxy"
+publishDir = "../public"
