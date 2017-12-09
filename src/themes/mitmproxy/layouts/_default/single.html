@@ -1,22 +1,24 @@
 {{ partial "header.html" . }}
-	<main>
-		<article>
-			<h1>{{ .Title }}</h1>
-			<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
-			<div>
-				{{ .Content }}
+<div class="section">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-8 is-offset-2">
+				<div class="section">
+					<h1 class="title">{{ .Title }}</h1>
+					<h2 class="subtitle time">{{ .Date.Format "02 Jan 2006" }}</h2>
+					<article class="content blogpost">
+						{{ .Content }}
+					</article>
+					<div class="tags">
+						{{ range .Params.tags }}
+							<a
+								class="tag is-rounded is-link is-medium"
+								href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+						{{ end }}
+					</div>
+				</div>
 			</div>
-			<div>
-				<ul id="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-					{{ end }}
-				</ul>
-			</div>
-			<div>
-				{{ template "_internal/disqus.html" . }}
-			</div>
-		</article>
-	</main>
-{{ partial "sidebar.html" . }}
+		</div>
+	</div>
+</div>
 {{ partial "footer.html" . }}

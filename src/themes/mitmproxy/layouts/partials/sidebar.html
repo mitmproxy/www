@@ -1,14 +1,10 @@
-	<aside>
-		<div>
-			<div>
-				<h3>LATEST POSTS</h3>
-			</div>
-			<div>
-				<ul>
-					{{ range first 5 .Site.Pages }}
-					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-					{{ end }}
-				</ul>
-			</div>
-		</div>
-	</aside>
+<aside class="menu blogsidemenu">
+	<p class="menu-label">
+		Recent Posts
+	</p>
+	<ul class="menu-list">
+		{{ range first 5 .Site.Pages }}
+		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+	</ul>
+</aside>

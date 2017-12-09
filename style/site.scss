@@ -1,8 +1,42 @@
-$primary: #404040;
 
+$fa-font-path: "../webfonts";
+@import "./fa/fa-brands";
+@import "./fa/fa-regular";
+@import "./fa/fontawesome";
+
+
+$primary: #404040;
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, 'Font Awesome 5 Free', 'Font Awesome 5 Brands' !default;
 @import "../node_modules/bulma/sass/utilities/_all";
 @import "../node_modules/bulma/sass/base/_all";
 @import "../node_modules/bulma/sass/grid/_all";
 @import "../node_modules/bulma/sass/elements/_all";
 @import "../node_modules/bulma/sass/components/_all";
 @import "../node_modules/bulma/sass/layout/_all";
+
+
+.frontbar {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #303030;
+    color: #c0c0c0;
+    h1 {
+        color: #fff;
+    }
+    a {
+        color: #ffffff;
+        &:hover {
+            color: #a2b6e9;
+        }
+    }
+}
+
+/* The infoboxes are just beneath the frontbar on the front page - they should
+all be the same height */
+.infobox {
+    height: 100%;
+}
+
+.news {
+    background-color: #f5fcba;
+}

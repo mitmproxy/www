@@ -11,44 +11,54 @@
 	<title>{{ .Title }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body>
 		<nav class="navbar is-dark">
 			<div class="navbar-brand">
-				<a class="navbar-item" href="https://mitmproxy.org">
-					<img src="{{ .Site.BaseURL }}/mitmproxy-long.png" alt="mitmproxy">
+				<a class="navbar-item" href="/">
+					<img src="/mitmproxy-long.png" alt="mitmproxy">
 				</a>
-				<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+				<div class="navbar-burger burger" data-target="topnav">
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
 			</div>
-			<div id="navbarExampleTransparentExample" class="navbar-menu">
+			<div id="topnav" class="navbar-menu">
 				<div class="navbar-start">
 					<a class="navbar-item" href="/publications">
-						Publications
+						publications
 					</a>
-					<a class="navbar-item" href="/blog">
-						Blog
+					<a class="navbar-item" href="/posts">
+						blog
 					</a>
 					<div class="navbar-item has-dropdown is-hoverable">
-						<a class="navbar-link" href="/docs/v3.0/">
-							Docs
+						<a class="navbar-link" href="/docs/latest/">
+							docs
 						</a>
 						<div class="navbar-dropdown is-boxed">
+							<a class="navbar-item" href="/docs/latest"> latest </a>
 							<a class="navbar-item" href="/docs/v3.0/"> v3.0 </a>
 							<a class="navbar-item" href="/docs/v2.0/"> v2.0 </a>
 						</div>
 					</div>
+					<a class="navbar-item" href="about">
+						about
+					</a>
 				</div>
 				<div class="navbar-end">
-					<a class="navbar-item" href="about">
-						About
-					</a>
+					<div class="navbar-item">
+						<a
+							class="github-button"
+							href="https://github.com/mitmproxy/mitmproxy"
+							data-size="large"
+							data-show-count="true"
+							aria-label="Star mitmproxy/mitmproxy on GitHub">Star</a>
+					</div>
 				</div>
 			</div>
 		</nav>
