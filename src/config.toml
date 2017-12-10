@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "mitmproxy.org"
 theme = "mitmproxy"
 publishDir = "../public"
+
+[indexes]
+  tag = "tags"
