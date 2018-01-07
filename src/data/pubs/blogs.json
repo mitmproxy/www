@@ -1,0 +1,100 @@
+[
+    [
+        "https://medium.com/@maxgreenwald/mitmproxy-your-d-i-y-private-eye-57e6be2a1273",
+        "Mitmproxy: Your D.I.Y. Private Eye",
+        "Max Greenwald",
+        "Sep 2015"
+    ],
+    [
+        "http://cyber.jotwell.com/an-internet-x-ray-machine-for-the-masses/",
+        "An Internet X-Ray Machine for the Masses",
+        "Paul Ohm",
+        "Jun 2015"
+    ],
+    [
+        "http://jeffhuang.com/extracting_my_data_from_the_microsoft_band.html",
+        "Extracting My Data from the Microsoft Band",
+        "Jeff Huang",
+        "Dec 2014"
+    ],
+    [
+        "http://www.shubhro.com/2014/12/18/reverse-engineering-kayak-mitmproxy/",
+        "Reverse-engineering the Kayak app with mitmproxy",
+        "Shubhro Saha",
+        "Dec 2014"
+    ],
+    [
+        "http://pem-musing.blogspot.fr/2014/12/debugging-server-side-rest-calls-with.html",
+        "Debugging server side REST calls with mitmproxy in Meteor",
+        "Pierre-Eric Marchandet",
+        "Dec 2014"
+    ],
+    [
+        "http://blog.attify.com/2014/12/26/quizup-ios-app-security-vulnerability-win-quiz/",
+        "WIN any quiz : QuizUp iOS App Security Vulnerability",
+        "attify",
+        "Dec 2014"
+    ],
+    [
+        "http://blog.marxy.org/2013/08/reverse-engineering-network-traffic.html",
+        "Reverse engineering network traffic with a Raspberri Pi",
+        "Peter B Marks",
+        "Aug 2013"
+    ],
+    [
+
+        "http://cweiske.de/tagebuch/ouya-is-watching.htm",
+        "OUYA is watching you",
+        "Christian Weiske",
+        "Oct 2013"
+    ],
+    [
+
+        "http://holgr.com/blog/2012/03/apple-starts-using-their-own-mapping-service-ditching-google-maps/",
+        "Apple starts using their own mapping service, ditches Google Maps",
+        "Holger Eilhard",
+        "Mar 2012"
+    ],
+    [
+        "http://blog.markchang.net/post/17244167951/hipster-uploads-part-of-your-iphone-address-book-to-its",
+        "Hipster uploads part of your iPhone address book to its servers",
+        "Mark L. Chang",
+        "Feb 2012"
+    ],
+    [
+        "https://www.theverge.com/2012/2/7/2782947/path-ios-app-user-information-collected-privacy",
+        "Path uploads your entire iPhone address book to its servers",
+        "Arun Thampi",
+        "Feb 2012"
+    ],
+    [
+        "https://www.youtube.com/watch?v=kQ1-0G90lQg",
+        "mitmproxy - use and abuse of a hackable SSL-capable man-in-the-middle proxy",
+        "Jim Cheetham",
+        "Jan 2012"
+    ],
+    [
+        "http://corte.si/posts/security/skout/index.html",
+        "Skout: a devastating privacy vulnerability",
+        "Aldo Cortesi",
+        "Sept 2011"
+    ],
+    [
+        "http://corte.si/posts/security/apple-udid-survey/index.html",
+        "How UDIDs are used: a survey",
+        "Aldo Cortesi",
+        "May 2011"
+    ],
+    [
+        "http://corte.si/posts/security/udid-must-die/index.html",
+        "Why the Apple UDID had to die",
+        "Aldo Cortesi",
+        "May 2011"
+    ],
+    [
+        "http://corte.si/posts/security/openfeint-udid-deanonymization/index.html",
+        "De-anonymizing Apple UDIDs with OpenFeint",
+        "Aldo Cortesi",
+        "May 2011"
+    ]
+]

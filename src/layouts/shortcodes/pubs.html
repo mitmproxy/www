@@ -1,0 +1,15 @@
+<!--
+publications + a publications list
+-->
+{{- $url := .Get "url" -}}
+{{ $data := getJSON $url }}
+<ul>
+    {{ range $data }}
+        {{ $item := . }}
+        <li>
+            <a href="{{ index $item 0 }}">{{ index $item 1 }}</a>
+            - <span class="author">{{ index $item 2 }}</span>,
+            <span class="date">{{ index $item 3 }}</span>
+        </li>
+    {{ end }}
+</ul>

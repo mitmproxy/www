@@ -3052,9 +3052,6 @@ table th {
 .is-uppercase {
   text-transform: uppercase !important; }
 
-.is-italic {
-  font-style: italic !important; }
-
 .has-text-white {
   color: white !important; }
 
@@ -5083,10 +5080,6 @@ a.box:active {
     color: #7a7a7a;
     box-shadow: none;
     pointer-events: none; }
-  .button.is-rounded {
-    border-radius: 290486px;
-    padding-left: 1em;
-    padding-right: 1em; }
 
 .buttons {
   align-items: center;
@@ -5361,6 +5354,9 @@ a.box:active {
     .input[disabled]:-ms-input-placeholder,
     .textarea[disabled]:-ms-input-placeholder {
       color: rgba(122, 122, 122, 0.3); }
+  .input[type="search"],
+  .textarea[type="search"] {
+    border-radius: 290486px; }
   .input[readonly],
   .textarea[readonly] {
     box-shadow: none; }
@@ -5473,11 +5469,6 @@ a.box:active {
     display: inline;
     width: auto; }
 
-.input.is-rounded {
-  border-radius: 290486px;
-  padding-left: 1em;
-  padding-right: 1em; }
-
 .input.is-static {
   background-color: transparent;
   border-color: transparent;
@@ -5542,9 +5533,6 @@ a.box:active {
       right: 1.125em;
       top: 50%;
       z-index: 4; }
-  .select.is-rounded select {
-    border-radius: 290486px;
-    padding-left: 1em; }
   .select select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -5880,6 +5868,10 @@ a.box:active {
     border-radius: 3px; }
   .file.has-name.is-empty .file-name {
     display: none; }
+  .file.is-centered {
+    justify-content: center; }
+  .file.is-right {
+    justify-content: flex-end; }
   .file.is-boxed .file-label {
     flex-direction: column; }
   .file.is-boxed .file-cta {
@@ -5904,21 +5896,17 @@ a.box:active {
   .file.is-boxed.has-name .file-name {
     border-radius: 0 0 3px 3px;
     border-width: 0 1px 1px; }
-  .file.is-centered {
-    justify-content: center; }
+  .file.is-right .file-cta {
+    border-radius: 0 3px 3px 0; }
+  .file.is-right .file-name {
+    border-radius: 3px 0 0 3px;
+    border-width: 1px 0 1px 1px;
+    order: -1; }
   .file.is-fullwidth .file-label {
     width: 100%; }
   .file.is-fullwidth .file-name {
     flex-grow: 1;
     max-width: none; }
-  .file.is-right {
-    justify-content: flex-end; }
-    .file.is-right .file-cta {
-      border-radius: 0 3px 3px 0; }
-    .file.is-right .file-name {
-      border-radius: 3px 0 0 3px;
-      border-width: 1px 0 1px 1px;
-      order: -1; }
 
 .file-label {
   align-items: stretch;
@@ -6052,46 +6040,46 @@ a.box:active {
   justify-content: flex-start; }
   .field.has-addons .control:not(:last-child) {
     margin-right: -1px; }
-  .field.has-addons .control:not(:first-child):not(:last-child) .button,
-  .field.has-addons .control:not(:first-child):not(:last-child) .input,
-  .field.has-addons .control:not(:first-child):not(:last-child) .select select {
-    border-radius: 0; }
   .field.has-addons .control:first-child .button,
   .field.has-addons .control:first-child .input,
   .field.has-addons .control:first-child .select select {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0; }
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px; }
   .field.has-addons .control:last-child .button,
   .field.has-addons .control:last-child .input,
   .field.has-addons .control:last-child .select select {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0; }
-  .field.has-addons .control .button:hover, .field.has-addons .control .button.is-hovered,
-  .field.has-addons .control .input:hover,
-  .field.has-addons .control .input.is-hovered,
-  .field.has-addons .control .select select:hover,
-  .field.has-addons .control .select select.is-hovered {
-    z-index: 2; }
-  .field.has-addons .control .button:focus, .field.has-addons .control .button.is-focused, .field.has-addons .control .button:active, .field.has-addons .control .button.is-active,
-  .field.has-addons .control .input:focus,
-  .field.has-addons .control .input.is-focused,
-  .field.has-addons .control .input:active,
-  .field.has-addons .control .input.is-active,
-  .field.has-addons .control .select select:focus,
-  .field.has-addons .control .select select.is-focused,
-  .field.has-addons .control .select select:active,
-  .field.has-addons .control .select select.is-active {
-    z-index: 3; }
-    .field.has-addons .control .button:focus:hover, .field.has-addons .control .button.is-focused:hover, .field.has-addons .control .button:active:hover, .field.has-addons .control .button.is-active:hover,
-    .field.has-addons .control .input:focus:hover,
-    .field.has-addons .control .input.is-focused:hover,
-    .field.has-addons .control .input:active:hover,
-    .field.has-addons .control .input.is-active:hover,
-    .field.has-addons .control .select select:focus:hover,
-    .field.has-addons .control .select select.is-focused:hover,
-    .field.has-addons .control .select select:active:hover,
-    .field.has-addons .control .select select.is-active:hover {
-      z-index: 4; }
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px; }
+  .field.has-addons .control .button,
+  .field.has-addons .control .input,
+  .field.has-addons .control .select select {
+    border-radius: 0; }
+    .field.has-addons .control .button:hover, .field.has-addons .control .button.is-hovered,
+    .field.has-addons .control .input:hover,
+    .field.has-addons .control .input.is-hovered,
+    .field.has-addons .control .select select:hover,
+    .field.has-addons .control .select select.is-hovered {
+      z-index: 2; }
+    .field.has-addons .control .button:focus, .field.has-addons .control .button.is-focused, .field.has-addons .control .button:active, .field.has-addons .control .button.is-active,
+    .field.has-addons .control .input:focus,
+    .field.has-addons .control .input.is-focused,
+    .field.has-addons .control .input:active,
+    .field.has-addons .control .input.is-active,
+    .field.has-addons .control .select select:focus,
+    .field.has-addons .control .select select.is-focused,
+    .field.has-addons .control .select select:active,
+    .field.has-addons .control .select select.is-active {
+      z-index: 3; }
+      .field.has-addons .control .button:focus:hover, .field.has-addons .control .button.is-focused:hover, .field.has-addons .control .button:active:hover, .field.has-addons .control .button.is-active:hover,
+      .field.has-addons .control .input:focus:hover,
+      .field.has-addons .control .input.is-focused:hover,
+      .field.has-addons .control .input:active:hover,
+      .field.has-addons .control .input.is-active:hover,
+      .field.has-addons .control .select select:focus:hover,
+      .field.has-addons .control .select select.is-focused:hover,
+      .field.has-addons .control .select select:active:hover,
+      .field.has-addons .control .select select.is-active:hover {
+        z-index: 4; }
   .field.has-addons .control.is-expanded {
     flex-grow: 1; }
   .field.has-addons.has-addons-centered {
@@ -6249,8 +6237,7 @@ a.box:active {
     width: 1em;
     position: absolute !important;
     right: 0.625em;
-    top: 0.625em;
-    z-index: 4; }
+    top: 0.625em; }
   .control.is-loading.is-small:after {
     font-size: 0.75rem; }
   .control.is-loading.is-medium:after {
@@ -6281,8 +6268,6 @@ a.box:active {
     display: block;
     height: auto;
     width: 100%; }
-    .image img.is-rounded {
-      border-radius: 290486px; }
   .image.is-square img, .image.is-1by1 img, .image.is-4by3 img, .image.is-3by2 img, .image.is-16by9 img, .image.is-2by1 img {
     bottom: 0;
     left: 0;
@@ -8197,13 +8182,6 @@ a.navbar-link.is-active {
     font-size: 1.25rem; }
   .pagination.is-large {
     font-size: 1.5rem; }
-  .pagination.is-rounded .pagination-previous,
-  .pagination.is-rounded .pagination-next {
-    padding-left: 1em;
-    padding-right: 1em;
-    border-radius: 290486px; }
-  .pagination.is-rounded .pagination-link {
-    border-radius: 290486px; }
 
 .pagination,
 .pagination-list {
@@ -8529,14 +8507,6 @@ label.panel-block {
     z-index: 1; }
   .tabs.is-toggle ul {
     border-bottom: none; }
-  .tabs.is-toggle.is-toggle-rounded li:first-child a {
-    border-bottom-left-radius: 290486px;
-    border-top-left-radius: 290486px;
-    padding-left: 1.25em; }
-  .tabs.is-toggle.is-toggle-rounded li:last-child a {
-    border-bottom-right-radius: 290486px;
-    border-top-right-radius: 290486px;
-    padding-right: 1.25em; }
   .tabs.is-small {
     font-size: 0.75rem; }
   .tabs.is-medium {
