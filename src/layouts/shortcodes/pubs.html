@@ -1,9 +1,9 @@
 <!--
 publications + a publications list
 -->
-{{- $url := .Get "url" -}}
+{{- $url := .Get 0 -}}
 {{ $data := getJSON $url }}
-<ul>
+<ul class="publist">
     {{ range $data }}
         {{ $item := . }}
         <li>

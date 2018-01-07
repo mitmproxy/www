@@ -9060,3 +9060,11 @@ all be the same height */
 
 .news {
   background-color: #f5fcba; }
+
+.publist {
+  margin-left: 0px !important; }
+  .publist li {
+    list-style: none;
+    margin-bottom: 1em; }
+    .publist li .date {
+      font-style: italic; }

@@ -40,3 +40,14 @@ all be the same height */
 .news {
     background-color: #f5fcba;
 }
+
+.publist {
+    margin-left: 0px !important;
+    li {
+        list-style: none;
+        margin-bottom: 1em;
+        .date {
+            font-style: italic;
+        }
+    }
+}
