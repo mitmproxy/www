@@ -5,9 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<link rel="icon"
-	type="image/png"
-	href="favicon-32x32.png">
+	<link rel="icon" type="image/png" href="favicon.ico">
 	<title>{{ .Title }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
@@ -18,9 +16,10 @@
 </head>
 <body>
 		<nav class="navbar is-dark">
+			<div class="container">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="/">
-					<img src="/mitmproxy-long.png" alt="mitmproxy">
+					<img src="/logo-navbar.png" alt="mitmproxy">
 				</a>
 				<div class="navbar-burger burger" data-target="topnav">
 					<span></span>
@@ -30,35 +29,26 @@
 			</div>
 			<div id="topnav" class="navbar-menu">
 				<div class="navbar-start">
-					<a class="navbar-item" href="/publications">
-						publications
-					</a>
 					<a class="navbar-item" href="/posts">
-						blog
+						Blog
 					</a>
 					<div class="navbar-item has-dropdown is-hoverable">
-						<a class="navbar-link" href="/docs/latest/">
-							docs
+						<a class="navbar-link" href="http://docs.mitmproxy.org/">
+							Documentation
 						</a>
 						<div class="navbar-dropdown is-boxed">
-							<a class="navbar-item" href="/docs/latest"> latest </a>
-							<a class="navbar-item" href="/docs/v3.0/"> v3.0 </a>
-							<a class="navbar-item" href="/docs/v2.0/"> v2.0 </a>
+							<a class="navbar-item" href="http://docs.mitmproxy.org/en/latest/"> latest </a>
+							<a class="navbar-item" href="http://docs.mitmproxy.org/en/latest/"> v3.0 </a>
+							<a class="navbar-item" href="http://docs.mitmproxy.org/en/v2.0.2/"> v2.0 </a>
 						</div>
 					</div>
+					<a class="navbar-item" href="/publications">
+						Publications
+					</a>
 					<a class="navbar-item" href="/about">
-						about
+						About
 					</a>
 				</div>
-				<div class="navbar-end">
-					<div class="navbar-item">
-						<a
-							class="github-button"
-							href="https://github.com/mitmproxy/mitmproxy"
-							data-size="large"
-							data-show-count="true"
-							aria-label="Star mitmproxy/mitmproxy on GitHub">Star</a>
-					</div>
-				</div>
 			</div>
+				</div>
 		</nav>

@@ -1,139 +1,238 @@
-<div class="section has-text-centered">
-    <div class="container">
-        <img width="60%" src="/screenshot.png" alt="mitmproxy">
-    </div>
-</div>
-
-<div class="columns frontbar">
-    <div class="column content">
-        <h1><a>mitmproxy</a></h1>
-        <p> An console program for intercepting, inspecting, modifying and replaying web traffic. </p>
-    </div>
-    <div class="column content">
-        <h1><a>mitmweb</a></h1>
-        <p> A web interface to mitmproxy. </p>
-    </div>
-    <div class="column content">
-        <h1><a>mitmdump</a></h1>
-        <p>Like tcpdump for HTTP - the same functionality as mitmproxy without the UI.</p>
-    </div>
-    <div class="column content">
-        <h1><a>pathod</a></h1>
-        <p> Crafted malice for tormenting HTTP clients and servers. </p>
-    </div>
-</div>
-
-<div class="section">
-    <div class="columns">
-        <div class="column">
-            <div class="news infobox box content">
-                <h2>news</h2>
-                <ul>
-                    <li> Mitmproxy 3.0 has been released! See the <a>release
-                    notes</a> for the details.
-                    </li>
-                    <li> More awesome things happened! </li>
-                </ul>
-            </div>
-        </div>
-        <div class="column">
-            <div class="infobox box content">
-                <h2>community</h2>
-                <div class="columns">
-                    <div class="column">
-                        <a
-                            href="https://github.com/mitmproxy/mitmproxy"
-                            class="button is-info">
-                            <span class="icon">
-                                <i class="fa fa-github"></i>
-                            </span>
-                            <span>GitHub</span>
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-two-fifths is-vcentered columns">
+                    <div>
+                        <!--<img src="/logo-brand-inverted.png" alt="mitmproxy logo"> -->
+                        <!--
+                        <h1 class="title">
+                            mitmproxy
+                        </h1>
+                        <h2 class="subtitle">
+                            An Interactive HTTPS Proxy
+                        </h2>-->
+                        <h1 class="is-size-3"><b>mitmproxy</b> is a free and open source interactive
+                            HTTPS proxy.</h1><br>
+                        <a class="button is-dark is-medium download">
+                            Download $Platform Installer
                         </a>
-                        code, bugs
+                        <p>
+                            <a href="/tags/releases/">Release Notes</a>
+                            –
+                            <a href="https://github.com/mitmproxy/mitmproxy/releases">Other
+                                platforms</a>
+                            –
+                            <a href="https://github.com/mitmproxy/mitmproxy/releases">Beta
+                                releases</a>
+                        </p>
                     </div>
-                    <div class="column">
-                        <a
-                            href="https://slack.mitmproxy.org"
-                            class="button is-info">
-                            <span class="icon">
-                                <i class="fa fa-slack"></i>
-                            </span>
-                            <span>Slack</span>
-                        </a>
-                        dev chat
-                    </div>
-                    <div class="column">
-                        <a
-                            href="https://discourse.mitmproxy.org"
-                            class="button is-info">
-                            <span class="icon">
-                                <i class="fa fa-discourse"></i>
-                            </span>
-                            <span>Discourse</span>
-                        </a>
-                        forums
-                    </div>
+                </div>
+                <div class="column is-three-fifths">
+                    <img width="100%" src="/screenshot.png"
+                         alt="screenshot of mitmproxy's interface">
                 </div>
             </div>
         </div>
-        <div class="column">
-            <div class="infobox box content">
-                <h2>download</h2>
-                <p> Get the <a
-                href="https://github.com/mitmproxy/mitmproxy/releases/latest">latest
-                release</a> on Github and follow the
-                <a>installation instructions</a>.
-            </div>
-        </div>
     </div>
-</div>
+</section>
 
 
-<div class="section">
-    <div class="columns">
-        <div class="column">
-            <div class="box content">
-                <h1>recent publications</h1>
+<section class="hero is-dark is-bold">
+    <div class="hero-body">
+        <div class="container">
 
-                {{% pubs "data/pubs/recent.json" %}}
-
-                <a href="/publications">More...</a>
-            </div>
-        </div>
-        <div class="column">
-            <div class="box content">
-                <h2>related projects</h2>
-
-                <h3><a>netograph.io</a></h3>
-                <p>A privacy analysis and measurement service, built using
-                mitmproxy - an example of a high-performance server-side
-                application of the project.</p>
-
-                <h3><a>tamper</a></h3>
-                <p>A mitmproxy based devtools extension that lets you edit
-                remote files locally and serve them directly to Chrome.</p>
-
-                <h3><a>bdfproxy</a></h3>
-                <p>BackDoorFactory + mitmproxy - patch binaries with shell code
-                on the fly.</p>
-
-            </div>
-        </div>
-        <div class="column">
-            <div class="box content">
-            <h1>chatter</h1>
-
-                <a
-                class="twitter-timeline"
-                data-dnt="true"
-                href="https://twitter.com/mitmproxy/favorites"
-                data-widget-id="525136772666118144"
-                height="800"
-            >
-                    Tweets about mitmproxy
+            <div class="columns">
+                <a href="#mitmproxy" class="column has-text-centered">
+                    <i class="fas fa-2x fa-terminal"></i>
+                    <div class="title">Command Line</div>
+                    <!--
+                    <div class="subtitle">
+                        Intercept, inspect, modify and replay web traffic using <kbd>mitmproxy</kbd>.
+                    </div>
+                    -->
                 </a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <a href="#mitmweb" class="column has-text-centered">
+                    <i class="fab fa-2x fa-firefox"></i>
+                    <div class="title">Web Interface</div>
+                    <!--
+                    <div class="subtitle">
+                        Use mitmproxy's main features in a graphical interface with <kbd>mitmweb</kbd>.
+                    </div>
+                    -->
+
+                </a>
+                <a href="#mitmdump" class="column has-text-centered">
+                    <i class="fas fa-2x fa-code"></i>
+                    <div class="title">Python API</div>
+                    <!--
+                    <div class="subtitle">
+                        Write powerful addons and script mitmproxy with <kbd>mitmdump</kbd>.
+                    </div>
+                    -->
+                </a>
+                <a href="#pathod" class="column has-text-centered">
+                    <i class="fas fa-2x fa-microchip"></i>
+                    <div class="title">Low-Level Fuzzing</div>
+                    <!--
+                    <div class="subtitle">
+                        Violate all web standards and craft malformed messages using <kbd>pathod</kbd>.
+                    </div>
+                    -->
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="hero is-light">
+    <div class="hero-body">
+        <div class="container">
+
+            <div class="columns">
+                <!-- tweets like on https://code.visualstudio.com/#meet-intellisense -->
+                <!-- see also: https://github.com/jgthms/bulma/blob/master/docs/love.html -->
+                <div class="column has-text-centered">
+                    <i class="fab fa-4x fa-twitter has-text-info"></i>
+                </div>
+                <div class="column has-text-centered">
+                    <i class="fab fa-4x fa-twitter has-text-info"></i>
+                </div>
+                <div class="column has-text-centered">
+                    <i class="fab fa-4x fa-twitter has-text-info"></i>
+                </div>
+            </div>
+            <div class="has-text-centered">static tweets like on
+                https://code.visualstudio.com/#meet-intellisense
             </div>
         </div>
     </div>
-</div>
+</section>
+
+
+<section id="mitmproxy" class="hero feature">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-description">
+                    <h2 class="title">Command Line Interface</h2>
+                    <p>
+                        Intercept, inspect, modify and replay web traffic using <kbd>mitmproxy</kbd>.
+                        This text was initially right below the "Command Line" at the top, but that
+                        was too much. Now we have more space.
+                    </p>
+                </div>
+                <div class="column is-illustration">
+                    <img src="/screenshot.png" alt="screenshot of mitmproxy's interface">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="mitmweb" class="hero feature is-light">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-illustration">
+                    <img src="/mitmweb.png"
+                         alt="screenshot of mitmweb's interface">
+                </div>
+                <div class="column is-description">
+                    <h2 class="title">Web Interface</h2>
+                    <p>
+                        Use mitmproxy's main features in a graphical interface with
+                        <kbd>mitmweb</kbd>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="mitmdump" class="hero feature">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-description">
+                    <h2 class="title">Python Scripting API</h2>
+                    <p>
+                        Write powerful addons and script mitmproxy with <kbd>mitmdump</kbd>.
+                        We should show a small screenshot of an addon here.
+                    </p>
+                </div>
+                <div class="column is-illustration">
+                    <i class="fab fa-python fa-8x has-text-centered" style="display: block;"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="pathod" class="hero feature is-light">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-illustration">
+                    <img src="/pathod.png" alt="">
+                </div>
+                <div class="column is-description">
+                    <h2 class="title">Low-Level Fuzzing</h2>
+                    <p>
+                        Violate all web standards and craft malformed messages using
+                        <kbd>pathod</kbd>. Not sure which picture we want to use here. We can also do
+                        <pre>&lt;i class="fas fa-microchip fa-8x has-text-centered" style="display: block;"></i></pre>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero feature">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-description">
+                    <h2 class="title">Open Source</h2>
+                    <p>
+                        Mitmproxy is free and open source. Be part of the mitmproxy community and
+                        help improve your favorite HTTPS proxy.
+                    </p>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <a class="button is-primary"
+                               href="https://github.com/mitmproxy/mitmproxy">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                        <div class="control">
+                            <a class="button is-danger" href="https://slack.mitmproxy.org">
+                            <span class="icon">
+                                <i class="fab fa-slack"></i>
+                            </span>
+                                <span>Developer Chat</span>
+                            </a>
+                        </div>
+                        <div class="control">
+                            <a class="button is-info" href="https://discourse.mitmproxy.org/">
+                            <span class="icon">
+                                <i class="fab fa-discourse"></i>
+                            </span>
+                                <span>Community Forums</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-illustration">
+                        <i class="fas fa-code fa-8x has-text-centered" style="display: block; margin: 3rem"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
