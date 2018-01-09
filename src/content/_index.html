@@ -1,36 +1,68 @@
+---
+title: "mitmproxy - an interactive HTTPS proxy"
+---
 <section class="hero">
     <div class="hero-body">
         <div class="container">
             <div class="columns">
-                <div class="column is-two-fifths is-vcentered columns">
-                    <div>
-                        <!--<img src="/logo-brand-inverted.png" alt="mitmproxy logo"> -->
-                        <!--
-                        <h1 class="title">
-                            mitmproxy
-                        </h1>
-                        <h2 class="subtitle">
-                            An Interactive HTTPS Proxy
-                        </h2>-->
-                        <h1 class="is-size-3"><b>mitmproxy</b> is a free and open source interactive
-                            HTTPS proxy.</h1><br>
-                        <a class="button is-dark is-medium download">
-                            Download $Platform Installer
+                <div class="column is-two-fifths has-vcenter-contents">
+                    <h1 class="is-size-3">
+                        <b>mitmproxy</b> is a free
+                        and open source
+                        interactive HTTPS proxy.
+                    </h1>
+                    <br>
+                    <div id="install-button">
+                        <a id="install-windows"
+                           class="button is-hidden is-primary is-medium"
+                           href="https://github.com/mitmproxy/mitmproxy/releases?FIXME">
+                            Download Windows Installer
                         </a>
-                        <p>
-                            <a href="/tags/releases/">Release Notes</a>
-                            –
-                            <a href="https://github.com/mitmproxy/mitmproxy/releases">Other
-                                platforms</a>
-                            –
-                            <a href="https://github.com/mitmproxy/mitmproxy/releases">Beta
-                                releases</a>
-                        </p>
+                        <a id="install-linux"
+                           class="button is-hidden is-primary is-medium"
+                           href="https://github.com/mitmproxy/mitmproxy/releases?FIXME">
+                            Download for Linux
+                        </a>
+                        <a id="install-macos"
+                           class="button is-hidden is-primary is-medium is-static is-outlined"
+                           href="https://github.com/mitmproxy/mitmproxy/releases?FIXME">
+                            <kbd>brew install mitmproxy</kbd>
+                        </a>
+                        <a id="install-default"
+                           class="button is-primary is-medium"
+                           href="https://github.com/mitmproxy/mitmproxy/releases">
+                            Download
+                        </a>
                     </div>
+                    <script>
+                        <!-- OS Detection -->
+                        let platform = window.navigator.platform.toLowerCase(),
+                            btn;
+                        if (platform.includes("win")) {
+                            btn = document.getElementById("install-windows");
+                        } else if (platform.includes("linux")) {
+                            btn = document.getElementById("install-linux");
+                        } else if (platform.includes("mac")) {
+                            btn = document.getElementById("install-macos");
+                        }
+                        if (btn) {
+                            btn.classList.remove("is-hidden");
+                            document.getElementById("install-default").classList.add("is-hidden");
+                        }
+                    </script>
+
+
+                    <p>
+                        <a class="has-text-dark" href="/tags/releases/">Release Notes</a>
+                        –
+                        <a class="has-text-dark"
+                           href="https://github.com/mitmproxy/mitmproxy/releases">Other
+                            Platforms
+                        </a>
+                    </p>
                 </div>
                 <div class="column is-three-fifths">
-                    <img width="100%" src="/screenshot.png"
-                         alt="screenshot of mitmproxy's interface">
+                    <img src="/screenshot.png" alt="screenshot of mitmproxy's interface">
                 </div>
             </div>
         </div>
@@ -38,12 +70,12 @@
 </section>
 
 
-<section class="hero is-dark is-bold">
+<section id="features" class="hero">
     <div class="hero-body">
         <div class="container">
 
             <div class="columns">
-                <a href="#mitmproxy" class="column has-text-centered">
+                <a href="#mitmproxy" class="column has-text-centered has-text-primary">
                     <i class="fas fa-2x fa-terminal"></i>
                     <div class="title">Command Line</div>
                     <!--
@@ -52,7 +84,7 @@
                     </div>
                     -->
                 </a>
-                <a href="#mitmweb" class="column has-text-centered">
+                <a href="#mitmweb" class="column has-text-centered has-text-primary">
                     <i class="fab fa-2x fa-firefox"></i>
                     <div class="title">Web Interface</div>
                     <!--
@@ -62,7 +94,7 @@
                     -->
 
                 </a>
-                <a href="#mitmdump" class="column has-text-centered">
+                <a href="#mitmdump" class="column has-text-centered has-text-primary">
                     <i class="fas fa-2x fa-code"></i>
                     <div class="title">Python API</div>
                     <!--
@@ -71,15 +103,17 @@
                     </div>
                     -->
                 </a>
-                <a href="#pathod" class="column has-text-centered">
+                <!--
+                <a href="#pathod" class="column has-text-centered has-text-primary">
                     <i class="fas fa-2x fa-microchip"></i>
                     <div class="title">Low-Level Fuzzing</div>
                     <!--
                     <div class="subtitle">
                         Violate all web standards and craft malformed messages using <kbd>pathod</kbd>.
                     </div>
-                    -->
+                    -!->
                 </a>
+                -->
             </div>
 
         </div>
@@ -90,11 +124,10 @@
 <section class="hero is-light">
     <div class="hero-body">
         <div class="container">
+            <p class="is-size-4">Latest Tweets</p><br>
+            <div class="columns" id="tweets">
+                <div class="column has-text-centered">
 
-            <div class="columns">
-                <!-- tweets like on https://code.visualstudio.com/#meet-intellisense -->
-                <!-- see also: https://github.com/jgthms/bulma/blob/master/docs/love.html -->
-                <div class="column has-text-centered">
                     <i class="fab fa-4x fa-twitter has-text-info"></i>
                 </div>
                 <div class="column has-text-centered">
@@ -104,9 +137,91 @@
                     <i class="fab fa-4x fa-twitter has-text-info"></i>
                 </div>
             </div>
-            <div class="has-text-centered">static tweets like on
-                https://code.visualstudio.com/#meet-intellisense
-            </div>
+
+            <!-- welcome to the wonderful world of rendering tweets. -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.29.0/date_fns.min.js"></script>
+            <script>
+
+                // https://github.com/lodash/lodash/blob/master/escape.js
+                const htmlEscapes = {
+                    '&': '&amp',
+                    '<': '&lt',
+                    '>': '&gt',
+                    '"': '&quot',
+                    "'": '&#39'
+                }
+                const reUnescapedHtml = /[&<>"']/g
+                const reHasUnescapedHtml = RegExp(reUnescapedHtml.source)
+                function escape(string) {
+                    return (string && reHasUnescapedHtml.test(string))
+                        ? string.replace(reUnescapedHtml, (chr) => htmlEscapes[chr])
+                        : string
+                }
+
+                fetch("https://s3.amazonaws.com/tweets.mitmproxy.org/tweets.json").then(
+                    resp => resp.json().then(
+                        tweets => {
+                            console.log(tweets)
+
+                            tweets = tweets.slice(0,3).map(tweet => {
+                                console.log(tweet)
+                                let time = dateFns.distanceInWordsToNow(tweet.created_at)
+                                let text = escape(tweet.full_text)
+                                tweet.entities.urls.concat(tweet.entities.media || []).forEach(u => {
+                                    text = text.replace(
+                                        u.url,
+                                        `<a class="has-text-link"
+                                            target="_blank"
+                                            rel="nofollow"
+                                            href="${u.expanded_url}">${u.display_url}</a>`
+                                    )
+                                });
+                                tweet.entities.user_mentions.forEach(u => {
+                                    text = text.replace(
+                                        "@" + u.screen_name,
+                                        `<a class="has-text-link" target="_blank" rel="nofollow" href="https://twitter.com/${u.screen_name}">@${u.screen_name}</a>`
+                                    )
+                                });
+                                tweet.entities.hashtags.forEach(t => {
+                                    let start = t.indices[0],
+                                        stop = t.indices[1];
+                                    text = (
+                                        text.slice(0, start) +
+                                        `<a class="has-text-link" target="_blank" rel="nofollow" href="https://twitter.com/hashtag/${t.text}">${text.slice(start, stop)}</a>` +
+                                        text.slice(stop)
+                                    )
+                                });
+                                return `
+                                    <div class="column">
+                                    <article class="media">
+                                      <figure class="media-left">
+                                        <p class="image is-64x64">
+                                          <img src="${tweet.user.profile_image_url_https}">
+                                        </p>
+                                      </figure>
+                                      <div class="media-content">
+                                        <div class="content">
+                                          <p>
+                                            <strong>${tweet.user.name}</strong>
+                                            <small>@${tweet.user.screen_name}</small>
+                                            <a class="has-text-link" href="https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}">
+                                            <small>${time} ago</small>
+                                            </a>
+                                            <br>
+                                            ${text}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </article>
+                                    </div>
+                                `;
+                            })
+                            document.getElementById("tweets").innerHTML = tweets.join("")
+                        }
+                    )
+                )
+            </script>
+            <!-- ...as you can tell, displaying tweets properly is very important to us. -->
         </div>
     </div>
 </section>
@@ -121,7 +236,7 @@
                     <p>
                         Intercept, inspect, modify and replay web traffic using <kbd>mitmproxy</kbd>.
                         This text was initially right below the "Command Line" at the top, but that
-                        was too much. Now we have more space.
+                        was too much. Now we have more space to fill here.
                     </p>
                 </div>
                 <div class="column is-illustration">
@@ -162,7 +277,7 @@
                         We should show a small screenshot of an addon here.
                     </p>
                 </div>
-                <div class="column is-illustration">
+                <div class="column is-illustration has-vcenter-contents">
                     <i class="fab fa-python fa-8x has-text-centered" style="display: block;"></i>
                 </div>
 
@@ -170,6 +285,7 @@
         </div>
     </div>
 </section>
+<!--
 <section id="pathod" class="hero feature is-light">
     <div class="hero-body">
         <div class="container">
@@ -181,15 +297,44 @@
                     <h2 class="title">Low-Level Fuzzing</h2>
                     <p>
                         Violate all web standards and craft malformed messages using
-                        <kbd>pathod</kbd>. Not sure which picture we want to use here. We can also do
-                        <pre>&lt;i class="fas fa-microchip fa-8x has-text-centered" style="display: block;"></i></pre>
+                        <kbd>pathod</kbd>. Not sure which picture we want to use here. We can also
+                        do
                     </p>
+                    <pre>&lt;i class="fas fa-microchip fa-8x has-text-centered" style="display: block;">&lt;/i></pre>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
+-->
+<section id="ecosystem" class="hero feature is-light">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-illustration has-vcenter-contents has-text-centered">
+                    <i class="fas fa-cog has-text-info fa-8x"
+                       style="animation: fa-spin 16s infinite linear"></i>
+                </div>
+                <div class="column is-description content">
+                    <h2 class="title">Powerful Ecosystem</h2>
+                    <p>
+                        Mitmproxy powers a number of notable open-source projects:
+                    </p>
+                    <ul>
+                        <li><a href="https://netograph.io/" class="has-text-link">netograph</a>, a privacy analysis and measurement service.</li>
+                        <li><a href="https://dutzi.github.io/tamper/" class="has-text-link">tamper</a>, a Chrome extension that lets you edit remote files locally.</li>
+                        <li><a href="https://github.com/secretsquirrel/BDFProxy" class="has-text-link">bdfproxy</a>, a BackDoorFactory integration to patch binaries with shell
+                            code on the fly.
+                        </li>
+                        <li><a href="https://github.com/ustwo/mastermind" class="has-text-link">mastermind</a>,
+                            a project from <a href="https://ustwo.com/" class="has-text-link">ustwo</a> that offers an easy way to mock an API or a website</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="hero feature">
     <div class="hero-body">
         <div class="container">
@@ -202,7 +347,7 @@
                     </p>
                     <div class="field is-grouped">
                         <div class="control">
-                            <a class="button is-primary"
+                            <a class="button is-dark"
                                href="https://github.com/mitmproxy/mitmproxy">
                             <span class="icon">
                                 <i class="fab fa-github"></i>
@@ -228,8 +373,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-illustration">
-                        <i class="fas fa-code fa-8x has-text-centered" style="display: block; margin: 3rem"></i>
+                <div class="column is-illustration has-vcenter-contents has-text-centered">
+                    <i class="fas fa-code fa-8x has-text-danger"></i>
                 </div>
 
             </div>

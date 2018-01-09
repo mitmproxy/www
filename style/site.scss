@@ -4,7 +4,8 @@ $fa-font-path: "../webfonts";
 @import "./fa/fa-solid";
 @import "./fa/fontawesome";
 
-//$primary: #404040;
+$primary: #C93312;
+$warning-invert: #FFFFFF;
 $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, 'Font Awesome 5 Free', 'Font Awesome 5 Brands' !default;
 @import "../node_modules/bulma/sass/utilities/_all";
 @import "../node_modules/bulma/sass/base/_all";
@@ -13,29 +14,25 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
 @import "../node_modules/bulma/sass/components/_all";
 @import "../node_modules/bulma/sass/layout/_all";
 
-/* The infoboxes are just beneath the frontbar on the front page - they should
-all be the same height */
-.infobox {
-  height: 100%;
-}
-
-.news {
-  background-color: #f5fcba;
-}
-
-.publist {
-  margin-left: 0px !important;
-  li {
-    list-style: none;
-    margin-bottom: 1em;
-    .date {
-      font-style: italic;
-    }
+#features {
+  /*
+  .column:hover i {
+    transform: scale(1.1);
   }
+  i {
+    transition: all 100ms linear;
+  }
+  */
 }
 
-.download {
+#install-button {
   margin-bottom: 0.5rem;
+}
+
+.has-vcenter-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .feature {
