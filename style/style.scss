@@ -14,6 +14,15 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
 @import "../node_modules/bulma/sass/components/_all";
 @import "../node_modules/bulma/sass/layout/_all";
 
+#intro {
+  @include mobile {
+    .columns {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
 #features {
   /*
   .column:hover i {
@@ -30,28 +39,113 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
 }
 
 .has-vcenter-contents {
+  flex: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .feature {
+
   h2 {
     margin: 1.5rem 0 !important;
   }
-  p {
-    margin-bottom: 1.5rem;
-  }
-  .column {
-    flex: none;
-    margin: 0 2%;
-    &.is-illustration {
-      width: 30%;
-    }
-    &.is-description {
-      width: 40%;
-    }
 
+  @include tablet() {
+    &:nth-child(odd) {
+      .columns {
+          flex-direction: row-reverse;
+      }
+    }
+    .column {
+      flex: none;
+      margin: 0 2%;
+      width: 35%;
+    }
+  }
+
+  .sample-code {
+
+    // http://ethanschoonover.com/solarized
+    $base03: #002b36;
+    $base02: #073642;
+    $base01: #586e75;
+    $base00: #657b83;
+    $base0: #839496;
+    $base1: #93a1a1;
+    $base2: #eee8d5;
+    $base3: #fdf6e3;
+    $yellow: #b58900;
+    $orange: #cb4b16;
+    $red: #dc322f;
+    $magenta: #d33682;
+    $violet: #6c71c4;
+    $blue: #268bd2;
+    $cyan: #2aa198;
+    $green: #859900;
+
+    background-color: $base3;
+    border-radius: 3px;
+    border: solid $base1 1px;
+    .import {
+      color: $red;
+    }
+    .keyword {
+      color: $green;
+    }
+    .method {
+      color: $blue;
+    }
+    .str {
+      color: $cyan;
+    }
+    .num {
+      color: $magenta;
+    }
+    .comment {
+      color: $base1;
+    }
+    .filename {
+      display: block;
+      margin: -20px -24px 12px -24px;
+      padding-left: 5px;
+      font-size: 0.75rem;
+      background-color: $base01;
+      color: $base3;
+    }
   }
 
 }
+
+.shell-command {
+  border-radius: 3px;
+  font-size: 1.25rem;
+  white-space: initial;
+  background: $dark;
+  color: white !important;
+  border-width: 0;
+  padding: 0.75rem;
+
+  $pad: 0.3rem;
+
+  code {
+    padding: $pad;
+    display: inline-block;
+  }
+
+  .copy {
+    padding: $pad 1.5rem;
+    float: right;
+    border-radius: 2px;
+    cursor: pointer;
+    color: $primary;
+    &:hover {
+      background-color: $primary;
+      color: white !important;
+    }
+    &:hover.has-text-success {
+      background-color: $success;
+    }
+  }
+}
+

@@ -1,11 +1,34 @@
+<footer class="footer">
+    <div class="container">
+        <div class="content">
+            <div class="level">
+                <div class="level-left">
+                    <p>
+                        <strong>mitmproxy</strong>, a project by
+                        <a href="https://twitter.com/cortesi">@cortesi</a>,
+                        <a href="https://twitter.com/maximilianhils">@maximilianhils</a>, and
+                        <a href="https://twitter.com/raumfresser">@raumfresser</a>.
+                        Maintained by the <a href="https://github.com/orgs/mitmproxy/people">core
+                        team</a>
+                        with the help of <a
+                            href="https://github.com/mitmproxy/mitmproxy/graphs/contributors">our
+                        contributors</a>.<br>
+                        Code licensed <a
+                            href="https://github.com/mitmproxy/mitmproxy/blob/master/LICENSE">MIT</a>,
+                        website © {{ now.Year }} Mitmproxy Project.
+                    </p>
+                </div>
+                <div class="level-right">
+                    <a class="button is-outlined is-info" href="https://twitter.com/mitmproxy">
+                        <span class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                        <span>Follow @mitmproxy</span>
+                    </a>
+                </div>
+            </div>
 
-		<footer class="footer">
-			<div class="container">
-				<div class="content has-text-centered">
-				<p>
-					&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">The Mitmproxy Project</a>
-				</p>
-			</div>
-		</footer>
-	</body>
+        </div>
+</footer>
+</body>
 </html>

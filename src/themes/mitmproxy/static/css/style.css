@@ -9102,6 +9102,11 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
+@media screen and (max-width: 768px) {
+  #intro .columns {
+    display: flex;
+    flex-direction: column-reverse; } }
+
 #features {
   /*
   .column:hover i {
@@ -9116,6 +9121,7 @@ label.panel-block {
   margin-bottom: 0.5rem; }
 
 .has-vcenter-contents {
+  flex: none;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -9123,13 +9129,57 @@ label.panel-block {
 .feature h2 {
   margin: 1.5rem 0 !important; }
 
-.feature p {
-  margin-bottom: 1.5rem; }
+@media screen and (min-width: 769px), print {
+  .feature:nth-child(odd) .columns {
+    flex-direction: row-reverse; }
+  .feature .column {
+    flex: none;
+    margin: 0 2%;
+    width: 35%; } }
 
-.feature .column {
-  flex: none;
-  margin: 0 2%; }
-  .feature .column.is-illustration {
-    width: 30%; }
-  .feature .column.is-description {
-    width: 40%; }
+.feature .sample-code {
+  background-color: #fdf6e3;
+  border-radius: 3px;
+  border: solid #93a1a1 1px; }
+  .feature .sample-code .import {
+    color: #dc322f; }
+  .feature .sample-code .keyword {
+    color: #859900; }
+  .feature .sample-code .method {
+    color: #268bd2; }
+  .feature .sample-code .str {
+    color: #2aa198; }
+  .feature .sample-code .num {
+    color: #d33682; }
+  .feature .sample-code .comment {
+    color: #93a1a1; }
+  .feature .sample-code .filename {
+    display: block;
+    margin: -20px -24px 12px -24px;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: #586e75;
+    color: #fdf6e3; }
+
+.shell-command {
+  border-radius: 3px;
+  font-size: 1.25rem;
+  white-space: initial;
+  background: #363636;
+  color: white !important;
+  border-width: 0;
+  padding: 0.75rem; }
+  .shell-command code {
+    padding: 0.3rem;
+    display: inline-block; }
+  .shell-command .copy {
+    padding: 0.3rem 1.5rem;
+    float: right;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #C93312; }
+    .shell-command .copy:hover {
+      background-color: #C93312;
+      color: white !important; }
+    .shell-command .copy:hover.has-text-success {
+      background-color: #23d160; }
