@@ -119,9 +119,9 @@ builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
 
-bulma@jgthms/bulma:
+bulma@^0.6.1:
   version "0.6.1"
-  resolved "https://codeload.github.com/jgthms/bulma/tar.gz/abead00bfed5b859014d95991366e47c74fe505f"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.6.1.tgz#5f21a77c0c06f7d80051c06628c23516081bd649"
 
 camelcase-keys@^2.0.0:
   version "2.1.0"

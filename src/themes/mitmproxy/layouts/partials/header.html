@@ -20,43 +20,41 @@
     {{ .Hugo.Generator }}
 </head>
 <body>
-<nav class="navbar is-dark">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-                <img src="/logo-navbar.png" alt="mitmproxy">
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/logo-navbar.png" alt="mitmproxy">
+        </a>
+        <button class="button navbar-burger is-dark" data-target="topnav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div id="topnav" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/posts">
+                Blog
             </a>
-            <div class="navbar-burger burger" data-target="topnav">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div id="topnav" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="/posts">
-                    Blog
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="http://docs.mitmproxy.org/">
+                    Documentation
                 </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="http://docs.mitmproxy.org/">
-                        Documentation
-                    </a>
-                    <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="http://docs.mitmproxy.org/en/latest/">
-                            latest </a>
-                        <a class="navbar-item" href="http://docs.mitmproxy.org/en/latest/">
-                            v3.0 </a>
-                        <a class="navbar-item" href="http://docs.mitmproxy.org/en/v2.0.2/">
-                            v2.0 </a>
-                    </div>
+                <div class="navbar-dropdown is-boxed">
+                    <a class="navbar-item" href="http://docs.mitmproxy.org/en/latest/">
+                        latest </a>
+                    <a class="navbar-item" href="http://docs.mitmproxy.org/en/latest/">
+                        v3.0 </a>
+                    <a class="navbar-item" href="http://docs.mitmproxy.org/en/v2.0.2/">
+                        v2.0 </a>
                 </div>
-                <a class="navbar-item" href="/publications">
-                    Publications
-                </a>
-                <a class="navbar-item" href="/about">
-                    About
-                </a>
             </div>
+            <a class="navbar-item" href="/publications">
+                Publications
+            </a>
+            <a class="navbar-item" href="/about">
+                About
+            </a>
         </div>
         <div class="navbar-end">
             <div class="navbar-item is-hidden-touch">
@@ -71,3 +69,30 @@
         </div>
     </div>
 </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Get all "navbar-burger" elements
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+
+                    // Get the target from the "data-target" attribute
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+
+                    // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
