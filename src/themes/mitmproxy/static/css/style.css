@@ -9093,7 +9093,7 @@ label.panel-block {
   margin: 1.5rem 0 !important; }
 
 @media screen and (min-width: 769px), print {
-  .feature:nth-child(odd) .columns {
+  .feature:nth-child(even) .columns {
     flex-direction: row-reverse; }
   .feature .column {
     flex: none;

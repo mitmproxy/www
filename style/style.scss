@@ -52,9 +52,9 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
   }
 
   @include tablet() {
-    &:nth-child(odd) {
+    &:nth-child(even) {
       .columns {
-          flex-direction: row-reverse;
+        flex-direction: row-reverse;
       }
     }
     .column {
