@@ -39,7 +39,6 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
 }
 
 .has-vcenter-contents {
-  flex: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,3 +148,15 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
   }
 }
 
+.pub-highlight {
+  list-style: none;
+  &:before {
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -1.5em;
+    width: 1.5em;
+    color: orange;
+  }
+}

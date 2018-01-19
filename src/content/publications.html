@@ -1,26 +1,64 @@
 ---
 ---
 <h1 class="title">Publications</h1>
-<h2 class="subtitle">Writings that reference mitmproxy</h2>
 
+<article class="message is-info">
+    <div class="message-header">
+        <p>Citing</p>
+    </div>
+    <div class="message-body content">
+        <p>
+            If mitmproxy has been significant to a project that leads to a publication,
+            please acknowledge that fact by citing the project.
+        </p>
+        <div class="columns">
+            <div class="column is-6">
+                <div class="content is-small">
+<pre>@misc{mitmproxy,
+    author = {Aldo Cortesi and Maximilian Hils and Thomas Kriechbaumer and contributors},
+    title  = {{mitmproxy}: A free and open source interactive {HTTPS} proxy},
+    year   = {2010--},
+    url    = {https://mitmproxy.org/},
+    note   = {[Version 3.0]}
+}</pre>
+                </div>
+            </div>
+            <div class="column is-6 has-vcenter-contents">
+                <p>
+                    Aldo Cortesi, Maximilian Hils, Thomas Kriechbaumer, and contributors.
+                    <br class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                    <strong>mitmproxy: A free and open source interactive HTTPS proxy</strong>,
+                    2010-, https://mitmproxy.org/ [Version 3.0].
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
 
-<div class="columns">
+<p class="content">
+    mitmproxy has contributed to a variety of academic publications, media reports, talks, blog posts, and
+    more. If you have written about mitmproxy,
+    please <a href="https://github.com/mitmproxy/www/blob/master/src/data/publications.json">add yourself</a>!
+</p>
 
-    <div class="column content">
-        <h3>blogs</h3>
-        {{% pubs "data/pubs/blogs.json" %}}
+<div class="columns content">
+
+    <div class="column">
+        <h3>Blog Posts</h3>
+        {{% pubs "blog post" %}}
     </div>
 
+    <div class="column">
+        <h3>Media</h3>
+        {{% pubs "media" %}}
 
-    <div class="column content">
-        <h3>media</h3>
-        {{% pubs "data/pubs/media.json" %}}
+        <h3>Talks</h3>
+        {{% pubs "talk" %}}
     </div>
 
-
-    <div class="column content">
-        <h3>research</h3>
-        {{% pubs "data/pubs/research.json" %}}
+    <div class="column">
+        <h3>Research</h3>
+        {{% pubs "research" %}}
     </div>
 
 </div>

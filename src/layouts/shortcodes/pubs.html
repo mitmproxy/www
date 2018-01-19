@@ -1,15 +1,10 @@
-<!--
-publications + a publications list
--->
-{{- $url := .Get 0 -}}
-{{ $data := getJSON $url }}
-<ul class="publist">
-    {{ range $data }}
-        {{ $item := . }}
-        <li>
-            <a href="{{ index $item 0 }}">{{ index $item 1 }}</a>
-            - <span class="author">{{ index $item 2 }}</span>,
-            <span class="date">{{ index $item 3 }}</span>
+{{ $data := getJSON "/data/publications.json" }}
+<ul class="publications">
+    {{ range where $data "type" "in" .Params }}
+        <li class="{{ cond .highlight "pub-highlight" "" }}">
+            <a href="{{ .url }}">{{ .title }}</a>
+            &ndash; <span class="author">{{ .author }}</span>,
+            <span class="date">{{ .date }}</span>.
         </li>
     {{ end }}
 </ul>
