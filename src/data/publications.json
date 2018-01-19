@@ -4,7 +4,6 @@
     "title": "Investigation of security relevant aspects of Android eHealthApps: permissions, storage properties and data transmission",
     "author": "Jenny Knackmuss, Eric Clausing, and Reiner Creutzburg, Electronic Imaging. Electronic Imaging 2017(6)",
     "date": "Jun 2017",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -12,7 +11,6 @@
     "title": "Better the Devil You Know: Exposing the Data Sharing Practices of Smartphone Apps",
     "author": "Max Van Kleek, Ilaria Liccardi, Reuben Binns, Jun Zhao, Daniel J. Weitzner, and Nigel Shadbolt. CHI'17",
     "date": "May 2017",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -20,7 +18,6 @@
     "title": "Privacy on Adult Websites",
     "author": "Ibrahim Altaweel, Maximillian Hils, and Chris Jay Hoofnagle. ConPro'17",
     "date": "Mar 2017",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -28,7 +25,6 @@
     "title": "How I gained access to TMobile’s national network for free",
     "author": "Jacob Ajit",
     "date": "Sep 2016",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -36,7 +32,6 @@
     "title": "Whom You Gonna Trust? A Longitudinal Study on TLS Notary Services",
     "author": "Georg Merzdovnik, Klaus Falb, Martin Schmiedecker, Artemios G. Voyiatzis, and Edgar Weippl. IFIP SEC'16",
     "date": "Jul 2016",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -44,7 +39,6 @@
     "title": "Out-of-Box Exploitation: A Security Analysis of OEM Updaters",
     "author": "Darren Kemp, Mikhail Davidov, and Chris Czub",
     "date": "May 2016",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -52,7 +46,6 @@
     "title": "HTTPS traffic analysis and client identification using passive SSL/TLS fingerprinting",
     "author": "Martin Husák, Milan Čermák, Tomáš Jirsík, and Pavel Čeleda. EURASIP 2016(1)",
     "date": "Jan 2016",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -60,7 +53,6 @@
     "title": "Demonstration of Python HTTP/2 using Hyper-h2 with Twisted and mitmproxy",
     "author": "Cory Benfield",
     "date": "Jan 2016",
-    "highlight": false,
     "type": "talk"
   },
   {
@@ -68,7 +60,6 @@
     "title": "Who Knows What About Me? A Survey of Behind the Scenes Personal Data Sharing to Third Parties by Mobile Apps",
     "author": "Zang, Dummit, Graves, Lisker, and Sweeney. Technology Science 30",
     "date": "Oct 2015",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -76,7 +67,6 @@
     "title": "Mitmproxy: Your D.I.Y. Private Eye",
     "author": "Max Greenwald",
     "date": "Sep 2015",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -84,7 +74,6 @@
     "title": "An Internet X-Ray Machine for the Masses",
     "author": "Paul Ohm",
     "date": "Jun 2015",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -92,7 +81,6 @@
     "title": "Extracting My Data from the Microsoft Band",
     "author": "Jeff Huang",
     "date": "Dec 2014",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -100,7 +88,6 @@
     "title": "Reverse-engineering the Kayak app with mitmproxy",
     "author": "Shubhro Saha",
     "date": "Dec 2014",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -108,7 +95,6 @@
     "title": "Debugging server side REST calls with mitmproxy in Meteor",
     "author": "Pierre-Eric Marchandet",
     "date": "Dec 2014",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -116,7 +102,6 @@
     "title": "WIN any quiz : QuizUp iOS App Security Vulnerability",
     "author": "attify",
     "date": "Dec 2014",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -124,15 +109,13 @@
     "title": "ClickMiner: Towards Forensic Reconstruction of User-Browser Interactions from Network Traces",
     "author": "Christopher Neasbitt, Roberto Perdisci, Kang Li, and Terry Nelms. CCS'14",
     "date": "Dec 2014",
-    "highlight": false,
     "type": "research"
   },
-    {
+  {
     "url": "https://www.youtube.com/watch?v=hPuOtJbxJT8",
     "title": "Mitmproxy Demo at Honeynet Workshop 2014",
     "author": "Maximilian Hils",
     "date": "Feb 2014",
-    "highlight": false,
     "type": "talk"
   },
   {
@@ -140,7 +123,6 @@
     "title": "Re-evaluating Smartphone Messaging Application Security",
     "author": "Robin Müller",
     "date": "Feb 2014",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -148,7 +130,6 @@
     "title": "OUYA is watching you",
     "author": "Christian Weiske",
     "date": "Oct 2013",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -156,7 +137,6 @@
     "title": "Reverse engineering network traffic with a Raspberry Pi",
     "author": "Peter B Marks",
     "date": "Aug 2013",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -164,7 +144,6 @@
     "title": "WhatsApp & Privacy",
     "author": "Martijn Terpstra",
     "date": "Jul 2013",
-    "highlight": false,
     "type": "research"
   },
   {
@@ -172,7 +151,6 @@
     "title": "Sites Sharing Personal Details: The Journal’s Tests",
     "author": "Jeremy Singer-Vine and Jennifer Valentino-DeVries, Wall Street Journal",
     "date": "Dec 2012",
-    "highlight": false,
     "type": "media"
   },
   {
@@ -180,7 +158,6 @@
     "title": "Apple starts using their own mapping service, ditches Google Maps",
     "author": "Holger Eilhard",
     "date": "Mar 2012",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -188,7 +165,6 @@
     "title": "Hipster uploads part of your iPhone address book to its servers",
     "author": "Mark L. Chang",
     "date": "Feb 2012",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -196,7 +172,6 @@
     "title": "Path uploads your entire iPhone address book to its servers",
     "author": "Arun Thampi, The Verge",
     "date": "Feb 2012",
-    "highlight": false,
     "type": "media"
   },
   {
@@ -204,7 +179,6 @@
     "title": "mitmproxy - use and abuse of a hackable SSL-capable man-in-the-middle proxy",
     "author": "Jim Cheetham",
     "date": "Jan 2012",
-    "highlight": false,
     "type": "talk"
   },
   {
@@ -212,7 +186,6 @@
     "title": "Skout: a devastating privacy vulnerability",
     "author": "Aldo Cortesi",
     "date": "Sept 2011",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -220,7 +193,6 @@
     "title": "How UDIDs are used: a survey",
     "author": "Aldo Cortesi",
     "date": "May 2011",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -228,7 +200,6 @@
     "title": "Why the Apple UDID had to die",
     "author": "Aldo Cortesi",
     "date": "May 2011",
-    "highlight": false,
     "type": "blog post"
   },
   {
@@ -236,7 +207,6 @@
     "title": "De-anonymizing Apple UDIDs with OpenFeint",
     "author": "Aldo Cortesi",
     "date": "May 2011",
-    "highlight": false,
     "type": "blog post"
   }
 ]

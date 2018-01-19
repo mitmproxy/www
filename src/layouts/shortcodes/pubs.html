@@ -1,7 +1,7 @@
 {{ $data := getJSON "/data/publications.json" }}
 <ul class="publications">
     {{ range where $data "type" "in" .Params }}
-        <li class="{{ cond .highlight "pub-highlight" "" }}">
+        <li>
             <a href="{{ .url }}">{{ .title }}</a>
             &ndash; <span class="author">{{ .author }}</span>,
             <span class="date">{{ .date }}</span>.
