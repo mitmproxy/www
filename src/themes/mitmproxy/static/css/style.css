@@ -9145,3 +9145,36 @@ label.panel-block {
       color: white !important; }
     .shell-command .copy:hover.has-text-success {
       background-color: #23d160; }
+
+.hero.tweets .hero-body {
+  padding: 1rem 1.5rem; }
+
+#tweet-container {
+  max-height: 200px;
+  overflow: hidden; }
+  #tweet-container:before {
+    content: "";
+    width: 100%;
+    height: 50px;
+    margin-bottom: -50px;
+    box-shadow: 0 190px 10px whitesmoke;
+    display: block;
+    z-index: 999;
+    position: relative; }
+
+.hero:nth-child(even) {
+  background-color: whitesmoke;
+  color: #363636; }
+
+#tweets {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 400px;
+  font-size: 0.8rem; }
+
+.tweet {
+  width: 33.3333%;
+  padding: 3px; }
+  .tweet > .card {
+    padding: 3px; }

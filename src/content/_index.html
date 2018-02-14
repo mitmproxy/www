@@ -75,26 +75,31 @@ title: "mitmproxy - an interactive HTTPS proxy"
     </div>
 </section>
 
-
-<section class="hero is-light">
+<!--
+<section class="hero tweets">
     <div class="hero-body">
         <div class="container">
             <p class="is-size-4"><i class="fab fa-twitter has-text-info"></i> Latest Tweets</p><br>
-            <div class="columns" id="tweets">
-                <div class="column has-text-centered">
-                    <i class="fab fa-4x fa-twitter has-text-info"></i>
+            <div id="tweet-container">
+                <div id="tweets">
+                    <div class="column has-text-centered">
+                        <i class="fab fa-4x fa-twitter has-text-info"></i>
+                    </div>
+                    <div class="column has-text-centered">
+                        <i class="fab fa-4x fa-twitter has-text-info"></i>
+                    </div>
+                    <div class="column has-text-centered">
+                        <i class="fab fa-4x fa-twitter has-text-info"></i>
+                    </div>
                 </div>
-                <div class="column has-text-centered">
-                    <i class="fab fa-4x fa-twitter has-text-info"></i>
-                </div>
-                <div class="column has-text-centered">
-                    <i class="fab fa-4x fa-twitter has-text-info"></i>
-                </div>
+            </div>
+            <div class="has-text-centered">
+                <small class="has-text-info">read more</small>
             </div>
         </div>
     </div>
 </section>
-
+-->
 
 <section id="mitmproxy" class="hero feature">
     <div class="hero-body">
@@ -110,7 +115,8 @@ title: "mitmproxy - an interactive HTTPS proxy"
                         privacy measurements, and penetration testing.
                         It can be used to intercept, inspect, modify and replay web traffic such as
                         HTTP/1, HTTP/2, WebSockets, or any other SSL/TLS-protected protocols.
-                        You can prettify and decode a variety of message types ranging from HTML to Protobuf,
+                        You can prettify and decode a variety of message types ranging from HTML to
+                        Protobuf,
                         intercept specific messages on-the-fly,
                         modify them before they reach their destination, and replay them
                         to a client or server later on.
@@ -127,7 +133,7 @@ title: "mitmproxy - an interactive HTTPS proxy"
     </div>
 </section>
 
-<section id="mitmweb" class="hero feature is-light">
+<section id="mitmweb" class="hero feature">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-centered">
@@ -195,15 +201,36 @@ title: "mitmproxy - an interactive HTTPS proxy"
     </div>
 </section>
 
-<section id="ecosystem" class="hero feature is-light">
+<section id="ecosystem" class="hero feature">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-centered">
-                <div class="column has-vcenter-contents has-text-centered">
-                    <i class="fas fa-cog has-text-info fa-8x"
-                       style="animation: fa-spin 16s infinite linear"></i>
+                <div class="column has-text-centered">
+                    <div class="has-text-left">
+                        <p class="is-size-5"><i class="fab fa-twitter has-text-info"></i> Latest Tweets</p>
+                        <a
+                                class="twitter-timeline"
+                                data-dnt="true"
+                                href="https://twitter.com/mitmproxy/favorites"
+                                data-widget-id="525136772666118144"
+                                data-width="430"
+                                data-height="500"
+                                style="max-width: 100%"
+                                data-chrome="nofooter noheader"
+                        ></a>
+                        <script>!function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0],
+                                p       = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = p + "://platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, "script", "twitter-wjs");</script>
+                    </div>
                 </div>
-                <div class="column">
+                <div class="column has-vcenter-contents">
                     <h2 class="title">Powerful Ecosystem</h2>
                     <div class="content">
                         <p>
@@ -356,16 +383,15 @@ title: "mitmproxy - an interactive HTTPS proxy"
                     `<a class="has-text-link" target="_blank" rel="nofollow" href="https://twitter.com/${u.screen_name}">@${u.screen_name}</a>`
                 )
             });
-            tweet.entities.hashtags.forEach(t => {
-                let [start, stop] = t.indices;
-                text = (
-                    text.slice(0, start) +
-                    `<a class="has-text-link" target="_blank" rel="nofollow" href="https://twitter.com/hashtag/${t.text}">${text.slice(start, stop)}</a>` +
-                    text.slice(stop)
+            tweet.entities.hashtags.forEach(h => {
+                text = text.replace(
+                    "#" + h.text,
+                    `<a class="has-text-link" target="_blank" rel="nofollow" href="https://twitter.com/hashtag/${h.text}">#${h.text}</a>`
                 )
             });
             return `
-                <div class="column">
+                <div class="tweet">
+                <div class="card">
                 <article class="media">
                   <figure class="media-left">
                     <p class="image is-64x64">
@@ -389,6 +415,7 @@ title: "mitmproxy - an interactive HTTPS proxy"
                   </div>
                 </article>
                 </div>
+                </div>
             `;
         })
         document.getElementById("tweets").innerHTML = tweets.join("")
@@ -396,7 +423,7 @@ title: "mitmproxy - an interactive HTTPS proxy"
 
     fetch("https://s3.amazonaws.com/tweets.mitmproxy.org/tweets.json").then(
         resp => resp.json().then(
-            tweets => renderTweets(tweets.slice(0, 3))
+            tweets => renderTweets(tweets.slice(0, 15))
         )
     )
     // ...as you can tell, displaying tweets properly is very important to us.

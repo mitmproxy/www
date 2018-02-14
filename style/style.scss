@@ -147,3 +147,48 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
     }
   }
 }
+
+.hero.tweets .hero-body {
+  padding: 1rem 1.5rem;
+}
+
+
+$tweetHeight: 200px;
+#tweet-container {
+  max-height: $tweetHeight;
+  overflow: hidden;
+
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 50px;
+    margin-bottom: -50px;
+    box-shadow: 0 ($tweetHeight - 10px) 10px whitesmoke;
+    display: block;
+    z-index: 999;
+    position: relative;
+  }
+}
+
+.hero:nth-child(even) {
+  background-color: whitesmoke;
+  color: #363636;
+}
+
+#tweets {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: $tweetHeight + 200px;
+    font-size: 0.8rem;
+}
+
+.tweet {
+  width: 33.3333%;
+  padding: 3px;
+
+  > .card {
+    padding: 3px;
+  }
+}
