@@ -5,8 +5,6 @@ $fa-font-path: "../webfonts";
 @import "./fa/fontawesome";
 
 $primary: #C93312;
-$warning-invert: #FFFFFF;
-$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, 'Font Awesome 5 Free', 'Font Awesome 5 Brands' !default;
 @import "../node_modules/bulma/sass/utilities/_all";
 @import "../node_modules/bulma/sass/base/_all";
 @import "../node_modules/bulma/sass/grid/_all";
@@ -14,106 +12,117 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
 @import "../node_modules/bulma/sass/components/_all";
 @import "../node_modules/bulma/sass/layout/_all";
 
-#intro {
-  @include mobile {
-    .columns {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-  }
-}
-
-#features {
-  /*
-  .column:hover i {
-    transform: scale(1.1);
-  }
-  i {
-    transition: all 100ms linear;
-  }
-  */
-}
-
-#install-button {
-  margin-bottom: 0.5rem;
-}
-
 .has-vcenter-contents {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+#home {
+  > section {
+    @extend .hero;
+
+    &:nth-child(even) {
+      @extend .is-light;
+    }
+  }
+  .column {
+    @extend .has-vcenter-contents;
+  }
+}
+
+#intro {
+  @include tablet() {
+    .columns {
+      flex-direction: row-reverse;
+    }
+  }
+
+  #install-button {
+    margin-bottom: 0.5rem;
+  }
+}
+
 .feature {
 
   h2 {
-    margin: 1.5rem 0 !important;
+    margin: 0 0 1.5rem !important;
   }
 
   @include tablet() {
-    &:nth-child(even) {
-      .columns {
-        flex-direction: row-reverse;
-      }
-    }
     .column {
       flex: none;
       margin: 0 2%;
       width: 35%;
     }
+    &:nth-child(even) {
+      .columns {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+.sample-code {
+
+  // http://ethanschoonover.com/solarized
+  $base03: #002b36;
+  $base02: #073642;
+  $base01: #586e75;
+  $base00: #657b83;
+  $base0: #839496;
+  $base1: #93a1a1;
+  $base2: #eee8d5;
+  $base3: #fdf6e3;
+  $yellow: #b58900;
+  $orange: #cb4b16;
+  $red: #dc322f;
+  $magenta: #d33682;
+  $violet: #6c71c4;
+  $blue: #268bd2;
+  $cyan: #2aa198;
+  $green: #859900;
+
+  $border-radius: 3px;
+
+  > .filename {
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: $base01;
+    color: $base3;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    + pre {
+      border-top-width: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
   }
 
-  .sample-code {
-
-    // http://ethanschoonover.com/solarized
-    $base03: #002b36;
-    $base02: #073642;
-    $base01: #586e75;
-    $base00: #657b83;
-    $base0: #839496;
-    $base1: #93a1a1;
-    $base2: #eee8d5;
-    $base3: #fdf6e3;
-    $yellow: #b58900;
-    $orange: #cb4b16;
-    $red: #dc322f;
-    $magenta: #d33682;
-    $violet: #6c71c4;
-    $blue: #268bd2;
-    $cyan: #2aa198;
-    $green: #859900;
-
+  > pre {
     background-color: $base3;
-    border-radius: 3px;
+    border-radius: $border-radius;
     border: solid $base1 1px;
-    .import {
-      color: $red;
-    }
-    .keyword {
-      color: $green;
-    }
-    .method {
-      color: $blue;
-    }
-    .str {
-      color: $cyan;
-    }
-    .num {
-      color: $magenta;
-    }
-    .comment {
-      color: $base1;
-    }
-    .filename {
-      display: block;
-      margin: -20px -24px 12px -24px;
-      padding-left: 5px;
-      font-size: 0.75rem;
-      background-color: $base01;
-      color: $base3;
-    }
   }
 
+  .import {
+    color: $red;
+  }
+  .keyword {
+    color: $green;
+  }
+  .method {
+    color: $blue;
+  }
+  .str {
+    color: $cyan;
+  }
+  .num {
+    color: $magenta;
+  }
+  .comment {
+    color: $base1;
+  }
 }
 
 .shell-command {
@@ -145,50 +154,5 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
     &:hover.has-text-success {
       background-color: $success;
     }
-  }
-}
-
-.hero.tweets .hero-body {
-  padding: 1rem 1.5rem;
-}
-
-
-$tweetHeight: 200px;
-#tweet-container {
-  max-height: $tweetHeight;
-  overflow: hidden;
-
-
-  &:before {
-    content: "";
-    width: 100%;
-    height: 50px;
-    margin-bottom: -50px;
-    box-shadow: 0 ($tweetHeight - 10px) 10px whitesmoke;
-    display: block;
-    z-index: 999;
-    position: relative;
-  }
-}
-
-.hero:nth-child(even) {
-  background-color: whitesmoke;
-  color: #363636;
-}
-
-#tweets {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: $tweetHeight + 200px;
-    font-size: 0.8rem;
-}
-
-.tweet {
-  width: 33.3333%;
-  padding: 3px;
-
-  > .card {
-    padding: 3px;
   }
 }

@@ -1,321 +1,301 @@
 ---
 title: "mitmproxy - an interactive HTTPS proxy"
 ---
-<section id="intro" class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-two-fifths has-vcenter-contents">
-                    <h1 class="is-size-3">
-                        <b>mitmproxy</b> is a free
-                        and open source
-                        interactive HTTPS proxy.
-                    </h1>
-                    <br>
-                    <div id="install-button">
-                        <a id="install-windows"
-                           class="button is-hidden is-primary is-medium"
-                           href="https://github.com/mitmproxy/mitmproxy/releases?FIXME">
-                            Download Windows Installer
-                        </a>
-                        <a id="install-linux"
-                           class="button is-hidden is-primary is-medium"
-                           href="https://github.com/mitmproxy/mitmproxy/releases?FIXME">
-                            Download for Linux
-                        </a>
-                        <pre id="install-macos" class="shell-command is-hidden">
+<div id="home">
+    <section id="intro">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-7">
+                        <img src="/screenshot.png" alt="screenshot of mitmproxy's interface">
+                    </div>
+                    <div class="column is-hidden-mobile"></div>
+                    <div class="column is-two-fifths">
+                        <div>
+                            <h1 class="is-size-3">
+                                <b>mitmproxy</b> is a free
+                                and open source
+                                interactive HTTPS proxy.
+                            </h1>
+                            <br>
+                            <div id="install-button">
+                                <a id="install-windows"
+                                   class="button is-hidden is-primary is-medium"
+                                   href="https://github.com/mitmproxy/mitmproxy/releases?FIXME">
+                                    Download Windows Installer
+                                </a>
+                                <a id="install-linux"
+                                   class="button is-hidden is-primary is-medium"
+                                   href="https://github.com/mitmproxy/mitmproxy/releases?FIXME">
+                                    Download for Linux
+                                </a>
+                                <pre id="install-macos" class="shell-command is-hidden">
                             <code>brew install mitmproxy</code>
                             <code class="copy is-hidden-touch"
                                   data-clipboard-text="brew install mitmproxy">copy</code>
                         </pre>
-                        <a id="install-default"
-                           class="button is-primary is-medium"
-                           href="https://github.com/mitmproxy/mitmproxy/releases">
-                            Download
-                        </a>
-                    </div>
-                    <p>
-                        <a class="has-text-dark" href="/tags/releases/">Release Notes</a>
-                        –
-                        <a class="has-text-dark"
-                           href="http://docs.mitmproxy.org/en/latest/install.html">
-                            Other Downloads
-                        </a>
-                    </p>
-                </div>
-                <div class="column is-hidden-mobile"></div>
-                <div class="column is-7">
-                    <img src="/screenshot.png" alt="screenshot of mitmproxy's interface">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section id="features" class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <a href="#mitmproxy" class="column has-text-centered has-text-primary">
-                    <i class="fas fa-2x fa-terminal"></i>
-                    <div class="title">Command Line</div>
-                </a>
-                <a href="#mitmweb" class="column has-text-centered has-text-primary">
-                    <i class="fab fa-2x fa-firefox"></i>
-                    <div class="title">Web Interface</div>
-                </a>
-                <a href="#mitmdump" class="column has-text-centered has-text-primary">
-                    <i class="fas fa-2x fa-code"></i>
-                    <div class="title">Python API</div>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!--
-<section class="hero tweets">
-    <div class="hero-body">
-        <div class="container">
-            <p class="is-size-4"><i class="fab fa-twitter has-text-info"></i> Latest Tweets</p><br>
-            <div id="tweet-container">
-                <div id="tweets">
-                    <div class="column has-text-centered">
-                        <i class="fab fa-4x fa-twitter has-text-info"></i>
-                    </div>
-                    <div class="column has-text-centered">
-                        <i class="fab fa-4x fa-twitter has-text-info"></i>
-                    </div>
-                    <div class="column has-text-centered">
-                        <i class="fab fa-4x fa-twitter has-text-info"></i>
+                                <a id="install-default"
+                                   class="button is-primary is-medium"
+                                   href="https://github.com/mitmproxy/mitmproxy/releases">
+                                    Download
+                                </a>
+                            </div>
+                            <p>
+                                <a class="has-text-dark" href="/tags/releases/">Release Notes</a>
+                                –
+                                <a class="has-text-dark"
+                                   href="http://docs.mitmproxy.org/en/latest/install.html">
+                                    Other Downloads
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="has-text-centered">
-                <small class="has-text-info">read more</small>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <a href="#mitmproxy" class="column has-text-centered has-text-primary">
+                        <i class="fas fa-2x fa-terminal"></i>
+                        <div class="title">Command Line</div>
+                    </a>
+                    <a href="#mitmweb" class="column has-text-centered has-text-primary">
+                        <i class="fab fa-2x fa-firefox"></i>
+                        <div class="title">Web Interface</div>
+                    </a>
+                    <a href="#mitmdump" class="column has-text-centered has-text-primary">
+                        <i class="fas fa-2x fa-code"></i>
+                        <div class="title">Python API</div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
--->
+    </section>
 
-<section id="mitmproxy" class="hero feature">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column">
-                    <img src="/screenshot.png" alt="screenshot of mitmproxy's interface">
+    <section id="mitmproxy" class="feature">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <img src="/screenshot.png" alt="screenshot of mitmproxy's interface">
+                    </div>
+                    <div class="column">
+                        <h2 class="title">Command Line</h2>
+                        <p>
+                            <kbd>mitmproxy</kbd> is your swiss-army knife for debugging, testing,
+                            privacy measurements, and penetration testing.
+                            It can be used to intercept, inspect, modify and replay web traffic such
+                            as
+                            HTTP/1, HTTP/2, WebSockets, or any other SSL/TLS-protected protocols.
+                            You can prettify and decode a variety of message types ranging from HTML
+                            to
+                            Protobuf,
+                            intercept specific messages on-the-fly,
+                            modify them before they reach their destination, and replay them
+                            to a client or server later on.
+                        </p>
+                    </div>
+
                 </div>
-                <div class="column">
-                    <h2 class="title">Command Line</h2>
-                    <p>
-                        <kbd>mitmproxy</kbd> is your swiss-army knife for debugging, testing,
-                        privacy measurements, and penetration testing.
-                        It can be used to intercept, inspect, modify and replay web traffic such as
-                        HTTP/1, HTTP/2, WebSockets, or any other SSL/TLS-protected protocols.
-                        You can prettify and decode a variety of message types ranging from HTML to
-                        Protobuf,
-                        intercept specific messages on-the-fly,
-                        modify them before they reach their destination, and replay them
-                        to a client or server later on.
-                    </p>
-                    <br>
-                    <p>
-
-                    </p>
-                    <br>
-                </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="mitmweb" class="hero feature">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column">
-                    <img src="/mitmweb.png"
-                         alt="screenshot of mitmweb's interface"
-                         style="border: solid #93a1a1 1px;">
+    <section id="mitmweb" class="feature">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <img src="/mitmweb.png"
+                             alt="screenshot of mitmweb's interface"
+                             style="border: solid #93a1a1 1px;">
+                    </div>
+                    <div class="column">
+                        <h2 class="title">Web Interface</h2>
+                        <p>
+                            Use mitmproxy's main features in a graphical interface with
+                            <kbd>mitmweb</kbd>. Do you like Chrome's DevTools? <kbd>mitmweb</kbd>
+                            gives
+                            you a similar experience for any other application or device,
+                            plus additional features such as request interception and replay.
+
+                        </p>
+                        <!--
+                        <a class="button is-info is-outlined"
+                           href="http://share.mitmproxy.org/honeynet-demo/#/flows/b07c553b-1ffd-4414-924f-ca4412804a6d/response">
+                            View Static Demo
+                        </a>-->
+                    </div>
+
                 </div>
-                <div class="column">
-                    <h2 class="title">
-                        Web Interface
-                    </h2>
-                    <p>
-                        Use mitmproxy's main features in a graphical interface with
-                        <kbd>mitmweb</kbd>. Do you like Chrome's DevTools? <kbd>mitmweb</kbd> gives
-                        you a similar experience for any other application or device,
-                        plus additional features such as request interception and replay.
-
-                    </p>
-                    <!--
-                    <a class="button is-info is-outlined"
-                       href="http://share.mitmproxy.org/honeynet-demo/#/flows/b07c553b-1ffd-4414-924f-ca4412804a6d/response">
-                        View Static Demo
-                    </a>-->
-                </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="mitmdump" class="hero feature">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column">
-                    <pre class="sample-code"><span class="filename">addon.py</span><span
-                            class="import">from</span> mitmproxy <span
-                            class="import">import</span> http
+    <section id="mitmdump" class="feature">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div class="sample-code">
+                            <div class="filename">addon.py</div>
+                            <pre><span
+                                    class="import">from</span> mitmproxy <span
+                                    class="import">import</span> http
 
 <span class="keyword">def</span> <span class="method">request</span>(flow: http.HTTPFlow):
     <span class="comment"># redirect to different host</span>
     <span class="keyword">if</span> flow.request.pretty_host == <span
-                                class="str">"example.com"</span>:
+                                        class="str">"example.com"</span>:
         flow.request.host = <span class="str">"mitmproxy.org"</span>
     <span class="comment"># answer from proxy</span>
     <span class="keyword">elif</span> flow.request.path.endswith(<span class="str">"/brew"</span>):
     	flow.response = http.HTTPResponse.make(
             <span class="num">418</span>, <strong>b</strong><span class="str">"I'm a teapot"</span>,
         )</pre>
-                </div>
-                <div class="column">
-                    <h2 class="title">
-                        Python API
-                    </h2>
-                    <p>
-                        Write powerful addons and script mitmproxy with <kbd>mitmdump</kbd>.
-                        The scripting API offers full control over mitmproxy and makes it possible
-                        to automatically modify messages, redirect traffic, visualize messages, or
-                        implement custom commands.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="ecosystem" class="hero feature">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <div class="has-text-left">
-                        <p class="is-size-5"><i class="fab fa-twitter has-text-info"></i> Latest Tweets</p>
-                        <a
-                                class="twitter-timeline"
-                                data-dnt="true"
-                                href="https://twitter.com/mitmproxy/favorites"
-                                data-widget-id="525136772666118144"
-                                data-width="430"
-                                data-height="500"
-                                style="max-width: 100%"
-                                data-chrome="nofooter noheader"
-                        ></a>
-                        <script>!function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0],
-                                p       = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + "://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");</script>
+                        </div>
                     </div>
-                </div>
-                <div class="column has-vcenter-contents">
-                    <h2 class="title">Powerful Ecosystem</h2>
-                    <div class="content">
+                    <div class="column">
+                        <h2 class="title">
+                            Python API
+                        </h2>
                         <p>
-                            Mitmproxy powers a number of notable open-source projects:
+                            Write powerful addons and script mitmproxy with <kbd>mitmdump</kbd>.
+                            The scripting API offers full control over mitmproxy and makes it
+                            possible
+                            to automatically modify messages, redirect traffic, visualize messages,
+                            or
+                            implement custom commands.
                         </p>
-                        <ul>
-                            <li><a href="http://docs.mitmproxy.org/en/stable/pathod/intro.html"
-                                   class="has-text-link">pathod</a>, mitmproxy's sister project to
-                                craft
-                                malformed HTTP/1, HTTP/2 and WebSocket requests.
-                            </li>
-                            <li><a href="https://netograph.io/" class="has-text-link">netograph</a>,
-                                a
-                                privacy analysis and measurement service.
-                            </li>
-                            <li><a href="https://dutzi.github.io/tamper/"
-                                   class="has-text-link">tamper</a>, a Chrome extension that lets
-                                you
-                                edit remote files locally.
-                            </li>
-                            <li><a href="https://github.com/secretsquirrel/BDFProxy"
-                                   class="has-text-link">bdfproxy</a>, a BackDoorFactory integration
-                                to
-                                patch binaries with shell
-                                code on the fly.
-                            </li>
-                            <li><a href="https://github.com/ustwo/mastermind" class="has-text-link">mastermind</a>,
-                                a project from <a href="https://ustwo.com/"
-                                                  class="has-text-link">ustwo</a> that offers an
-                                easy
-                                way to mock an API or a website
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="opensource" class="hero feature">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column has-vcenter-contents has-text-centered">
-                    <i class="fas fa-code fa-8x has-text-danger"></i>
+    <section id="ecosystem" class="feature">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div style="margin: 0 auto">
+                            <p class="is-size-5"><i class="fab fa-twitter has-text-info"></i> Latest
+                                Tweets</p>
+                            <a
+                                    class="twitter-timeline"
+                                    href="https://twitter.com/mitmproxy/favorites"
+                                    data-dnt="true"
+                                    data-width="430"
+                                    data-height="500"
+                                    data-chrome="nofooter noheader"
+                            ></a>
+                            <script>!function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p       = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");</script>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h2 class="title">Powerful Ecosystem</h2>
+                        <div class="content">
+                            <p>
+                                Mitmproxy powers a number of notable open-source projects:
+                            </p>
+                            <ul>
+                                <li><a href="http://docs.mitmproxy.org/en/stable/pathod/intro.html"
+                                       class="has-text-link">pathod</a>, mitmproxy's sister project
+                                    to
+                                    craft
+                                    malformed HTTP/1, HTTP/2 and WebSocket requests.
+                                </li>
+                                <li><a href="https://netograph.io/"
+                                       class="has-text-link">netograph</a>,
+                                    a
+                                    privacy analysis and measurement service.
+                                </li>
+                                <li><a href="https://dutzi.github.io/tamper/"
+                                       class="has-text-link">tamper</a>, a Chrome extension that
+                                    lets
+                                    you
+                                    edit remote files locally.
+                                </li>
+                                <li><a href="https://github.com/secretsquirrel/BDFProxy"
+                                       class="has-text-link">bdfproxy</a>, a BackDoorFactory
+                                    integration
+                                    to
+                                    patch binaries with shell
+                                    code on the fly.
+                                </li>
+                                <li><a href="https://github.com/ustwo/mastermind"
+                                       class="has-text-link">mastermind</a>,
+                                    a project from <a href="https://ustwo.com/"
+                                                      class="has-text-link">ustwo</a> that offers an
+                                    easy
+                                    way to mock an API or a website
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="column">
-                    <h2 class="title">Open Source</h2>
-                    <p>
-                        Mitmproxy is free and open source. Be part of the mitmproxy community and
-                        help improve your favorite HTTPS proxy.
-                    </p>
-                    <br>
-                    <div class="buttons">
-                        <a class="button is-dark"
-                           href="https://github.com/mitmproxy/mitmproxy">
+            </div>
+        </div>
+    </section>
+
+    <section id="opensource" class="feature">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <i class="fas fa-code fa-8x has-text-danger"></i>
+                    </div>
+                    <div class="column">
+                        <h2 class="title">Open Source</h2>
+                        <p>
+                            Mitmproxy is free and open source. Be part of the mitmproxy community
+                            and
+                            help improve your favorite HTTPS proxy.
+                        </p>
+                        <br>
+                        <div class="buttons">
+                            <a class="button is-dark"
+                               href="https://github.com/mitmproxy/mitmproxy">
                             <span class="icon">
                                 <i class="fab fa-github"></i>
                             </span>
-                            <span>GitHub</span>
-                        </a>
-                        <a class="button is-danger" href="https://slack.mitmproxy.org">
+                                <span>GitHub</span>
+                            </a>
+                            <a class="button is-danger" href="https://slack.mitmproxy.org">
                             <span class="icon">
                                 <i class="fab fa-slack"></i>
                             </span>
-                            <span>Developer Chat</span>
-                        </a>
-                        <a class="button is-info" href="https://discourse.mitmproxy.org/">
+                                <span>Developer Chat</span>
+                            </a>
+                            <a class="button is-info" href="https://discourse.mitmproxy.org/">
                             <span class="icon">
                                 <i class="fab fa-discourse"></i>
                             </span>
-                            <span>Community Forums</span>
-                        </a>
+                                <span>Community Forums</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"
         integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.29.0/date_fns.min.js"
-        integrity="sha384-A1u4Ih5CnLnBBL0ElY5mMaNRZQOWG/1+VyiVjPUYu/A6yWOCUbce8x2PLlCvB2vL"
         crossorigin="anonymous"></script>
 <script>
     document.getElementsByClassName("copy")
@@ -346,88 +326,6 @@ title: "mitmproxy - an interactive HTTPS proxy"
         document.getElementById("install-default").classList.add("is-hidden");
     }
 </script>
-<script>
-    // welcome to the wonderful world of rendering tweets.
-
-
-    // https://github.com/lodash/lodash/blob/master/escape.js
-    const htmlEscapes = {
-        '&': '&amp',
-        '<': '&lt',
-        '>': '&gt',
-        '"': '&quot',
-        "'": '&#39'
-    }
-    const reUnescapedHtml = /[&<>"']/g
-    const reHasUnescapedHtml = RegExp(reUnescapedHtml.source)
-
-    function escape(string) {
-        return (string && reHasUnescapedHtml.test(string))
-            ? string.replace(reUnescapedHtml, (chr) => htmlEscapes[chr])
-            : string
-    }
-
-    function renderTweets(tweets) {
-        tweets = tweets.map(tweet => {
-            let time = dateFns.distanceInWordsToNow(tweet.created_at)
-            let text = escape(tweet.full_text)
-            tweet.entities.urls.concat(tweet.entities.media || []).forEach(u => {
-                text = text.replace(
-                    u.url,
-                    `<a class="has-text-link" target="_blank" rel="nofollow" href="${u.expanded_url}">${u.display_url}</a>`
-                )
-            });
-            tweet.entities.user_mentions.forEach(u => {
-                text = text.replace(
-                    "@" + u.screen_name,
-                    `<a class="has-text-link" target="_blank" rel="nofollow" href="https://twitter.com/${u.screen_name}">@${u.screen_name}</a>`
-                )
-            });
-            tweet.entities.hashtags.forEach(h => {
-                text = text.replace(
-                    "#" + h.text,
-                    `<a class="has-text-link" target="_blank" rel="nofollow" href="https://twitter.com/hashtag/${h.text}">#${h.text}</a>`
-                )
-            });
-            return `
-                <div class="tweet">
-                <div class="card">
-                <article class="media">
-                  <figure class="media-left">
-                    <p class="image is-64x64">
-                      <img src="${tweet.user.profile_image_url_https}">
-                    </p>
-                  </figure>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <a href="https://twitter.com/${tweet.user.screen_name}">
-                            <strong>${tweet.user.name}</strong>
-                            <small>@${tweet.user.screen_name}</small>
-                        </a>
-                        <a class="has-text-link" href="https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}">
-                        <small>${time} ago</small>
-                        </a>
-                        <br>
-                        ${text}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-                </div>
-                </div>
-            `;
-        })
-        document.getElementById("tweets").innerHTML = tweets.join("")
-    }
-
-    fetch("https://s3.amazonaws.com/tweets.mitmproxy.org/tweets.json").then(
-        resp => resp.json().then(
-            tweets => renderTweets(tweets.slice(0, 15))
-        )
-    )
-    // ...as you can tell, displaying tweets properly is very important to us.
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.min.js"
         integrity="sha384-5KRXjapPFnFbzANU3URulNFaWeQPBUI40tNv/ikWGPHsgek9VcNPrcGPugJ8oFOL"
         crossorigin="anonymous"></script>
@@ -435,3 +333,4 @@ title: "mitmproxy - an interactive HTTPS proxy"
     // Smooth scroll. Probably overkill.
     let scroll = new SmoothScroll('a[href*="#"]');
 </script>
+
