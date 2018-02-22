@@ -11,7 +11,7 @@
 							{{ range .Pages }}
 							<li>
 								<time>{{.Date.Format "02 Jan 2006" }}</time> -
-								<a href="{{ .Permalink }}">{{ .Title }}</a>
+								<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 							</li>
 							{{ end }}
 							</ul>

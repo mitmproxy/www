@@ -1,6 +1,6 @@
 ---
-title: "Mitmproxy v3.0"
-date: 2017-12-06T21:06:55+13:00
+title: "Mitmproxy 3"
+date: 2018-02-22
 weight: 10
 tags: [
     "releases",
@@ -10,24 +10,22 @@ tags: [
 ]
 ---
 
-# This is a heading
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet eu
-arcu in sollicitudin. Vivamus auctor tristique mollis. Praesent sagittis
-neque pulvinar diam feugiat consequat. Nulla blandit, urna ac ullamcorper
-fermentum, diam nibh semper dui, eu cursus nulla risus nec elit. Curabitur
-tincidunt tempor viverra. Nullam posuere rutrum ligula. Aliquam erat
-volutpat. Aenean suscipit elementum dui et hendrerit. Proin porta faucibus
-imperdiet.
+Since the last release, the project has had 1235 commits by 19 contributors,
+resulting in 287 closed issues and 308 closed PRs, all of this in just over 299
+days.
+
+Testing testing
+
+# Internal changes
 
 
-# Here is another heading
+# Mitmproxy
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet eu
-arcu in sollicitudin. Vivamus auctor tristique mollis. Praesent sagittis
-neque pulvinar diam feugiat consequat. Nulla blandit, urna ac ullamcorper
-fermentum, diam nibh semper dui, eu cursus nulla risus nec elit. Curabitur
-tincidunt tempor viverra. Nullam posuere rutrum ligula. Aliquam erat
-volutpat. Aenean suscipit elementum dui et hendrerit. Proin porta faucibus
-imperdiet.
+
+# Mitmweb
+
+
+# GSOC
+
 
