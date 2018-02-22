@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on mitmproxy.org docs</title>
+    <link>/</link>
+    <description>Recent content in Introduction on mitmproxy.org docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Addons</title>
+      <link>/addons-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/addons-overview/</guid>
+      <description>Addons Mitmproxy&amp;rsquo;s addon mechanism consists of a set of APIs that support components of any complexity. Addons interact with mitmproxy by responding to events, which allow them to hook into and change mitmproxy&amp;rsquo;s behaviour. They are configured through options, which can be set in mitmproxy&amp;rsquo;s config file, changed interactively by users, or passed on the command-line. Finally, they can expose commands, which allows users to invoke their actions either directly or by binding them to keys in the interactive tools.</description>
+    </item>
+    
+    <item>
+      <title>Certificates</title>
+      <link>/concepts-certificates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/concepts-certificates/</guid>
+      <description>About Certificates Mitmproxy can decrypt encrypted traffic on the fly, as long as the client trusts its built-in certificate authority. Usually this means that the mitmproxy CA certificates have to be installed on the client device.
+Quick Setup By far the easiest way to install the mitmproxy certificates is to use the built-in certificate installation app. To do this, just start mitmproxy and configure your target device with the correct proxy settings.</description>
+    </item>
+    
+    <item>
+      <title>Client replay</title>
+      <link>/tute-clientreplay/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tute-clientreplay/</guid>
+      <description>Client playback: a 30 second example My local cafe is serviced by a rickety and unreliable wireless network, generously sponsored with ratepayers&amp;rsquo; money by our city council. After connecting, you are redirected to an SSL-protected page that prompts you for a username and password. Once you&amp;rsquo;ve entered your details, you are free to enjoy the intermittent dropouts, treacle-like speeds and incorrectly configured transparent proxy.
+I tend to automate this kind of thing at the first opportunity, on the theory that time spent now will be more than made up in the long run.</description>
+    </item>
+    
+    <item>
+      <title>Commands</title>
+      <link>/addons-commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/addons-commands/</guid>
+      <description>Commands Commands allow users to actively interact with addons - querying their state, commanding them to perform actions, and having them transform data. Like options, commands are typed, and both invocations and data returned from commands are checked at runtime. Commands are a very powerful construct - for instance, all user interaction in mitmproxy console are built by binding commands to keys.
+Simple example Let&amp;rsquo;s begin with a simple example.</description>
+    </item>
+    
+    <item>
+      <title>Commands</title>
+      <link>/concepts-commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/concepts-commands/</guid>
+      <description>Commands Commands are the mechanism that allows users to actively interact with addons. Perhaps the most prominent example of this is the mitmproxy console user interface - every interaction in this tool consists of commands bound to keys. Commands also form a flexible and very powerful way to interact with mitmproxy from the command prompt. In mitmproxy console you can enter the command prompt with the : key. The prompt has intelligent tab completion for command names and many of the built-in argument types - give it a try.</description>
+    </item>
+    
+    <item>
+      <title>Events</title>
+      <link>/addons-events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/addons-events/</guid>
+      <description>Events Addons hook into mitmproxy&amp;rsquo;s internal mechanisms through events. These are implemented on addons as methods with a set of well-known names. Many events receive Flow objects as arguments - by modifying these objects, addons can change traffic on the fly. For instance, here is an addon that adds a response header with a count of the number of responses seen:
+class AddHeader: def __init__(self): self.num = 0 def response(self, flow): self.</description>
+    </item>
+    
+    <item>
+      <title>Features</title>
+      <link>/overview-features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/overview-features/</guid>
+      <description>Mitmproxy Core Features  Anticache Client-side replay Proxy Authentication Replacements Server-side replay Set Headers Sticky Auth Sticky Cookies Streaming Upstream Certificates  Anticache When the anticache option is set, it removes headers (if-none-match and if-modified-since) that might elicit a 304 not modified response from the server. This is useful when you want to make sure you capture an HTTP exchange in its totality. It&amp;rsquo;s also often used during client-side replay, when you want to make sure the server responds with complete data.</description>
+    </item>
+    
+    <item>
+      <title>Filter expressions</title>
+      <link>/concepts-filters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/concepts-filters/</guid>
+      <description>Filter expressions Many commands in the mitmproxy tool make use of filter expressions. Filter expressions consist of the following operators:
+ ~aMatch asset in response: CSS, Javascript, Flash, images. ~b regexBody ~bq regexRequest body ~bs regexResponse body ~c intHTTP response code ~d regexDomain ~dst regexMatch destination address ~eMatch error ~h regexHeader ~hq regexRequest header ~hs regexResponse header ~httpMatch HTTP flows ~m regexMethod ~markedMatch marked flows ~qMatch request with no response ~sMatch response ~src regexMatch source address ~t regexContent-type header ~tcpMatch TCP flows ~tq regexRequest Content-Type header ~ts regexResponse Content-Type header ~u regexURL ~websocketMatch WebSocket flows !</description>
+    </item>
+    
+    <item>
+      <title>How mitmproxy works</title>
+      <link>/concepts-howmitmproxyworks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/concepts-howmitmproxyworks/</guid>
+      <description>How mitmproxy works Mitmproxy is an enormously flexible tool. Knowing exactly how the proxying process works will help you deploy it creatively, and take into account its fundamental assumptions and how to work around them. This document explains mitmproxy&amp;rsquo;s proxy mechanism in detail, starting with the simplest unencrypted explicit proxying, and working up to the most complicated interaction -transparent proxying of TLS-protected traffic1 in the presence of Server Name Indication.</description>
+    </item>
+    
+    <item>
+      <title>Ignoring Domains</title>
+      <link>/howto-ignoredomains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/howto-ignoredomains/</guid>
+      <description>Ignoring Domains There are two main reasons why you may want to exempt some traffic from mitmproxy&amp;rsquo;s interception mechanism:
+ Certificate pinning: Some traffic is is protected using Certificate Pinning and mitmproxy&amp;rsquo;s interception leads to errors. For example, the Twitter app, Windows Update or the Apple App Store fail to work if mitmproxy is active. Convenience: You really don&amp;rsquo;t care about some parts of the traffic and just want them to go away.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>/overview-installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/overview-installation/</guid>
+      <description>Installation Please follow the steps for your operating system.
+macOS The recommended way to install mitmproxy on macOS is to use Homebrew:
+brew install mitmproxy Alternatively you can download the binary-packages from our releases page.
+Linux The recommended way to install mitmproxy on Linux is to download the binary-packages from our releases page.
+Some Linux distributions provide community-supported mitmproxy packages through their native package repositories (e.g., Arch Linux, Debian, Ubuntu, Kali Linux, OpenSUSE, etc.</description>
+    </item>
+    
+    <item>
+      <title>Modes of operation</title>
+      <link>/concepts-modes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/concepts-modes/</guid>
+      <description>Modes of Operation  Regular (the default) Transparent Reverse Proxy Upstream Proxy SOCKS Proxy  Now, which one should you pick? Use this flow chart:
+ Regular Proxy Mitmproxy&amp;rsquo;s regular mode is the simplest and the easiest to set up.
+ Start mitmproxy. Configure your client to use mitmproxy by explicitly setting an HTTP proxy. Quick Check: You should already be able to visit an unencrypted HTTP site through the proxy.</description>
+    </item>
+    
+    <item>
+      <title>Options</title>
+      <link>/addons-options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/addons-options/</guid>
+      <description>Options At the heart of mitmproxy is a global options store, containing the settings that determine the behaviour of both mitmproxy and its addons. Options can be read from a configuration file, set on the command-line and changed interactively by users on the fly.
+All options are annotated with one of a set of supported types. Mitmproxy knows how to serialise and deserialise these types, and has standard ways of presenting typed values for editing in interactive programs.</description>
+    </item>
+    
+    <item>
+      <title>Options</title>
+      <link>/concepts-options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/concepts-options/</guid>
+      <description>Options The mitmproxy tools share a common YAML configuration file located at ~/.mitmproxy/config.yaml. This file controls options - typed values that determine the behaviour of mitmproxy. The options mechanism is very comprehensive - in fact, options control all of mitmproxy&amp;rsquo;s runtime behaviour. Most command-line flags are simply aliases for underlying options, and interactive settings changes made in mitmproxy and mitmweb just change values in our runtime options store. This means that almost any facet of mitmproxy&amp;rsquo;s behaviour can be controlled through options.</description>
+    </item>
+    
+    <item>
+      <title>Scripting</title>
+      <link>/addons-scripting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/addons-scripting/</guid>
+      <description>Scripting Sometimes, we would like to write a quick script without going through the trouble of creating a class. The addons mechanism has a shorthand that allows a module as a whole to be treated as an addon object. This lets us place event handler functions in the module scope. For instance, here is a complete script that adds a header to every request.
+def request(flow): flow.request.headers[&amp;#34;myheader&amp;#34;] = &amp;#34;value&amp;#34; examples/addons/scripting.</description>
+    </item>
+    
+    <item>
+      <title>Setting highscores on Apple GameCenter</title>
+      <link>/tute-highscores/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tute-highscores/</guid>
+      <description>Setting highscores on Apple&amp;rsquo;s GameCenter The setup In this tutorial, I&amp;rsquo;m going to show you how simple it is to creatively interfere with Apple Game Center traffic using mitmproxy. To set things up, install the mitmproxy root certificate. Then start mitmproxy on your desktop, and configure the iPhone to use it as a proxy.
+Taking a look at the Game Center traffic Lets take a first look at the Game Center traffic.</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>/overview-tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/overview-tools/</guid>
+      <description>Overview You should thin of the mitmproxy project&amp;rsquo;s tools as a set of front-ends that expose the same underlying functionality. We aim to have feature parity across all of our tooling, and all tools share a common configuration mechanism and most command-line options.
+mitmproxy  mitmproxy is a console tool that allows interactive examination and modification of HTTP traffic. It differs from mitmdump in that all flows are kept in memory, which means that it&amp;rsquo;s intended for taking and manipulating small-ish samples.</description>
+    </item>
+    
+    <item>
+      <title>Transparent Proxying</title>
+      <link>/howto-transparent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/howto-transparent/</guid>
+      <description>Transparent Proxying When a transparent proxy is used, traffic is redirected into a proxy at the network layer, without any client configuration being required. This makes transparent proxying ideal for those situations where you can&amp;rsquo;t change client behaviour - proxy-oblivious mobile applications being a common example.
+To set up transparent proxying, we need two new components. The first is a redirection mechanism that transparently reroutes a TCP connection destined for a server on the Internet to a listening proxy server.</description>
+    </item>
+    
+    <item>
+      <title>Transparently Proxying VMs</title>
+      <link>/howto-transparent-vms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/howto-transparent-vms/</guid>
+      <description>Transparently proxify virtual machines This walkthrough illustrates how to set up transparent proxying with mitmproxy. We use VirtualBox VMs with an Ubuntu proxy machine in this example, but the general Internet &amp;lt;&amp;ndash;&amp;gt; Proxy VM &amp;lt;&amp;ndash;&amp;gt; (Virtual) Internal Network setup can be applied to other setups.
+1. Configure Proxy VM On the proxy machine, eth0 is connected to the internet. eth1 is connected to the internal network that will be proxified and configured to use a static ip (192.</description>
+    </item>
+    
+  </channel>
+</rss>

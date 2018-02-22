@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <title>Client replay</title>
+    
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <meta name="generator" content="Hugo 0.36.1" />
+</head>
+<body>
+
+<div class="columns">
+    <div class="column is-one-quarter sidebody">
+        <div class="sidebar">
+    <div class="brand">
+        <img src='../logo-docs.png' alt="mitmproxy docs">
+    </div>
+    <div class="version">
+        <span class="tag is-info is-rounded is-medium">v3.x</span>
+    </div>
+    <aside class="menu">
+        <p class="menu-label"> Overview </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../">Introduction</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-installation/">Installation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-tools/">Tools</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-features/">Features</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label">Core concepts</p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../concepts-howmitmproxyworks/">How mitmproxy works</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-modes/">Modes of operation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-certificates/">Certificates</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-filters/">Filter expressions</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-commands/">Commands</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Addon Development </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../addons-overview/">Addons</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-events/">Events</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-commands/">Commands</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-scripting/">Scripting</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> HOWTOs </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../howto-transparent/">Transparent Proxying</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-ignoredomains/">Ignoring Domains</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-transparent-vms/">Transparently Proxying VMs</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Tutorials </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class="is-active"
+                href="../tute-clientreplay/">Client replay</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../tute-highscores/">Setting highscores on Apple GameCenter</a>
+        </li>
+    
+</ul>
+    </aside>
+</div>
+    </div>
+    <div class="column content mainbody">
+        
+
+<h1 id="client-playback-a-30-second-example">Client playback: a 30 second example</h1>
+
+<p>My local cafe is serviced by a rickety and unreliable wireless network,
+generously sponsored with ratepayers&rsquo; money by our city council. After
+connecting, you are redirected to an SSL-protected page that prompts you for a
+username and password. Once you&rsquo;ve entered your details, you are free to enjoy
+the intermittent dropouts, treacle-like speeds and incorrectly configured
+transparent proxy.</p>
+
+<p>I tend to automate this kind of thing at the first opportunity, on the theory
+that time spent now will be more than made up in the long run. In this case, I
+might use <a href="https://getfirebug.com/">Firebug</a> to ferret out the form post
+parameters and target URL, then fire up an editor to write a little script using
+Python&rsquo;s <a href="https://docs.python.org/library/urllib.html">urllib</a> to simulate a
+submission. That&rsquo;s a lot of futzing about. With mitmproxy we can do the job in
+literally 30 seconds, without having to worry about any of the details. Here&rsquo;s
+how.</p>
+
+<h2 id="1-run-mitmdump-to-record-our-http-conversation-to-a-file">1. Run mitmdump to record our HTTP conversation to a file.</h2>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mitmdump -w wireless-login</code></pre></div>
+
+<h2 id="2-point-your-browser-at-the-mitmdump-instance">2. Point your browser at the mitmdump instance.</h2>
+
+<p>I use a tiny Firefox addon called <a href="https://addons.mozilla.org/en-us/firefox/addon/toggle-proxy-51740/">Toggle
+Proxy</a> to
+switch quickly to and from mitmproxy. I&rsquo;m assuming you&rsquo;ve already <a href="../concepts-certificates/">configured
+your browser with mitmproxy&rsquo;s SSL certificate authority</a>.</p>
+
+<h2 id="3-log-in-as-usual">3. Log in as usual</h2>
+
+<p>And that&rsquo;s it! You now have a serialised version of the login process
+in the file wireless-login, and you can replay it at any time like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mitmdump -c wireless-login</code></pre></div>
+
+<h2 id="embellishments">Embellishments</h2>
+
+<p>We&rsquo;re really done at this point, but there are a couple of embellishments we
+could make if we wanted. I use <a href="https://launchpad.net/wicd">wicd</a> to
+automatically join wireless networks I frequent, and it lets me specify a
+command to run after connecting. I used the client replay command above and
+voila! - totally hands-free wireless network startup.</p>
+
+<p>We might also want to prune requests that download CSS, JS, images and so forth.
+These add only a few moments to the time it takes to replay, but they&rsquo;re not
+really needed and I somehow feel compelled to trim them anyway. So, we fire up
+the mitmproxy console tool on our serialised conversation, like so:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mitmproxy -r wireless-login</code></pre></div>
+
+<p>We can now go through and manually delete (using the <span
+data-role="kbd">d</span> keyboard shortcut) everything we want to trim. When
+we&rsquo;re done, we use <span data-role="kbd">w</span> to save the conversation back
+to the file.</p>
+
+    </div>
+</div>
+</body>
+</html>
+

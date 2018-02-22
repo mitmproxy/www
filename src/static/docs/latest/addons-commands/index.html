@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <title>Commands</title>
+    
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <meta name="generator" content="Hugo 0.36.1" />
+</head>
+<body>
+
+<div class="columns">
+    <div class="column is-one-quarter sidebody">
+        <div class="sidebar">
+    <div class="brand">
+        <img src='../logo-docs.png' alt="mitmproxy docs">
+    </div>
+    <div class="version">
+        <span class="tag is-info is-rounded is-medium">v3.x</span>
+    </div>
+    <aside class="menu">
+        <p class="menu-label"> Overview </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../">Introduction</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-installation/">Installation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-tools/">Tools</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-features/">Features</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label">Core concepts</p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../concepts-howmitmproxyworks/">How mitmproxy works</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-modes/">Modes of operation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-certificates/">Certificates</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-filters/">Filter expressions</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-commands/">Commands</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Addon Development </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../addons-overview/">Addons</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-events/">Events</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class="is-active"
+                href="../addons-commands/">Commands</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-scripting/">Scripting</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> HOWTOs </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../howto-transparent/">Transparent Proxying</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-ignoredomains/">Ignoring Domains</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-transparent-vms/">Transparently Proxying VMs</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Tutorials </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../tute-clientreplay/">Client replay</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../tute-highscores/">Setting highscores on Apple GameCenter</a>
+        </li>
+    
+</ul>
+    </aside>
+</div>
+    </div>
+    <div class="column content mainbody">
+        
+
+<h1 id="commands">Commands</h1>
+
+<p>Commands allow users to actively interact with addons - querying their state,
+commanding them to perform actions, and having them transform data. Like
+<a href="../addons-options/">options</a>, commands are typed, and both
+invocations and data returned from commands are checked at runtime. Commands are
+a very powerful construct - for instance, all user interaction in mitmproxy
+console are built by binding commands to keys.</p>
+
+<h2 id="simple-example">Simple example</h2>
+
+<p>Let&rsquo;s begin with a simple example.</p>
+
+
+<div class="example">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> command
+<span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> ctx
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyAddon</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#a6e22e">@command.command</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;myaddon.inc&#34;</span>)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inc</span>(self) <span style="color:#f92672">-&gt;</span> None:
+        self<span style="color:#f92672">.</span>num <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        ctx<span style="color:#f92672">.</span>log<span style="color:#f92672">.</span>info(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;num = </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>num)
+
+
+addons <span style="color:#f92672">=</span> [
+    MyAddon()
+]</code></pre></div>
+<div class="path">examples/addons/commands-simple.py</div>
+</div>
+
+<p>To see this example in action, start mitmproxy console with the addon loaded:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; mitmproxy -s ./examples/addons/commands-simple.py</code></pre></div>
+
+<p>Now, make sure the event log is showing, and then execute the command at the
+prompt (started by typing &ldquo;:&ldquo;):</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">:myaddon.inc</code></pre></div>
+
+<p>Notice that tab completion works - our addon command has complete parity with
+builtin commands. There are a few things to note about this example:</p>
+
+<ul>
+<li>Commands are declared through the <code>command.command</code> decorator. Each command
+has a unique name - by convention, we use period-separated names, with the
+name of the addon as a prefix.</li>
+<li>Annotating commands with types is mandatory, including the return type (in
+this case <code>None</code>). This allows mitmproxy to support addon commands throughout
+its toolset - runtime invocations are type checked, addon commands are
+included in the built-in help, the command editor in mitmproxy console can
+perform sophisticated completion and error checking, and so forth.</li>
+</ul>
+
+<h2 id="working-with-flows">Working with flows</h2>
+
+<p>Since command arguments are typed, we can provide special conveniences for
+working with certain important data types. The most useful of these are the
+<code>Flows</code> classes that represent mitmproxy traffic.</p>
+
+<p>Consider the following addon:</p>
+
+
+<div class="example">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> typing
+
+<span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> command
+<span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> ctx
+<span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> flow
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyAddon</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#a6e22e">@command.command</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;myaddon.addheader&#34;</span>)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">addheader</span>(self, flows: typing<span style="color:#f92672">.</span>Sequence[flow<span style="color:#f92672">.</span>Flow]) <span style="color:#f92672">-&gt;</span> None:
+        <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> flows:
+            f<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>headers[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;myheader&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;value&#34;</span>
+        ctx<span style="color:#f92672">.</span>log<span style="color:#f92672">.</span>alert(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;done&#34;</span>)
+
+
+addons <span style="color:#f92672">=</span> [
+    MyAddon()
+]</code></pre></div>
+<div class="path">examples/addons/commands-flows.py</div>
+</div>
+
+<p>The <code>myaddon.addheader</code> command is quite simple: it takes a sequence of flows,
+and adds a header to every request. The really interesting aspect of this
+example is how users specify flows. Because mitmproxy can inspect the type
+signature, it can expand a text flow selector into a sequence of flows for us
+transparently. This means that the user has the full flexibility of <a href="../addons-options/">flow
+filters</a> available. Let&rsquo;s try it out.</p>
+
+<p>Start by loading the addon into mitmproxy and sending some traffic through so we
+have flows to work with:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; mitmproxy -s ./examples/addons/commands-flows.py</code></pre></div>
+
+<p>We can now invoke our toy command in various ways. Let&rsquo;s begin by running it
+just on the currently focused flow:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">:myaddon.addheader @focus</code></pre></div>
+
+<p>We can also invoke it on all flows:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">:myaddon.addheader @all</code></pre></div>
+
+<p>Or only flows from <strong>google.com</strong>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">:myaddon.addheader ~d google.com</code></pre></div>
+
+<p>What&rsquo;s more, we can trivially bind these commands to keyboard shortcuts within
+mitmproxy if we plan to use them frequently. Flow selectors combined with
+commands are amazingly powerful, and lets us build and expose re-usable functions
+for operating on flows.</p>
+
+<h2 id="paths">Paths</h2>
+
+<p>Commands can take an arbitrary number of arguments. Let&rsquo;s build on the previous
+example to illustrate this, and also demonstrate another special type: paths.</p>
+
+
+<div class="example">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> typing
+
+<span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> command
+<span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> ctx
+<span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> flow
+<span style="color:#f92672">from</span> mitmproxy <span style="color:#f92672">import</span> types
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyAddon</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#a6e22e">@command.command</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;myaddon.histogram&#34;</span>)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">histogram</span>(
+        self,
+        flows: typing<span style="color:#f92672">.</span>Sequence[flow<span style="color:#f92672">.</span>Flow],
+        path: types<span style="color:#f92672">.</span>Path,
+    ) <span style="color:#f92672">-&gt;</span> None:
+        totals <span style="color:#f92672">=</span> {}
+        <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> flows:
+            totals[f<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>host] <span style="color:#f92672">=</span> totals<span style="color:#f92672">.</span>setdefault(f<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>host, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+        fp <span style="color:#f92672">=</span> open(path, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;w+&#34;</span>)
+        <span style="color:#66d9ef">for</span> cnt, dom <span style="color:#f92672">in</span> sorted([(v, k) <span style="color:#66d9ef">for</span> (k, v) <span style="color:#f92672">in</span> totals<span style="color:#f92672">.</span>items()]):
+            fp<span style="color:#f92672">.</span>write(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">: </span><span style="color:#e6db74">%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (cnt, dom))
+
+        ctx<span style="color:#f92672">.</span>log<span style="color:#f92672">.</span>alert(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;done&#34;</span>)
+
+
+addons <span style="color:#f92672">=</span> [
+    MyAddon()
+]</code></pre></div>
+<div class="path">examples/addons/commands-paths.py</div>
+</div>
+
+<p>Our command calculates a histogram of the domains in the specified set of flows,
+and writes it to a path which is specified as the second argument to the
+command. Try invoking it like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">:myaddon.histogram @all /tmp/xxx</code></pre></div>
+
+<p>Notice that mitmproxy provides tab completion both for the flow specification
+and the path.</p>
+
+<h2 id="supported-types">Supported Types</h2>
+
+<p>The following types are supported for options. If you need to use a type not
+listed here, please send us a pull request.</p>
+
+<ul>
+<li>Primitive types: <code>str</code>, <code>int</code>, <code>bool</code></li>
+<li>Sequences: <code>typing.Sequence[str]</code></li>
+<li>Flows and flow sequences: <code>flow.Flow</code> and <code>typing.Sequence[flow.Flow]</code></li>
+<li>Multiple choice strings: <code>types.Choice</code></li>
+<li>Meta-types: <code>types.Command</code> and <code>types.Arg</code>. These are for constructing
+commands that invoke other commands. This is most commonly useful in
+keybinding - see the built-in mitmproxy console keybindings for a rich suite
+of examples.</li>
+<li>Data types: <code>types.CutSpec</code> and <code>types.Data</code>. The cuts mechanism is in alpha
+at the moment, and provides a convenient way to snip up flow data.</li>
+<li>Path: <code>types.Path</code></li>
+</ul>
+
+    </div>
+</div>
+</body>
+</html>
+

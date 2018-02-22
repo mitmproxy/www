@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <title>Filter expressions</title>
+    
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <meta name="generator" content="Hugo 0.36.1" />
+</head>
+<body>
+
+<div class="columns">
+    <div class="column is-one-quarter sidebody">
+        <div class="sidebar">
+    <div class="brand">
+        <img src='../logo-docs.png' alt="mitmproxy docs">
+    </div>
+    <div class="version">
+        <span class="tag is-info is-rounded is-medium">v3.x</span>
+    </div>
+    <aside class="menu">
+        <p class="menu-label"> Overview </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../">Introduction</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-installation/">Installation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-tools/">Tools</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-features/">Features</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label">Core concepts</p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../concepts-howmitmproxyworks/">How mitmproxy works</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-modes/">Modes of operation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-certificates/">Certificates</a>
+        </li>
+    
+        <li >
+            <a class="is-active"
+                href="../concepts-filters/">Filter expressions</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-commands/">Commands</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Addon Development </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../addons-overview/">Addons</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-events/">Events</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-commands/">Commands</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-scripting/">Scripting</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> HOWTOs </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../howto-transparent/">Transparent Proxying</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-ignoredomains/">Ignoring Domains</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-transparent-vms/">Transparently Proxying VMs</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Tutorials </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../tute-clientreplay/">Client replay</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../tute-highscores/">Setting highscores on Apple GameCenter</a>
+        </li>
+    
+</ul>
+    </aside>
+</div>
+    </div>
+    <div class="column content mainbody">
+        
+
+<h1 id="filter-expressions">Filter expressions</h1>
+
+<p>Many commands in the mitmproxy tool make use of filter expressions. Filter
+expressions consist of the following operators:</p>
+
+<table class="table filtertable"><tbody>
+<tr><th>~a</th><td>Match asset in response: CSS, Javascript, Flash, images.</td></tr>
+<tr><th>~b regex</th><td>Body</td></tr>
+<tr><th>~bq regex</th><td>Request body</td></tr>
+<tr><th>~bs regex</th><td>Response body</td></tr>
+<tr><th>~c int</th><td>HTTP response code</td></tr>
+<tr><th>~d regex</th><td>Domain</td></tr>
+<tr><th>~dst regex</th><td>Match destination address</td></tr>
+<tr><th>~e</th><td>Match error</td></tr>
+<tr><th>~h regex</th><td>Header</td></tr>
+<tr><th>~hq regex</th><td>Request header</td></tr>
+<tr><th>~hs regex</th><td>Response header</td></tr>
+<tr><th>~http</th><td>Match HTTP flows</td></tr>
+<tr><th>~m regex</th><td>Method</td></tr>
+<tr><th>~marked</th><td>Match marked flows</td></tr>
+<tr><th>~q</th><td>Match request with no response</td></tr>
+<tr><th>~s</th><td>Match response</td></tr>
+<tr><th>~src regex</th><td>Match source address</td></tr>
+<tr><th>~t regex</th><td>Content-type header</td></tr>
+<tr><th>~tcp</th><td>Match TCP flows</td></tr>
+<tr><th>~tq regex</th><td>Request Content-Type header</td></tr>
+<tr><th>~ts regex</th><td>Response Content-Type header</td></tr>
+<tr><th>~u regex</th><td>URL</td></tr>
+<tr><th>~websocket</th><td>Match WebSocket flows</td></tr>
+<tr><th>!</th><td>unary not</td></tr>
+<tr><th>&</th><td>and</td></tr>
+<tr><th>|</th><td>or</td></tr>
+<tr><th>(...)</th><td>grouping</td></tr>
+</tbody></table>
+
+<ul>
+<li>Regexes are Python-style</li>
+<li>Regexes can be specified as quoted strings</li>
+<li>Header matching (~h, ~hq, ~hs) is against a string of the form &ldquo;name: value&rdquo;.</li>
+<li>Strings with no operators are matched against the request URL.</li>
+<li>The default binary operator is &amp;.</li>
+</ul>
+
+<h2 id="view-flow-selectors">View flow selectors</h2>
+
+<p>In interactive contexts, mitmproxy has a set of convenient flow selectors that
+operate on the current view:</p>
+
+<table class="table filtertable"><tbody>
+<tr><th>@all</th><td>All flows</td></tr>
+<tr><th>@focus</th><td>The currently focused flow</td></tr>
+<tr><th>@shown</th><td>All flows currently shown</td></tr>
+<tr><th>@hidden</th><td>All flows currently hidden</td></tr>
+<tr><th>@marked</th><td>All marked flows</td></tr>
+<tr><th>@unmarked</th><td>All unmarked flows</td></tr>
+</tbody></table>
+
+<p>These are frequently used in commands and key bindings.</p>
+
+<h2 id="examples">Examples</h2>
+
+<p>URL containing &ldquo;google.com&rdquo;:</p>
+
+<pre><code>google\.com
+</code></pre>
+
+<p>Requests whose body contains the string &ldquo;test&rdquo;:</p>
+
+<pre><code>~q ~b test
+</code></pre>
+
+<p>Anything but requests with a text/html content type:</p>
+
+<pre><code>!(~q &amp; ~t &quot;text/html&quot;)
+</code></pre>
+
+    </div>
+</div>
+</body>
+</html>
+

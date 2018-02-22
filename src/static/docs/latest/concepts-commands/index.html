@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <title>Commands</title>
+    
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <meta name="generator" content="Hugo 0.36.1" />
+</head>
+<body>
+
+<div class="columns">
+    <div class="column is-one-quarter sidebody">
+        <div class="sidebar">
+    <div class="brand">
+        <img src='../logo-docs.png' alt="mitmproxy docs">
+    </div>
+    <div class="version">
+        <span class="tag is-info is-rounded is-medium">v3.x</span>
+    </div>
+    <aside class="menu">
+        <p class="menu-label"> Overview </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../">Introduction</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-installation/">Installation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-tools/">Tools</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-features/">Features</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label">Core concepts</p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../concepts-howmitmproxyworks/">How mitmproxy works</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-modes/">Modes of operation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-certificates/">Certificates</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-filters/">Filter expressions</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class="is-active"
+                href="../concepts-commands/">Commands</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Addon Development </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../addons-overview/">Addons</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-events/">Events</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-commands/">Commands</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-scripting/">Scripting</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> HOWTOs </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../howto-transparent/">Transparent Proxying</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-ignoredomains/">Ignoring Domains</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-transparent-vms/">Transparently Proxying VMs</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Tutorials </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../tute-clientreplay/">Client replay</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../tute-highscores/">Setting highscores on Apple GameCenter</a>
+        </li>
+    
+</ul>
+    </aside>
+</div>
+    </div>
+    <div class="column content mainbody">
+        
+
+<h1 id="commands">Commands</h1>
+
+<p>Commands are the mechanism that allows users to actively interact with addons.
+Perhaps the most prominent example of this is the mitmproxy console user
+interface - every interaction in this tool consists of commands bound to keys.
+Commands also form a flexible and very powerful way to interact with mitmproxy
+from the command prompt. In mitmproxy console you can enter the command prompt
+with the <code>:</code> key. The prompt has intelligent tab completion for command names
+and many of the built-in argument types - give it a try.</p>
+
+<p>The canonical reference for commands is the <code>--commands</code> flag, which is exposed
+by each of the mitmproxy tools. Passing this flag will dump an annotated list of
+all registered commands, their arguments and their return values to screen. In
+mimtproxy console you can also view a palette of all commands in the command
+browser (by default accessible with the <code>C</code> key binding).</p>
+
+<h1 id="working-with-flows">Working with flows</h1>
+
+<p>Many of mitmproxy&rsquo;s commands take flows as arguments. For instance, the
+signature for the client replay commands looks like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">replay.client [flow]</code></pre></div>
+
+<p>That means that it expects a sequence of one or more flows. This is where <a href="../concepts-filters/">flow
+specifications</a> come in - mitmproxy will
+intelligently expand a flexible flow selection language to a list of flows when
+invoking commands.</p>
+
+<p>Fire up mitmproxy console, and intercept some traffic so we have flows to work
+with. Now type the following command:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">:replay.client @focus</code></pre></div>
+
+<p>Make sure you try using tab completion for the command name and the flow
+specification. The <code>@focus</code> specifiers expands to the currently focused flow, so
+you should see this flow replay. However, replay can take any number of flows.
+Try the following command:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">:replay.client @all</code></pre></div>
+
+<p>Now you should see all flows replay one by one. We have the full power of the
+mitmproxy filter language at our disposal here, so we could also, for example,
+just replay flows for a specific domain:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">:replay.client &#34;~d google.com&#34;</code></pre></div>
+
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <title>Ignoring Domains</title>
+    
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <meta name="generator" content="Hugo 0.36.1" />
+</head>
+<body>
+
+<div class="columns">
+    <div class="column is-one-quarter sidebody">
+        <div class="sidebar">
+    <div class="brand">
+        <img src='../logo-docs.png' alt="mitmproxy docs">
+    </div>
+    <div class="version">
+        <span class="tag is-info is-rounded is-medium">v3.x</span>
+    </div>
+    <aside class="menu">
+        <p class="menu-label"> Overview </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../">Introduction</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-installation/">Installation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-tools/">Tools</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-features/">Features</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label">Core concepts</p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../concepts-howmitmproxyworks/">How mitmproxy works</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-modes/">Modes of operation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-certificates/">Certificates</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-filters/">Filter expressions</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-commands/">Commands</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Addon Development </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../addons-overview/">Addons</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-events/">Events</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-commands/">Commands</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-scripting/">Scripting</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> HOWTOs </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../howto-transparent/">Transparent Proxying</a>
+        </li>
+    
+        <li >
+            <a class="is-active"
+                href="../howto-ignoredomains/">Ignoring Domains</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-transparent-vms/">Transparently Proxying VMs</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Tutorials </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../tute-clientreplay/">Client replay</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../tute-highscores/">Setting highscores on Apple GameCenter</a>
+        </li>
+    
+</ul>
+    </aside>
+</div>
+    </div>
+    <div class="column content mainbody">
+        
+
+<h1 id="ignoring-domains">Ignoring Domains</h1>
+
+<p>There are two main reasons why you may want to exempt some traffic from
+mitmproxy&rsquo;s interception mechanism:</p>
+
+<ul>
+<li><strong>Certificate pinning:</strong> Some traffic is is protected using <a href="https://security.stackexchange.com/questions/29988/what-is-certificate-pinning">Certificate
+Pinning</a>
+and mitmproxy&rsquo;s interception leads to errors. For example, the Twitter app,
+Windows Update or the Apple App Store fail to work if mitmproxy is active.</li>
+<li><strong>Convenience:</strong> You really don&rsquo;t care about some parts of the traffic and
+just want them to go away. Note that mitmproxy&rsquo;s &ldquo;Limit&rdquo; option is often the
+better alternative here, as it is not affected by the limitations listed
+below.</li>
+</ul>
+
+<p>If you want to peek into (SSL-protected) non-HTTP connections, check out the
+<strong>tcp_proxy</strong> feature. If you want to ignore traffic from mitmproxy&rsquo;s processing
+because of large response bodies, take a look at the <a href="../overview-features/#streaming">streaming</a> feature.</p>
+
+<h2 id="ignore-hosts">ignore_hosts</h2>
+
+<p>The <code>ignore_hosts</code> option allows you to specify a regex which is matched against
+a <code>host:port</code> string (e.g. &ldquo;example.com:443&rdquo;) of a connection. Matching hosts
+are excluded from interception, and passed on unmodified.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>command-line alias</td>
+<td><code>--ignore-hosts regex</code></td>
+</tr>
+
+<tr>
+<td>mitmproxy option</td>
+<td><code>ignore_hosts</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>There are two important quirks to consider:</p>
+
+<ul>
+<li><strong>In transparent mode, the ignore pattern is matched against the IP and
+ClientHello SNI host.</strong> While we usually infer the hostname from the Host
+header if the <code>ignore_hosts</code> option is set, we do not have access to this
+information before the SSL handshake. If the client uses SNI however, then we
+treat the SNI host as an ignore target.</li>
+<li><strong>In regular and upstream proxy mode, explicit HTTP requests are never
+ignored.</strong>[1] The ignore pattern is applied on CONNECT requests, which
+initiate HTTPS or clear-text WebSocket connections.</li>
+</ul>
+
+<h2 id="tutorial">Tutorial</h2>
+
+<p>If you just want to ignore one specific domain, there&rsquo;s usually a bulletproof
+method to do so:</p>
+
+<ol>
+<li>Run mitmproxy or mitmdump in verbose mode (<code>-v</code>) and observe the <code>host:port</code>
+information in the serverconnect messages. mitmproxy will filter on these.</li>
+<li>Take the <code>host:port</code> string, surround it with ^ and $, escape all dots (.
+becomes \.) and use this as your ignore pattern:</li>
+</ol>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none">&gt;&gt;&gt; mitmdump -v
+127.0.0.1:50588: clientconnect
+127.0.0.1:50588: request
+  -&gt; CONNECT example.com:443 HTTP/1.1
+127.0.0.1:50588: Set new server address: example.com:443
+127.0.0.1:50588: serverconnect
+  -&gt; example.com:443
+^C
+&gt;&gt;&gt; mitmproxy --ignore-hosts ^example\.com:443$</code></pre></div>
+
+<p>Here are some other examples for ignore
+patterns:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-none" data-lang="none"># Exempt traffic from the iOS App Store (the regex is lax, but usually just works):
+--ignore-hosts apple.com:443
+# &#34;Correct&#34; version without false-positives:
+--ignore-hosts &#39;^(.+\.)?apple\.com:443$&#39;
+
+# Ignore example.com, but not its subdomains:
+--ignore-hosts &#39;^example.com:&#39;
+
+# Ignore everything but example.com and mitmproxy.org:
+--ignore-hosts &#39;^(?!example\.com)(?!mitmproxy\.org)&#39;
+
+# Transparent mode:
+--ignore-hosts 17\.178\.96\.59:443
+# IP address range:
+--ignore-hosts 17\.178\.\d+\.\d+:443</code></pre></div>
+
+<p><strong>Footnotes</strong></p>
+
+<ol>
+<li>This stems from an limitation of explicit HTTP proxying: A single connection
+can be re-used for multiple target domains - a <code>GET http://example.com/</code>
+request may be followed by a <code>GET http://evil.com/</code> request on the same
+connection. If we start to ignore the connection after the first request, we
+would miss the relevant second one.</li>
+</ol>
+
+    </div>
+</div>
+</body>
+</html>
+

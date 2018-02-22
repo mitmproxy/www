@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <title>Events</title>
+    
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <meta name="generator" content="Hugo 0.36.1" />
+</head>
+<body>
+
+<div class="columns">
+    <div class="column is-one-quarter sidebody">
+        <div class="sidebar">
+    <div class="brand">
+        <img src='../logo-docs.png' alt="mitmproxy docs">
+    </div>
+    <div class="version">
+        <span class="tag is-info is-rounded is-medium">v3.x</span>
+    </div>
+    <aside class="menu">
+        <p class="menu-label"> Overview </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../">Introduction</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-installation/">Installation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-tools/">Tools</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../overview-features/">Features</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label">Core concepts</p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../concepts-howmitmproxyworks/">How mitmproxy works</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-modes/">Modes of operation</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-certificates/">Certificates</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-filters/">Filter expressions</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../concepts-commands/">Commands</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Addon Development </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../addons-overview/">Addons</a>
+        </li>
+    
+        <li >
+            <a class="is-active"
+                href="../addons-events/">Events</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-options/">Options</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-commands/">Commands</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../addons-scripting/">Scripting</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> HOWTOs </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../howto-transparent/">Transparent Proxying</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-ignoredomains/">Ignoring Domains</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../howto-transparent-vms/">Transparently Proxying VMs</a>
+        </li>
+    
+</ul>
+
+        <p class="menu-label"> Tutorials </p>
+        <ul class="menu-list">
+    
+    
+    
+    
+        <li >
+            <a class=""
+                href="../tute-clientreplay/">Client replay</a>
+        </li>
+    
+        <li >
+            <a class=""
+                href="../tute-highscores/">Setting highscores on Apple GameCenter</a>
+        </li>
+    
+</ul>
+    </aside>
+</div>
+    </div>
+    <div class="column content mainbody">
+        
+
+<h1 id="events">Events</h1>
+
+<p>Addons hook into mitmproxy&rsquo;s internal mechanisms through events. These are
+implemented on addons as methods with a set of well-known names. Many events
+receive <code>Flow</code> objects as arguments - by modifying these objects, addons can
+change traffic on the fly. For instance, here is an addon that adds a response
+header with a count of the number of responses seen:</p>
+
+
+<div class="example">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddHeader</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">response</span>(self, flow):
+        self<span style="color:#f92672">.</span>num <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>num <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+        flow<span style="color:#f92672">.</span>response<span style="color:#f92672">.</span>headers[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;count&#34;</span>] <span style="color:#f92672">=</span> str(self<span style="color:#f92672">.</span>num)
+
+
+addons <span style="color:#f92672">=</span> [
+    AddHeader()
+]</code></pre></div>
+<div class="path">examples/addons/addheader.py</div>
+</div>
+
+<h2 id="supported-events">Supported Events</h2>
+
+<p>Below is an addon class that implements stubs for all events. We&rsquo;ve added
+annotations to illustrate the argument types for the various events.</p>
+
+<p>
+<div class="example">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> typing
+
+<span style="color:#f92672">import</span> mitmproxy.addonmanager
+<span style="color:#f92672">import</span> mitmproxy.connections
+<span style="color:#f92672">import</span> mitmproxy.http
+<span style="color:#f92672">import</span> mitmproxy.log
+<span style="color:#f92672">import</span> mitmproxy.tcp
+<span style="color:#f92672">import</span> mitmproxy.websocket
+<span style="color:#f92672">import</span> mitmproxy.proxy.protocol
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Events</span>:
+    <span style="color:#75715e"># HTTP lifecycle</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">http_connect</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>http<span style="color:#f92672">.</span>HTTPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            An HTTP CONNECT request was received. Setting a non 2xx response on
+</span><span style="color:#e6db74">            the flow will return the response to the client abort the
+</span><span style="color:#e6db74">            connection. CONNECT requests and responses do not generate the usual
+</span><span style="color:#e6db74">            HTTP handler events. CONNECT requests are only valid in regular and
+</span><span style="color:#e6db74">            upstream proxy modes.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">requestheaders</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>http<span style="color:#f92672">.</span>HTTPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            HTTP request headers were successfully read. At this point, the body
+</span><span style="color:#e6db74">            is empty.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">request</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>http<span style="color:#f92672">.</span>HTTPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            The full HTTP request has been read.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">responseheaders</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>http<span style="color:#f92672">.</span>HTTPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            HTTP response headers were successfully read. At this point, the body
+</span><span style="color:#e6db74">            is empty.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">response</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>http<span style="color:#f92672">.</span>HTTPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            The full HTTP response has been read.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">error</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>http<span style="color:#f92672">.</span>HTTPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            An HTTP error has occurred, e.g. invalid server responses, or
+</span><span style="color:#e6db74">            interrupted connections. This is distinct from a valid server HTTP
+</span><span style="color:#e6db74">            error response, which is simply a response with an HTTP error code.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#75715e"># TCP lifecycle</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tcp_start</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>tcp<span style="color:#f92672">.</span>TCPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A TCP connection has started.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tcp_message</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>tcp<span style="color:#f92672">.</span>TCPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A TCP connection has received a message. The most recent message
+</span><span style="color:#e6db74">            will be flow.messages[-1]. The message is user-modifiable.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tcp_error</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>tcp<span style="color:#f92672">.</span>TCPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A TCP error has occurred.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tcp_end</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>tcp<span style="color:#f92672">.</span>TCPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A TCP connection has ended.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#75715e"># Websocket lifecycle</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">websocket_handshake</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>http<span style="color:#f92672">.</span>HTTPFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Called when a client wants to establish a WebSocket connection. The
+</span><span style="color:#e6db74">            WebSocket-specific headers can be manipulated to alter the
+</span><span style="color:#e6db74">            handshake. The flow object is guaranteed to have a non-None request
+</span><span style="color:#e6db74">            attribute.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">websocket_start</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>websocket<span style="color:#f92672">.</span>WebsocketFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A websocket connection has commenced.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">websocket_message</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>websocket<span style="color:#f92672">.</span>WebsocketFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Called when a WebSocket message is received from the client or
+</span><span style="color:#e6db74">            server. The most recent message will be flow.messages[-1]. The
+</span><span style="color:#e6db74">            message is user-modifiable. Currently there are two types of
+</span><span style="color:#e6db74">            messages, corresponding to the BINARY and TEXT frame types.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">websocket_error</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>websocket<span style="color:#f92672">.</span>WebsocketFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A websocket connection has had an error.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">websocket_end</span>(self, flow: mitmproxy<span style="color:#f92672">.</span>websocket<span style="color:#f92672">.</span>WebsocketFlow):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A websocket connection has ended.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#75715e"># Network lifecycle</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">clientconnect</span>(self, layer: mitmproxy<span style="color:#f92672">.</span>proxy<span style="color:#f92672">.</span>protocol<span style="color:#f92672">.</span>Layer):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A client has connected to mitmproxy. Note that a connection can
+</span><span style="color:#e6db74">            correspond to multiple HTTP requests.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">clientdisconnect</span>(self, layer: mitmproxy<span style="color:#f92672">.</span>proxy<span style="color:#f92672">.</span>protocol<span style="color:#f92672">.</span>Layer):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A client has disconnected from mitmproxy.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">serverconnect</span>(self, conn: mitmproxy<span style="color:#f92672">.</span>connections<span style="color:#f92672">.</span>ServerConnection):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Mitmproxy has connected to a server. Note that a connection can
+</span><span style="color:#e6db74">            correspond to multiple requests.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">serverdisconnect</span>(self, conn: mitmproxy<span style="color:#f92672">.</span>connections<span style="color:#f92672">.</span>ServerConnection):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Mitmproxy has disconnected from a server.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">next_layer</span>(self, layer: mitmproxy<span style="color:#f92672">.</span>proxy<span style="color:#f92672">.</span>protocol<span style="color:#f92672">.</span>Layer):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Network layers are being switched. You may change which layer will
+</span><span style="color:#e6db74">            be used by returning a new layer object from this event.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#75715e"># General lifecycle</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">configure</span>(self, updated: typing<span style="color:#f92672">.</span>Set[str]):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Called when configuration changes. The updated argument is a
+</span><span style="color:#e6db74">            set-like object containing the keys of all changed options. This
+</span><span style="color:#e6db74">            event is called during startup with all options in the updated set.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">done</span>(self):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Called when the addon shuts down, either by being removed from the
+</span><span style="color:#e6db74">            mitmproxy instance, or when mitmproxy itself shuts down.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load</span>(self, entry: mitmproxy<span style="color:#f92672">.</span>addonmanager<span style="color:#f92672">.</span>Loader):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Called when an addon is first loaded. This event receives a Loader
+</span><span style="color:#e6db74">            object, which contains methods for adding options and commands. This
+</span><span style="color:#e6db74">            method is where the addon configures itself.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log</span>(self, entry: mitmproxy<span style="color:#f92672">.</span>log<span style="color:#f92672">.</span>LogEntry):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Called whenver a new log entry is created through the mitmproxy
+</span><span style="color:#e6db74">            context. Be careful not to log from this event, which will cause an
+</span><span style="color:#e6db74">            infinite loop!
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">running</span>(self):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Called when the proxy is completely up and running. At this point,
+</span><span style="color:#e6db74">            you can expect the proxy to be bound to a port, and all addons to be
+</span><span style="color:#e6db74">            loaded.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tick</span>(self):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            A regular ticker - called approximately once every 100ms.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(self, flows: typing<span style="color:#f92672">.</span>Sequence[mitmproxy<span style="color:#f92672">.</span>flow<span style="color:#f92672">.</span>Flow]):
+        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">            Update is called when one or more flow objects have been modified,
+</span><span style="color:#e6db74">            usually from a different addon.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span></code></pre></div>
+<div class="path">examples/addons/events.py</div>
+</div></p>
+
+    </div>
+</div>
+</body>
+</html>
+
