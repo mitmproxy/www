@@ -1,6 +1,6 @@
 ---
 title: "Mitmproxy 3"
-date: 2018-02-22
+date: 2018-02-23
 weight: 10
 tags: [
     "releases",
@@ -87,13 +87,13 @@ For a complete list of changes, see the
 
 ## GSOC
 
-Of special note during this release cycle is the work of our two brilliant [GSOC
-2017](https://summerofcode.withgoogle.com/) students, who participated in
-mitmproxy's development under the umbrella of the [HoneyNet
+Of special note during this release cycle is the work of our two brilliant
+[Google Summer of Code 2017](https://summerofcode.withgoogle.com/) students, who
+participated in mitmproxy's development under the umbrella of the [HoneyNet
 Project](https://www.honeynet.org/). [Matthew
 Shao](https://github.com/matthewshao) made major improvements to the mitmproxy
 web interface, including adding a new options editor, vastly improving our
-testing and working on a static web viewer for mitmproxy dumps. Matthew wrote a
+testing, and working on a static web viewer for mitmproxy dumps. Matthew wrote a
 detailed blog about his work on the [HoneyNet
 blog](http://honeynet.org/node/1359). [Ujjwal
 Verma](https://github.com/ujjwal96) pushed our content views and protocol layers
