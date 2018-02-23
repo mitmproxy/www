@@ -14,7 +14,7 @@ structure and serious improvements in all tools across the board. Everyone shoul
 update!
 
 The project's momentum remains fearsome: this release features 1235 commits by
-19 contributors, resulting in 287 closed issues and 308 merged PRs. With this
+56 contributors, resulting in 287 closed issues and 308 merged PRs. With this
 release, we're also launching a new website (you're looking at it), a new
 project blog (you're reading this release notice on it), and [cleaner
 docs](/docs/latest).
@@ -85,11 +85,11 @@ For a complete list of changes, see the
 
 
 
-## GSOC
+## GSoC
 
 Of special note during this release cycle is the work of our two brilliant
 [Google Summer of Code 2017](https://summerofcode.withgoogle.com/) students, who
-participated in mitmproxy's development under the umbrella of the [HoneyNet
+participated in mitmproxy's development under the umbrella of the [Honeynet
 Project](https://www.honeynet.org/). [Matthew
 Shao](https://github.com/matthewshao) made major improvements to the mitmproxy
 web interface, including adding a new options editor, vastly improving our
@@ -103,6 +103,8 @@ migrated our websockets implementation to
 [wsproto](https://github.com/python-hyper/wsproto), and added request streaming
 to HTTP1 and HTTP2. We look forward to working with both Matthew and Ujjwal in
 the years to come.
+
+Are you a student and interested in working on mitmproxy? Take a look at our [GSoC 2018 page](https://honeynet.org/gsoc2018/ideas)!
 
 
 
