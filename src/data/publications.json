@@ -1,4 +1,11 @@
 [
+    {
+    "url": "https://github.com/plasma-umass/BLeak/blob/master/paper.pdf",
+    "title": "BLeak: Automatically Debugging Memory Leaks in Web Applications",
+    "author": "John Vilk and Emery Berger, University of Massachusetts Amherst. To appear, PLDI 2018",
+    "date" : "Jun 2018",
+    "type" : "research"
+  },
   {
     "url": "http://www.ingentaconnect.com/contentone/ist/ei/2017/00002017/00000006/art00010?crawler=true&mimetype=application/pdf",
     "title": "Investigation of security relevant aspects of Android eHealthApps: permissions, storage properties and data transmission",
