@@ -93,32 +93,11 @@ function createS3QueryUrl(marker) {
     var s3_rest_url = BUCKET_URL;
     s3_rest_url += '?delimiter=/';
 
-    //
-    // Handling paths and prefixes:
-    //
-    // 1. S3BL_IGNORE_PATH = false
-    // Uses the pathname
-    // {bucket}/{path} => prefix = {path}
-    //
-    // 2. S3BL_IGNORE_PATH = true
-    // Uses ?prefix={prefix}
-    //
-    // Why both? Because we want classic directory style listing in normal
-    // buckets but also allow deploying to non-buckets
-    //
-
     var rx = '.*[?&]prefix=' + S3B_ROOT_DIR + '([^&]+)(&.*)?$';
-    var prefix = '';
-    if (S3BL_IGNORE_PATH == false) {
-        var prefix = location.pathname.replace(/^\//, S3B_ROOT_DIR);
-    }
+    var prefix = location.pathname.replace(/^\//, S3B_ROOT_DIR);
     var match = location.search.match(rx);
     if (match) {
         prefix = S3B_ROOT_DIR + match[1];
-    } else {
-        if (S3BL_IGNORE_PATH) {
-            var prefix = S3B_ROOT_DIR;
-        }
     }
     if (prefix) {
         // make sure we end in /
@@ -161,7 +140,6 @@ function getInfoFromS3Data(xml) {
         prefix: $(xml.find('Prefix')[0]).text(),
         nextMarker: encodeURIComponent(nextMarker)
     }
-    // clang-format on
 }
 
 // info is object like:
@@ -188,7 +166,7 @@ function prepareTable(info) {
                     LastModified: '',
                     Size: '',
                     keyText: '../',
-                    href: S3BL_IGNORE_PATH ? '?prefix=' + up : '../'
+                    href: '../'
                 },
             row = renderRow(item, cols);
         content.push(row + '\n');
@@ -198,12 +176,7 @@ function prepareTable(info) {
         // strip off the prefix
         item.keyText = item.Key.substring(prefix.length);
         if (item.Type === 'directory') {
-            if (S3BL_IGNORE_PATH) {
-                item.href = location.protocol + '//' + location.hostname +
-                    location.pathname + '?prefix=' + item.Key;
-            } else {
-                item.href = item.keyText;
-            }
+            item.href = item.keyText;
         } else {
             item.href = WEB_ROOT + '/' + encodeURIComponent(item.Key);
             item.href = item.href.replace(/%2F/g, '/');
