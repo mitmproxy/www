@@ -1,12 +1,12 @@
 
 var WEB_ROOT = "https://snapshots.mitmproxy.org"
-var BUCKET_URL = 'https://s3-us-west-2.amazonaws.com/snapshots.mitmproxy.org';
+var BUCKET_URL = 'https://s3-us-west-2.amazonaws.com/snapshots.mitmproxy.org'
 var EXCLUDE = {
     "index.html": true,
     "error.html": true,
     "list.js": true,
 }
-
+var S3B_SORT = 'DEFAULT'
 
 if (typeof S3B_ROOT_DIR == 'undefined') {
     var S3B_ROOT_DIR = '';

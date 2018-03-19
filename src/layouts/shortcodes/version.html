@@ -1,0 +1,5 @@
+{{- if (eq (.Get 0) "minor")}}
+    {{- replaceRE "\\.\\d+$" "" .Site.Params.version}}
+{{- else}}
+    {{- .Site.Params.version}}
+{{- end -}}

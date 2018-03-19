@@ -6,5 +6,8 @@ publishDir = "../public"
 relativeURLs = true
 googleAnalytics = "UA-4150636"
 
+[params]
+  version = "3.0.3"
+
 [indexes]
   tag = "tags"
