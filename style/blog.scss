@@ -1,0 +1,26 @@
+.blog {
+    // this greatly improves legibility
+    max-width: 700px;
+}
+
+.blog article {
+    margin: 4rem auto 2rem;
+    font-size: 1.1rem;
+
+    h1 > a {
+        color: $content-heading-color;
+    }
+
+    > section {
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        color: gray;
+        margin-top: -1rem !important;
+    }
+
+    figure {
+        margin: 1rem 2rem !important;
+    }
+}

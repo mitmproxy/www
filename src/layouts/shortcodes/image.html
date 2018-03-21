@@ -1,0 +1,10 @@
+{{/*
+A bit WTF, but apparently this is required to display images in both
+single pages (e.g. http://localhost:1313/posts/gsoc18/announcement/)
+and overviews (e.g. http://localhost:1313/posts/).
+The builtin {{% figure %}} shortcode doesn't work, nor does simple ![]() markdown syntax.
+*/}}
+{{ $img := .Page.Resources.GetMatch (.Get "src") }}
+<figure>
+    <img src="{{ $img.RelPermalink }}" alt="{{.Get "alt"}}">
+</figure>
