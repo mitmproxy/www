@@ -1,25 +1,9 @@
 {{ partial "header.html" . }}
-<div class="section">
-	<div class="container">
-		<div class="columns">
-			<div class="column is-8 is-offset-2">
-				<div class="section">
-					<div class="content">
-						{{ range .Data.Pages.GroupByDate "2006" }}
-							<h2>{{ .Key }}</h2>
-							<ul>
-							{{ range .Pages }}
-							<li>
-								<time>{{.Date.Format "02 Jan 2006" }}</time> -
-								<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-							</li>
-							{{ end }}
-							</ul>
-						{{ end }}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container blog content">
+    {{ range (.Paginator 10).Pages }}
+    {{ partial "summary" .}}
+    {{ end }}
+    {{ partial "pagination" .}}
 </div>
+
 {{ partial "footer.html" . }}

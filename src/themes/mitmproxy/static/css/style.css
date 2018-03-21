@@ -9150,3 +9150,19 @@ label.panel-block {
       color: white !important; }
     .shell-command .copy:hover.has-text-success {
       background-color: #23d160; }
+
+.blog {
+  max-width: 700px; }
+
+.blog article {
+  margin: 4rem auto 2rem;
+  font-size: 1.1rem; }
+  .blog article h1 > a {
+    color: #363636; }
+  .blog article > section {
+    margin-bottom: 1rem; }
+  .blog article .subtitle {
+    color: gray;
+    margin-top: -1rem !important; }
+  .blog article figure {
+    margin: 1rem 2rem !important; }

@@ -13,6 +13,8 @@ milestone release, featuring a substantial revamp of mitmproxy's internal
 structure and serious improvements in all tools across the board. Everyone should
 update!
 
+<!--more-->
+
 The project's momentum remains fearsome: this release features 1235 commits by
 56 contributors, resulting in 287 closed issues and 308 merged PRs. With this
 release, we're also launching a new website (you're looking at it), a new

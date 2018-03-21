@@ -7,7 +7,7 @@ tags: [
 ]
 ---
 
-{{< figure src="./gsoc.png" >}}
+{{< image src="gsoc.png" >}}
 
 Mitmproxy has participated in the [Google Summer of
 Code](https://summerofcode.withgoogle.com/) program under the umbrella of the
@@ -18,6 +18,8 @@ students. For the right student, GSOC is a wonderful opportunity to be mentored
 to become a full-fledged mitmproxy dev team member. There's only about one week
 left before our application for slots needs to be submitted, so if you want to
 come along for the adventure, you have to move quickly!
+
+<!--more-->
 
 The first step is to choose a project to work on. We have a huge number of
 interesting areas to explore, and you should feel free to mix projects according
