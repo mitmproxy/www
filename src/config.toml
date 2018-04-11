@@ -4,7 +4,7 @@ title = "mitmproxy.org"
 theme = "mitmproxy"
 publishDir = "../public"
 relativeURLs = true
-googleAnalytics = "UA-4150636"
+googleAnalytics = "UA-4150636-13"
 
 [params]
   version = "3.0.4"
