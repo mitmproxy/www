@@ -5,6 +5,9 @@ weight: 10
 tags: [
     "releases",
 ]
+author:
+  name: Aldo Cortesi
+  twitter: cortesi
 ---
 
 We've just released [mitmproxy

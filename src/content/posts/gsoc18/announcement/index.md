@@ -5,6 +5,9 @@ weight: 10
 tags: [
     "gsoc",
 ]
+author:
+  name: Aldo Cortesi
+  twitter: cortesi
 ---
 
 {{< image src="gsoc.png" >}}
