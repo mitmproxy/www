@@ -1,0 +1,106 @@
+---
+title: Downloads
+---
+<h1 class="title" id="download-breadcrumb">Downloads</h1>
+
+
+<article class="message is-info">
+    <div class="message-body">
+        For details, please read the
+        <a href="https://docs.mitmproxy.org/stable/overview-installation/">installation
+            instructions</a>.
+    </div>
+</article>
+
+<table class="table is-striped is-fullwidth">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th class='has-text-right'>Modified</th>
+        <th class='has-text-right'>Size</th>
+    </tr>
+    </thead>
+    <tbody id="downloads">
+    <tr>
+        <td><i class="fas fa-spinner fa-pulse"></i></td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    if (!window.Promise) {
+        document.write(
+            '\x3Cscript src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js" integrity="sha384-qJAAVv+GMrM6LcwyNkOCaMOmwxyNnl6bgHDjp5bbtw8iJ6TAvIueZFaPaep9A4WN" crossorigin="anonymous">\x3C/script>'
+        )
+    }
+    if (!window.fetch) {
+        document.write(
+            '\x3Cscript src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js" integrity="sha384-hjJDFVtG1y/1g2fSiUAe+ccz4SO/dP/QlEtDDsxqhOIJ7zNBGpnC9V+NGhV7KQKK" crossorigin="anonymous">\x3C/script>'
+        )
+    }
+</script>
+<script src="/snapshots.js"></script>
+<script>
+    function render(data) {
+        let directory   = data.directory,
+            files       = data.files,
+            directories = data.directories;
+
+        let crumbDirs = directory.split("/");
+        crumbDirs.pop()
+        let crumbHtml = "Downloads";
+        if (crumbDirs.length > 0) {
+            crumbHtml = "<a href='#'>Downloads</a>";
+        }
+        let curr = "";
+        crumbDirs.forEach(function (d, i) {
+            curr += d + "/";
+            crumbHtml += " > ";
+            if (i === crumbDirs.length - 1) {
+                crumbHtml += d;
+            } else {
+                crumbHtml += "<a href='#" + curr + "'>" + d + "</a>"
+            }
+        })
+        document.getElementById("download-breadcrumb").innerHTML = crumbHtml;
+
+        let html = "";
+        directories.forEach(function (d) {
+            let name = d.name.substring(0, d.name.length - 1)
+            html += (
+                "<tr>" +
+                "<td><i class='fas fa-fw fa-folder-open'></i><a href='#" + directory + d.name + "'> " + name + "</a></td>" +
+                "<td></td>" +
+                "<td></td>" +
+                "</tr>"
+            )
+        })
+        files.forEach(function (f) {
+            html += (
+                "<tr>" +
+                "<td><i class='fas fa-fw fa-file-archive'></i><a href='" + WEB_ROOT + directory + f.name + "'> " + f.name + "</a></td>" +
+                "<td class='has-text-right'>" + f.time.toLocaleString() + "</td>" +
+                "<td class='has-text-right'>" + bytesToHumanReadable(f.size) + "</td>" +
+                "</tr>"
+            )
+        })
+        document.getElementById("downloads").innerHTML = html;
+    }
+
+    function bytesToHumanReadable(sizeInBytes) {
+        let i = -1;
+        let units = [' kB', ' MB', ' GB'];
+        do {
+            sizeInBytes = sizeInBytes / 1024;
+            i++;
+        } while (sizeInBytes > 1024);
+        return Math.max(sizeInBytes, 0.1).toFixed(1) + units[i];
+    }
+
+    function update() {
+        fetchS3(location.hash.replace("#", "")).then(render);
+    }
+
+    update();
+    window.addEventListener("hashchange", update);
+</script>
