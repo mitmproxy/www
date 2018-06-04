@@ -18,8 +18,13 @@
     }
   }
 
-  #install-button {
-    margin-bottom: 0.5rem;
+  #install {
+    transition: all 250ms ease-in-out;
+    overflow: hidden;
+
+    > * {
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -112,7 +117,7 @@
   background: $dark;
   color: white !important;
   border-width: 0;
-  padding: 0.75rem;
+  padding: 0.25rem 0.75rem;
 
   $pad: 0.3rem;
 

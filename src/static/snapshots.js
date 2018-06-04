@@ -7,19 +7,22 @@ const EXCLUDE = {
 }
 
 function sortByName(a, b) {
-    if (a.name > b.name) return 1;
-    if (a.name < b.name) return -1;
+    // 5.0 > 4.0 > 1.0 > a > b > z
+    let invert = (/^[0-9]/.test(a.name) && /^[0-9]/.test(b.name)) ? -1 : 1;
+    if (a.name > b.name) return invert;
+    if (a.name < b.name) return -invert;
     return 0;
 }
 
+let s3cache = {};
 function fetchS3(directory) {
-    return fetch(BUCKET_URL + "?delimiter=/&prefix=" + directory)
+    let url = BUCKET_URL + "?delimiter=/&prefix=" + directory;
+    s3cache[url] = s3cache[url] || (fetch(url)
         .then(function (response) {
             return response.text()
         })
         .then(function (data) {
             let s3 = (new DOMParser()).parseFromString(data, "text/xml");
-            console.log(s3);
             let files = [];
             s3.querySelectorAll("Contents").forEach(function (item) {
                 if (item.querySelector("Key").textContent in EXCLUDE) {
@@ -40,11 +43,10 @@ function fetchS3(directory) {
                 });
             })
             directories.sort(sortByName);
-            directories.reverse();  // latest version first
-
 
             return { directory: directory, files: files, directories: directories };
-        })
+        }));
+    return s3cache[url];
 }
 
 
