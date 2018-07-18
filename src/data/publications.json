@@ -1,5 +1,12 @@
 [
     {
+    "url": "https://www.cron.dk/grabbing-media-with-mitmproxy",
+    "title": "Grabbing multimedia content with mitmproxy",
+    "author": "Alex Skov Jensen",
+    "date" : "Jul 2018",
+    "type" : "blog post"
+  },
+    {
     "url": "https://dl.acm.org/citation.cfm?id=3192376",
     "title": "BLeak: Automatically Debugging Memory Leaks in Web Applications",
     "author": "John Vilk and Emery Berger, University of Massachusetts Amherst. PLDI 2018",
