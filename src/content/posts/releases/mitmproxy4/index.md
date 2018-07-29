@@ -45,7 +45,7 @@ The key bindings for mitmproxy console can now be configured through the
   key: ctrl a
   cmd: replay.client @marked
 -
-  # Bind key only in the fowlist
+  # Bind key only in the flowlist
   key: "1"
   ctx: ["flowlist"]
   cmd: console.nav.down
