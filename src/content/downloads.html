@@ -37,18 +37,7 @@ title: Downloads
     </tbody>
 </table>
 
-<script>
-    if (!window.Promise) {
-        document.write(
-            '\x3Cscript src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js" integrity="sha384-qJAAVv+GMrM6LcwyNkOCaMOmwxyNnl6bgHDjp5bbtw8iJ6TAvIueZFaPaep9A4WN" crossorigin="anonymous">\x3C/script>'
-        )
-    }
-    if (!window.fetch) {
-        document.write(
-            '\x3Cscript src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js" integrity="sha384-hjJDFVtG1y/1g2fSiUAe+ccz4SO/dP/QlEtDDsxqhOIJ7zNBGpnC9V+NGhV7KQKK" crossorigin="anonymous">\x3C/script>'
-        )
-    }
-</script>
+<script src="/polyfills.js"></script>
 <script src="/snapshots.js"></script>
 <script>
     function render(data) {

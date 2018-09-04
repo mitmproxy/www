@@ -216,7 +216,6 @@ title: "mitmproxy - an interactive HTTPS proxy"
                                     fjs.parentNode.insertBefore(js, fjs);
                                 }
                             }(document, "script", "twitter-wjs");</script>
-                            </iframe>
                         </div>
                     </div>
                     <div class="column">
@@ -308,19 +307,18 @@ title: "mitmproxy - an interactive HTTPS proxy"
         </div>
     </section>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"
-        integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js" integrity="sha384-JbuAF+8+4FF8uR/7D07/5IWwIj2FoNw5jJQGg1s8GtGIfQXFxWPRdMNWYmU35KjP" crossorigin="anonymous"></script>
+<script src="/polyfills.js"></script>
 <script src="/snapshots.js"></script>
 <script>
     document.getElementsByClassName("copy")
     // Copy
-    let clipboard = new Clipboard('.copy');
+    let clipboard = new ClipboardJS('.copy');
     clipboard.on('success', function (e) {
         let node = e.trigger;
         node.classList.add("has-text-success");
         node.textContent = "copied!";
-        window.setTimeout(() => {
+        window.setTimeout(function(){
             node.classList.remove("has-text-success")
             node.textContent = "copy"
         }, 1000)
@@ -366,9 +364,7 @@ title: "mitmproxy - an interactive HTTPS proxy"
     })
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.min.js"
-        integrity="sha384-5KRXjapPFnFbzANU3URulNFaWeQPBUI40tNv/ikWGPHsgek9VcNPrcGPugJ8oFOL"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5/dist/js/smooth-scroll.min.js" integrity="sha384-5KRXjapPFnFbzANU3URulNFaWeQPBUI40tNv/ikWGPHsgek9VcNPrcGPugJ8oFOL" crossorigin="anonymous"></script>
 <script>
     // Smooth scroll. Probably overkill.
     let scroll = new SmoothScroll('a[href*="#"]');
