@@ -1,5 +1,12 @@
 [
-    {
+  {
+    "url": "https://medium.com/@blakeface/spying-on-apps-c42bece94fa0",
+    "title": "Spying on Apps: How to Sleuth Back",
+    "author": "Blake Netzeband <blake.netzeband@gmail.com> (www.blakenetzeband.com)",
+    "date": "Sep 2018",
+    "type": "blog post"
+  },
+  {
     "url": "https://www.cron.dk/grabbing-media-with-mitmproxy",
     "title": "Grabbing multimedia content with mitmproxy",
     "author": "Alex Skov Jensen",
