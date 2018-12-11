@@ -13,7 +13,14 @@
     "date" : "Jul 2018",
     "type" : "blog post"
   },
-    {
+  {
+    "url": "https://doi.org/10.1109/ISCC.2018.8538564",
+    "title": "An SFC-enabled approach for processing SSL/TLS encrypted traffic in Future Enterprise Networks",
+    "author": "Vitor A. Cunha, Marcio B. Carvalho, Daniel Corujo, Joao P. Barraca, Diogo Gomes, Alberto E. Schaeffer-Filho, Carlos R. P. dos Santos, Lisandro Z. Granville, and Rui L. Aguiar, IEEE ISCC 2018",
+    "date" : "Jun 2018",
+    "type" : "research"
+  },
+  {
     "url": "https://dl.acm.org/citation.cfm?id=3192376",
     "title": "BLeak: Automatically Debugging Memory Leaks in Web Applications",
     "author": "John Vilk and Emery Berger, University of Massachusetts Amherst. PLDI 2018",
