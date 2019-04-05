@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://medium.com/hulu-tech-blog/automating-mitmproxy-and-improving-hulus-build-loading-tool-for-roku-629e7f763682",
+    "title": "Automating mitmproxy and Improving Hulu’s Build Loading Tool for Roku",
+    "author": "Chandler Underwood, Hulu Tech",
+    "date": "Apr 2019",
+    "type": "blog post"
+  },
+  {
     "url": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/",
     "title": "Running a man-in-the-middle proxy on a Raspberry Pi 3",
     "author": "Dino Fizzotti",
