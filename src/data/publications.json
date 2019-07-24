@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=lGDETbe0b6w",
+    "title": "Attacking own APIs to find security bugs",
+    "author": "Daniel Neagaru, mytaxi",
+    "date": "Jun 2019",
+    "type": "talk"
+  },
+  {
     "url": "https://medium.com/hulu-tech-blog/automating-mitmproxy-and-improving-hulus-build-loading-tool-for-roku-629e7f763682",
     "title": "Automating mitmproxy and Improving Hulu’s Build Loading Tool for Roku",
     "author": "Chandler Underwood, Hulu Tech",
