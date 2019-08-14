@@ -33,7 +33,14 @@
     "author": "Simon Elvery, ABC",
     "date": "Oct 2018",
     "type": "media"
-  },  
+  },
+  {
+    "url": "https://blog.apify.com/using-a-man-in-the-middle-proxy-to-scrape-data-from-a-mobile-app-api-e954915f979d",
+    "title": "Using a man-in-the-middle proxy to scrape data from a mobile app API",
+    "author": "Petr Patek",
+    "date": "Jul 2019",
+    "type": "blog post"
+  },
   {
     "url": "https://medium.com/@blakeface/spying-on-apps-c42bece94fa0",
     "title": "Spying on Apps: How to Sleuth Back",
