@@ -7,7 +7,7 @@ relativeURLs = true
 googleAnalytics = "UA-4150636-13"
 
 [params]
-  version = "4.0.4"
+  version = "5.0.0"
 
 [indexes]
   tag = "tags"
