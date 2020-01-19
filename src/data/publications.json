@@ -56,6 +56,13 @@
     "type" : "blog post"
   },
   {
+    "url": "https://www.plightofbyte.com/tools/2018/03/13/make-believe-using-proxy",
+    "title": "Playing make-believe using proxy server",
+    "author": "Sumit Gupta",
+    "date": "Mar 2018",
+    "type": "blog post"
+  },
+  {
     "url": "https://dl.acm.org/citation.cfm?id=3274752",
     "title": "Why Johnny Can't Make Money With His Contents: Pitfalls of Designing and Implementing Content Delivery Apps",
     "author": "Sze Yiu Chau, Bincheng Wang, Jianxiong Wang, Omar Chowdhury, Aniket Kate, and Ninghui Li, ACSAC '18",
