@@ -1,5 +1,13 @@
 [
   {
+    "url": "https://arxiv.org/abs/2001.02564",
+    "title": "Watching the Weak Link into Your Home: An Inspection and Monitoring Toolkit for TR-069",
+    "author": "Maximilian Hils, Rainer Böhme, ACNS '20",
+    "date" : "Jun 2018",
+    "type" : "research"
+ 
+  },
+  {
     "url": "https://www.youtube.com/watch?v=lGDETbe0b6w",
     "title": "Attacking own APIs to find security bugs",
     "author": "Daniel Neagaru, mytaxi",
