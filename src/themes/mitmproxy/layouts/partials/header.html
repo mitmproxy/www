@@ -14,7 +14,7 @@
     <meta name="author" content="{{ . }}">
     {{ end }}
     {{ $style := resources.Get "style.scss" | toCSS | minify }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     {{ if .RSSLink -}}
     <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
     {{- end }}
