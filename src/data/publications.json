@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://lucaslegname.github.io/mitmproxy/2020/04/10/mitmproxy.html",
+    "title": "How to inspect network traffic using mitmproxy",
+    "author": "Lucas Legname",
+    "date": "Apr 2020",
+    "type": "blog post"
+  },
+  {
     "url": "https://arxiv.org/abs/2001.02564",
     "title": "Watching the Weak Link into Your Home: An Inspection and Monitoring Toolkit for TR-069",
     "author": "Maximilian Hils, Rainer Böhme, ACNS '20",
