@@ -308,5 +308,12 @@
     "author": "Aldo Cortesi",
     "date": "May 2011",
     "type": "blog post"
+  },
+  {
+    "url": "https://oxr463.github.io/pentesting-guide/setup/tools/mitmproxy",
+    "title": "Penetration Testing Guide",
+    "author": "Lucas Ramage",
+    "date": "May 2011",
+    "type": "guide"
   }
 ]
