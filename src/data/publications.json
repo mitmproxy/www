@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://oxr463.github.io/pentesting-guide/setup/tools/mitmproxy",
+    "title": "Penetration Testing Guide",
+    "author": "Lucas Ramage",
+    "date": "May 2020",
+    "type": "guide"
+  },
+  {
     "url": "https://lucaslegname.github.io/mitmproxy/2020/04/10/mitmproxy.html",
     "title": "How to inspect network traffic using mitmproxy",
     "author": "Lucas Legname",
