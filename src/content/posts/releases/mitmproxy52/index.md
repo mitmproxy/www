@@ -10,55 +10,59 @@ author:
   twitter: martinplattnr
 ---
 
-We are excited to announce the release of [mitmproxy 5.2](https://github.com/mitmproxy/mitmproxy/releases/tag/v5.2).
-It comes with many improvements and bugfixes: 48 merged PRs with 211 commits from over 30 contributors - see the full changelog below.
+We are excited to announce the release of [mitmproxy 5.2](https://github.com/mitmproxy/mitmproxy/releases/tag/v5.2)! This release comes not only with a long list of improvements and bugfixes -- 48 PRs from over 30 contributors --, but also with the first fruits from this year's Google Summer of Code:
 In this post we take a look the new and improved replacement features.
 
 <!--more-->
 
-## Unified Replacement UX
+##### *Editorial Note: Hi!*
+
+*My name is [Martin Plattner](https://mplattner.at) ([@mplattner](https://github.com/mplattner)) and I'm this years' [Google Summer of Code](https://summerofcode.withgoogle.com/) student for mitmproxy.
+My main task so far was the implementation of the new replacement addons that I've described below.
+It's been a great experience already and I'm looking forward to the rest of the summer.*
+
+## New Replacement UX
 
 The existing `Replace` addon was cumbersome to use: there was no way to specify where the replacements are applied, [among other shortcomings](https://github.com/mitmproxy/mitmproxy/issues/3948).
-We completely revised the current implementation and got rid of of the existing addon.
-Instead, we introduce four new addons that provide a unified user experience to perform replacements.
-All addons use a configuration pattern of the form `/filter-expression/subject/replacement`, where the first character is used as the separator.
-The optional filter expression can be used to only target specific messages, e.g. only `GET` requests using `~m GET`
+We completely revised the current implementation and introduce four new addons that provide a unified user experience to perform replacements: *ModifyBody*, *ModifyHeaders*, *MapRemote*, and *MapLocal*.
 
-The `ModifyBody` addon applies replacements in the body of requests and responses.
+ - The `ModifyBody` addon applies replacements in the body of requests and responses.
 A simple rule like `/Hi/Hello` replaces all occurrences of `Hi` with `Hello`.
 
+ - `ModifyHeaders` works on headers: it can set, replace, or remove existing headers. For example, `|User-Agent|Wget/1.11.4` sets the user agent header on all requests to impersonate wget.
+Common use-cases for this addon are to set cache or security headers for development and security research.
 
-`ModifyHeaders` works on headers: it can set, replace, or remove existing headers.
-The rule `/Set-Cookie/` removes all cookie headers and `|User-Agent|Wget/1.11.4` sets or changes the user agent header.
-Common use-cases for this addon could be to set cache or security headers for debugging purposes while developing.
-
-The `MapRemote` addon transparently serves resources from an alternative remote location.
+ - The `MapRemote` addon transparently serves resources from an alternative remote location.
 The URL is rewritten before performing the request.
 mitmproxy then fetches the new resource and serves it instead of the original.
 
-Time for an example. Let's use `ModifyBody` and `MapRemote` to make browsing the web more fun.
-We replace `BBC` and `Trump` with `Dog` in the body of all pages and redirect all image requests to [placedog.net](https://placedog.net).
+ - The last addon is `MapLocal`, which maps remote resources to local files.
+For example, using the rule `|example.com/js|~/js` you can redirect all requests to
+`example.com/js/*` to the local directory `~/js`.
 
-{{< highlight plain >}}
-mitmproxy \
-  --modify-body "/BBC/Dog" --modify-body "/Trump/Dog" \
-  --map-remote "|.*\.jpg$|https://placedog.net/640/480?random"
-{{< / highlight >}}
+All addons use a configuration pattern of the form `/filter/subject/replacement`.
+The optional [mitmproxy filter expression](https://docs.mitmproxy.org/archive/v5/concepts-filters/) can be used to only target specific messages, for example only HTTP GET requests using `~m GET`.
+
+Time for an example. Let's use `ModifyBody` and `MapRemote` to make browsing the web more fun:
+We replace `BBC` with `DOG` in the body of all pages and redirect all image requests to [placedog.net](https://placedog.net).
 
 {{< figure src="../mitmproxy52/mapremote_bbc_dogs.jpg" >}}
 
-More seriously, a real-world use case for developers could be to serve certain files from the dev environment while browsing the production environment,
-e.g., with the rule `|www.example.org/css/|dev.example.org/css/`.
+```plain
+mitmproxy
+  --modify-body "/BBC/Dog"
+  --map-remote "|^.+\.jpg$|https://placedog.net/640/480?random"
+```
 
-The last addon is `MapLocal`, which maps remote resources to local files.
-For example, using the rule `|example.com/js|~/js` you can redirect all requests to
-`example.com/js/*` to the local directory `~/js`.
+More seriously, a real-world use case for developers would be to serve certain files from the dev environment while browsing the production environment, for example with a rule like `|www.example.org/css/|dev.example.org/css/`.
+
+
 
 This should give you a glance of what you can do with the new replacement addons.
 We hope these new features are helpful and we're happy to hear your feedback.
 For more details and examples please see the [documentation](https://docs.mitmproxy.org/stable/overview-features/).
 
-## Other changes
+## Release Changelog
 
 Thanks to our great contributors there are many other notable changes:
 
@@ -87,8 +91,3 @@ Thanks to our great contributors there are many other notable changes:
 * Fix console output formatting (@sarthak212)
 * Add example for proxy authentication using selenium (@anneborcherding and @weichweich)
 
-## GSoC 2020
-
-My name is [Martin Plattner](https://mplattner.at) ([@mplattner](https://github.com/mplattner)) and I'm this years' [Google Summer of Code](https://summerofcode.withgoogle.com/) student for mitmproxy.
-My main task so far was the implementation of the new replacement addons that I've described above.
-It's been a great experience already and I'm looking forward to the rest of the summer.
