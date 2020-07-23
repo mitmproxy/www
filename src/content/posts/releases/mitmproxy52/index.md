@@ -10,7 +10,7 @@ author:
   twitter: martinplattnr
 ---
 
-We are excited to announce the release of [mitmproxy 5.2](https://github.com/mitmproxy/mitmproxy/releases/tag/v5.2)! This release comes not only with a long list of improvements and bugfixes -- 48 PRs from over 30 contributors --, but also with the first fruits from this year's Google Summer of Code:
+We are excited to announce the release of [mitmproxy 5.2](https://github.com/mitmproxy/mitmproxy/releases/tag/v5.2)! This release comes not only with a long list of improvements and bugfixes -- 48 PRs from over 30 contributors -- but also with the first fruits from this year's Google Summer of Code:
 In this post we take a look the new and improved replacement features.
 
 <!--more-->
@@ -18,7 +18,7 @@ In this post we take a look the new and improved replacement features.
 ##### *Editorial Note: Hi!*
 
 *My name is [Martin Plattner](https://mplattner.at) ([@mplattner](https://github.com/mplattner)) and I'm this years' [Google Summer of Code](https://summerofcode.withgoogle.com/) student for mitmproxy.
-My main task so far was the implementation of the new replacement addons that I've described below.
+My main task so far was the implementation of the new replacement addons that I describe below.
 It's been a great experience already and I'm looking forward to the rest of the summer.*
 
 ## New Replacement UX
@@ -52,6 +52,7 @@ We replace `BBC` with `DOG` in the body of all pages and redirect all image requ
 mitmproxy
   --modify-body "/BBC/Dog"
   --map-remote "|^.+\.jpg$|https://placedog.net/640/480?random"
+  --no-http2  # Full HTTP/2 redirects are coming soon!
 ```
 
 More seriously, a real-world use case for developers would be to serve certain files from the dev environment while browsing the production environment, for example with a rule like `|www.example.org/css/|dev.example.org/css/`.
