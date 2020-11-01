@@ -10,7 +10,7 @@ author:
   twitter: raumfresser
 ---
 
-We are excited to announce the release of [mitmproxy 5.3](https://github.com/mitmproxy/mitmproxy/releases/tag/v5.3.0)! This release comes with a long list of improvements and bugfixes -- 38 PRs from over 18 contributors.
+We are excited to announce the release of [mitmproxy 5.3](https://github.com/mitmproxy/mitmproxy/releases/tag/v5.3.0)! This release comes with a long list of improvements and bugfixes -- 137 commits by 20 contributors, resulting in 72 closed issues and 69 closed PRs, all of this in just over 105 days.
 
 <!--more-->
 
