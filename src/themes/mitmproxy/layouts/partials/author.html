@@ -1,6 +1,5 @@
-{{ if isset .Params "author" }}
-<i>
-    , {{ $.Param "author.name" }}
+{{ if isset .Params "author" -}}
+<i>, {{ $.Param "author.name" }}
     <a href="https://twitter.com/{{ $.Param "author.twitter" }}">@{{ $.Param "author.twitter" }}</a>
 </i>
 {{ end }}
