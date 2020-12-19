@@ -61,6 +61,15 @@ title: "mitmproxy - an interactive HTTPS proxy"
                                 </a>
                                 </span>
                             </p>
+                            <!--
+                            <br>
+                            <p>
+                                <a class="button is-primary is-outlined is-small"
+                                   href="/downloads/#branches/master/">
+                                    Try the beta!
+                                </a>
+                            </p>
+                            -->
                         </div>
                     </div>
                 </div>
@@ -326,7 +335,10 @@ title: "mitmproxy - an interactive HTTPS proxy"
         platformButton;
     if (platform.includes("win")) {
         platformButton = document.getElementById("install-windows");
-
+        let linux = document.getElementById("install-linux")
+        linux.textContent += " (WSL)";
+        linux.classList.remove("is-hidden");
+        linux.classList.add("is-outlined");
     } else if (platform.includes("linux") && !platform.includes("android")) {
         platformButton = document.getElementById("install-linux");
 
