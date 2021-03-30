@@ -96,7 +96,7 @@ title: Downloads
     }
 
     function update() {
-        fetchS3(location.hash.replace("#", "")).then(render);
+        fetchS3(location.hash.replace("#", "").replace("master","main")).then(render);
     }
 
     update();
