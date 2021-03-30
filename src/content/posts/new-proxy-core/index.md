@@ -187,7 +187,7 @@ excitement and that you will enjoy the next mitmproxy release!
 Our sans-io effort started in 2016, this week we have finally merged 195 commits, added 10k lines of code and deleted
 even more than that. We are obviously very excited, and please be forgiving if we introduced a bug or two somewhere. If
 you would like to support our effort, please help test the
-[latest snapshots builds](https://mitmproxy.org/downloads/#branches/master/)! A few features from the old proxy core
+[latest snapshots builds](https://mitmproxy.org/downloads/#branches/main/)! A few features from the old proxy core
 also did not make it to the new implementation yet. Please let us know what we should focus on in 
 [#4348](https://github.com/mitmproxy/mitmproxy/issues/4348).
 
