@@ -1,5 +1,5 @@
 ---
-title: "Mitmproxy 6.0"
+title: "Mitmproxy 6"
 date: 2020-12-13
 weight: 10
 tags: [
