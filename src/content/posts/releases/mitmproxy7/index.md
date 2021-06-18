@@ -10,7 +10,7 @@ author:
   twitter: maximilianhils
 ---
 
-We're delighted to announce the release of mitmproxy 7. The major feature of this release is our new proxy core,
+We're delighted to announce the release of mitmproxy 7. This release is all about our new proxy core,
 which bring substantial improvements across the board and represents a massive milestone for the project.
 
 <!--more-->
@@ -27,7 +27,7 @@ out our [blog post]({{< relref "new-proxy-core" >}}) dedicated to that!
 {{< figure src="tcp.png" >}}
 
 Mitmproxy now supports proxying raw TCP connections out of the box, including ones that start with a server-side 
-greeting (for example SMTP). [Opportunistic TLS](https://en.wikipedia.org/wiki/Opportunistic_TLS) (`STARTTLS`) is not 
+greeting -- for example SMTP. [Opportunistic TLS](https://en.wikipedia.org/wiki/Opportunistic_TLS) (`STARTTLS`) is not 
 supported yet, but regular TCP-over-TLS just works!
 
 
@@ -35,8 +35,7 @@ supported yet, but regular TCP-over-TLS just works!
 
 {{< figure src="http-interop.svg" >}}
 
-Mitmproxy can now accept HTTP/2 requests from the client and forward them to an HTTP/1 server. Of course, 
-translation also works the other way around. This change also makes it possible to change the request destination for 
+Mitmproxy can now accept HTTP/2 requests from the client and forward them to an HTTP/1 server. This on-the-wire protocol translation works bi-directional: All HTTP requests and responses were created equal!. This change also makes it possible to change the request destination for 
 HTTP/2 flows, which previously was not possible at all.
 
 ### WebSocket Message Display
@@ -44,7 +43,7 @@ HTTP/2 flows, which previously was not possible at all.
 {{< figure src="websocket.png" >}}
 
 Mitmproxy now displays WebSocket messages not only in the event log, but also in a dedicated UI tab!
-There are still UX details to be ironed out, but we're excited to ship a first prototype here.
+There are still UX details to be ironed out, but we're excited to ship a first prototype here. While this is only for the console UI via mitmproxy, the web UI via mitmweb is still looking for amazing contributors to get feature parity!
 
 ### Secure Web Proxy (TLS-over-TLS)
 
@@ -53,7 +52,9 @@ There are still UX details to be ironed out, but we're excited to ship a first p
 Clients usually talk in plaintext to HTTP proxies -- telling them where to connect -- before they ultimately establish 
 a secure TLS connection through the proxy with the destination server. With mitmproxy 7, clients can now establish TLS 
 with the proxy right from the start (before issuing an HTTP `CONNECT` request), 
-which can add a significant layer of defense in public networks.
+which can add a significant layer of defense in public networks. 
+
+So instead of simply specifying `http://127.0.0.1:8080` you can now also use HTTPS via `https://127.0.0.1:8080` (or any other listen host and port).
 
 
 ### Windows Support for Console UI
@@ -69,14 +70,14 @@ for a while, we're very happy to provide the same tools across all platforms now
 {{< figure src="pdoc.svg" width=100 >}}
 
 Having recently adopted the [pdoc](https://pdoc.dev) project, which generates awesome Python API documentation, 
-we have built completely [new API reference docs](https://docs.mitmproxy.org/archive/v7/api/events.html) for mitmproxy's 
-addon API. Paired with our existing [example repository](https://github.com/mitmproxy/mitmproxy/tree/main/examples), 
+we have built a completely [new API reference documentation](https://docs.mitmproxy.org/archive/v7/api/events.html) for mitmproxy's 
+addon API. Paired with our existing [examples on GitHub](https://github.com/mitmproxy/mitmproxy/tree/main/examples), 
 this makes it much simpler to write mitmproxy new addons.
 
 ## What's next?
 
 While this release focuses heavily on our backend, the next mitmproxy release will come with lots of mitmweb 
-improvements by our current GSoC student [@gorogoroumaru](https://github.com/gorogoroumaru). Stay tuned!
+improvements by our current GSoC 2021 student [@gorogoroumaru](https://github.com/gorogoroumaru). Stay tuned!
 
 ## Release Changelog
 
