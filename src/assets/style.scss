@@ -22,5 +22,9 @@ mitmproxy website | MIT License | github.com/mitmproxy/www */
   justify-content: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @import "./home";
 @import "./blog";

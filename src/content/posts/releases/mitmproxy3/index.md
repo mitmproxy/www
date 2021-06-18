@@ -34,7 +34,7 @@ infrastructure](/docs/latest/addons-overview/). Addons can hook into mitmproxy's
 options](/docs/latest/addons-options) for configuration, and can create [typed
 commands](/docs/latest/addons-events/) for user interaction. We've migrated much
 of mitmproxy's [own functionality into a set of internal
-addons](https://github.com/mitmproxy/mitmproxy/tree/master/mitmproxy/addons),
+addons](https://github.com/mitmproxy/mitmproxy/tree/main/mitmproxy/addons),
 resulting in a much cleaner and more maintainable code structure.
 
 Perhaps the most exciting aspect of this change is the power it gives
@@ -86,7 +86,7 @@ underlying protocol support has improved, with a better websockets stack and the
 introduction of request streaming for HTTP1 and HTTP2.
 
 For a complete list of changes, see the
-[CHANGELOG](https://github.com/mitmproxy/mitmproxy/blob/master/CHANGELOG).
+[CHANGELOG](https://github.com/mitmproxy/mitmproxy/blob/main/CHANGELOG.md).
 
 
 
@@ -120,6 +120,3 @@ users. We rely on your manual feedback to let us know what to build. Please take
 a moment to fill in the [2018 mitmproxy user
 survey](https://goo.gl/forms/Or2mwRtcG5h8yr813) - this feeds directly into our
 dev priorities for the next year.
-
-
-
