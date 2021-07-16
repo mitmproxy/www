@@ -2,9 +2,16 @@
 <ul class="publications">
     {{ range where $data "type" "in" .Params }}
         <li>
-            <a href="{{ .url }}">{{ .title }}</a>
-            &ndash; <span class="author">{{ .author }}</span>,
-            <span class="date">{{ .date }}</span>.
+            {{ if eq .type "research" }}
+                <span class="author">{{ .author }}</span>:
+                <a href="{{ .url }}">{{ .title }}</a>.
+                <span class="conference">{{ .conference }}</span>.
+                <span class="date">{{ .date }}</span>.
+            {{ else }}
+                <a href="{{ .url }}">{{ .title }}</a>
+                &ndash; <span class="author">{{ .author }}</span>,
+                <span class="date">{{ .date }}</span>.
+            {{ end }}
         </li>
     {{ end }}
 </ul>

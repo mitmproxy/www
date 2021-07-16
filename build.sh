@@ -25,4 +25,10 @@ if [[ ${types} != ${allowed_types} ]]; then
   exit 1
 fi
 
+cat data/publications.json | jq -e '.[] | select(.type =="research") | select(.conference == null)'
+if [ $? -eq 0 ]; then
+  echo "Research artifact without conference!"
+  exit 1
+fi
+
 hugo
