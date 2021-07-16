@@ -1,6 +1,6 @@
 ---
 title: "Mitmproxy 7"
-date: 2021-06-17
+date: 2021-07-16
 weight: 10
 tags: [
     "releases",
@@ -79,9 +79,73 @@ this makes it much simpler to write mitmproxy new addons.
 While this release focuses heavily on our backend, the next mitmproxy release will come with lots of mitmweb 
 improvements by our current GSoC 2021 student [@gorogoroumaru](https://github.com/gorogoroumaru). Stay tuned!
 
+-----------------
+
 ## Release Changelog
 
-Since the release of mitmproxy 6 about six months ago, the project has had 476 commits by 27 contributors, 
-resulting in 214 closed issues and 144 closed pull requests.
+Since the release of mitmproxy 6 about seven months ago, the project has had 527 commits by 28 contributors, 
+resulting in 234 closed issues and 173 closed pull requests.
 
-* *See https://github.com/mitmproxy/mitmproxy/blob/main/CHANGELOG.md*
+##### New Proxy Core (@mhils)
+
+* **Secure Web Proxy:** Mitmproxy now supports TLS-over-TLS to already encrypt the connection to the proxy.
+* **Server-Side Greetings:** Mitmproxy now supports proxying raw TCP connections, including ones that start
+  with a server-side greeting (e.g. SMTP).
+* **HTTP/1 – HTTP/2 Interoperability:** mitmproxy can now accept an HTTP/2 connection from the client,
+  and forward it to an HTTP/1 server.
+* **HTTP/2 Redirects:** The request destination can now be changed on HTTP/2 flows.
+* **Connection Strategy:** Users can now specify if they want mitmproxy to eagerly connect upstream
+  or wait as long as possible. Eager connections are required to detect protocols with server-side
+  greetings, lazy connections enable the replay of responses without connecting to an upstream server.
+* **Timeout Handling:** Mitmproxy will now clean up idle connections and also abort requests if the client disconnects
+  in the meantime.
+* **Host Header-based Proxying:** If the request destination is unknown, mitmproxy now falls back to proxying
+  based on the Host header. This means that requests can often be redirected to mitmproxy using
+  DNS spoofing only.
+* **Internals:** All protocol logic is now separated from I/O (["sans-io"](https://sans-io.readthedocs.io/)).
+  This greatly improves testing capabilities, prevents a wide array of race conditions, and increases
+  proper isolation between layers.
+
+##### Additional Changes
+
+* mitmproxy's command line interface now supports Windows (@mhils)
+* The `clientconnect`, `clientdisconnect`, `serverconnect`, `serverdisconnect`, and `log`
+  events have been replaced with new events, see addon documentation for details (@mhils)
+* Contentviews now implement `render_priority` instead of `should_render`, allowing more specialization (@mhils)
+* Addition of block_list option to block requests with a set status code (@ericbeland)
+* Make mitmweb columns configurable and customizable (@gorogoroumaru)
+* Automatic JSON view mode when `+json` suffix in content type (@kam800)
+* Use pyca/cryptography to generate certificates, not pyOpenSSL (@mhils)
+* Remove the legacy protocol stack (@Kriechi)
+* Remove all deprecated pathod and pathoc tools and modules (@Kriechi)
+* In reverse proxy mode, mitmproxy now does not assume TLS if no scheme
+  is given but a custom port is provided (@mhils)
+* Remove the following options: `http2_priority`, `relax_http_form_validation`, `upstream_bind_address`,
+  `spoof_source_address`, and `stream_websockets`. If you depended on one of them please let us know.
+  mitmproxy never phones home, which means we don't know how prominently these options were used. (@mhils)
+* Fix IDNA host 'Bad HTTP request line' error (@grahamrobbins)
+* Pressing `?` now exits console help view (@abitrolly)
+* `--modify-headers` now works correctly when modifying a header that is also part of the filter expression (@Prinzhorn)
+* Fix SNI-related reproducibility issues when exporting to curl/httpie commands. (@dkasak)
+* Add option `export_preserve_original_ip` to force exported command to connect to IP from original request.
+  Only supports curl at the moment. (@dkasak)
+* Major proxy protocol testing (@r00t-)
+* Switch Docker image release to be based on Debian (@PeterDaveHello)
+* Multiple Browsers: The `browser.start` command may be executed more than once to start additional
+  browser sessions. (@rbdixon)
+* Improve readability of SHA256 fingerprint. (@wrekone)
+* Metadata and Replay Flow Filters: Flows may be filtered based on metadata and replay status. (@rbdixon)
+* Flow control: don't read connection data faster than it can be forwarded. (@hazcod)
+* Docker images for ARM64 architecture (@hazcod, @mhils)
+* Fix parsing of certificate issuer/subject with escaped special characters (@Prinzhorn)
+* Customize markers with emoji, and filters: The `flow.mark` command may be used to mark a flow with either the default
+  "red ball" marker, a single character, or an emoji like `:grapes:`. Use the `~marker` filter to filter on marker
+  characters. (@rbdixon)
+* New `flow.comment` command to add a comment to the flow. Add `~comment <regex>` filter syntax to search flow comments.
+  (@rbdixon)
+* Fix multipart forms losing `boundary` values on edit. (@roytu)
+* `Transfer-Encoding: chunked` HTTP message bodies are now retained if they are below the stream_large_bodies limit.
+  (@mhils)
+* `json()` method for HTTP Request and Response instances will return decoded JSON body. (@rbdixon)
+* Support for HTTP/2 Push Promises has been dropped. (@mhils)
+* Make it possible to set sequence options from the command line. (@Yopi)
