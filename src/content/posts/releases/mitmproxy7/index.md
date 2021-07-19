@@ -10,8 +10,9 @@ author:
   twitter: maximilianhils
 ---
 
-We're delighted to announce the release of mitmproxy 7. This release is all about our new proxy core,
-which bring substantial improvements across the board and represents a massive milestone for the project.
+We're delighted to announce the release of mitmproxy 7, a free and open source interactive HTTPS proxy. 
+This release is all about our new proxy core, which bring substantial improvements across the board and 
+represents a massive milestone for the project.
 
 <!--more-->
 

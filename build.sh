@@ -3,7 +3,7 @@
 set -o errexit
 set -o pipefail
 set -o nounset
-set -o xtrace
+# set -o xtrace
 
 cd src
 
@@ -25,9 +25,10 @@ if [[ ${types} != ${allowed_types} ]]; then
   exit 1
 fi
 
-cat data/publications.json | jq -e '.[] | select(.type =="research") | select(.conference == null)'
-if [ $? -eq 0 ]; then
+conference_missing=$(cat data/publications.json | jq '.[] | select(.type =="research") | select(.conference == null)')
+if [ -n "$conference_missing" ]; then
   echo "Research artifact without conference!"
+  echo "$conference_missing"
   exit 1
 fi
 
