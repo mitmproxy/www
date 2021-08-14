@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://github.blog/2021-08-05-release-radar-jun-jul-2021/",
+    "title": "GitHub Release Radar - Mid-year 2021 Edition",
+    "author": "Michelle Mannering, GitHub",
+    "date": "Aug 2021",
+    "type": "blog post"
+  },
+  {
     "url": "https://sufiyanyasa.com/blog/mitmproxy-better-filters/",
     "title": "mitmproxy filters that will make you a better developer",
     "author": "Sufiyan Yasa",
@@ -304,6 +311,13 @@
     "url": "https://www.cron.dk/grabbing-media-with-mitmproxy",
     "title": "Grabbing multimedia content with mitmproxy",
     "author": "Alex Skov Jensen",
+    "date": "Jul 2018",
+    "type": "blog post"
+  },
+  {
+    "url": "https://github.blog/2018-06-12-release-radar-may-2018/",
+    "title": "GitHub Release Radar - May 2018",
+    "author": "Lee Reilly, GitHub",
     "date": "Jul 2018",
     "type": "blog post"
   },
