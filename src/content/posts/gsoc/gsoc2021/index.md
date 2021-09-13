@@ -12,26 +12,59 @@ author:
 
 {{< image src="gsoc.png" >}}
 
-## Introduction
-Hello, my name is Toshiaki Tanaka. I'm Japanese university student who major in medicine. I got approved of the GSoC 2021 event for mitmproxy organization. I applied to mitmproxy organization because I had played CTF and used mitmproxy. Also, when I sent a pull request to mitmproxy, the reviewers were so nice.
+Hello, my name is Toshiaki Tanaka. I'm a Japanese university student majoring in medicine. Even though I don't major in
+computer science, I occasionally play CTFs. For this I've used mitmproxy quite a bit, and so I applied to be a Google
+Summer of Code (GSoC) 2021 student for the project... and got accepted!
+In this post I would like to share my GSoC experience with future applicants.
 
-## Before Application
-At first, I worked on a "good first issue" to gain a deeper understanding of the code base and to be recognized by people in the mitmproxy organization. Then I thought about what kind of functions would be nice to have in mitmproxy. But I noticed later that I didn't need to think about what to implement in GSoC because the organizations prepare it for the participants. If you are interested in the project ideas, please take a look at this. (https://github.com/mitmproxy/mitmproxy/issues/4404)  Still, it was a good experience to design and implement a function.
+<!--more-->
 
-## Proposal
-My project was to make mitmweb (mitmproxy web UI) rich and easy to use. This is the [link](https://docs.google.com/document/d/1CqnkSsZUX9ZIzV3-YLwZ2YFDbYU50fYGuY57ohBmkPQ/edit?usp=sharing) for my proposal. It's not perfect, but it might help. When you finish writing your proposal, you should show it to the mentors as soon as possible. You can receive feedbacks from the mentors and polish your proposal, which will raise the possibility of being accepted.
+## Applying for GSoC
 
-## Meeting
-After I sent my draft proposal, I had a meeting with my mentor Maximilian Hils. It was really casual meeting. Also, he was very considerate of non-English speaker. I'm really relaxed during the meeting. In the meeting, he asked me where he could not understand my proposal. I explained my opinion and fixed the proposal. Also, he proposed me a project which is to integrate mitmproxy command feature into mitmweb. At first, I planed to do a different project, but I realized that this looks more interesting and chose to do it.
+At first, I worked on an issue that was tagged
+with ["help wanted"](https://github.com/mitmproxy/mitmproxy/labels/help%20wanted)
+to gain a deeper understanding of the code base and to be recognized by people in the mitmproxy organization. Then I
+thought about what kind of features would be nice to have in mitmproxy. But I noticed later that I didn't need to think
+about what to implement in GSoC because the organizations prepare
+an [ideas list](https://github.com/mitmproxy/mitmproxy/issues/4404) for the participants. Still, it was a good
+experience to design and implement a new feature.
 
-## Coding
-This is the [link](https://gist.github.com/gorogoroumaru/32aec49d469d10be870953526e14d6ab#file-gsoc2021report-md) for my GSoC achievements. I made utility functions for forwarding intercepted HTTP communication and making interception rules easily. Also, I made a terminal where we can use mitmproxy commands. In addition, I transformed mitmweb from javascript into typescript and upgraded version of react in mitmweb to be able to use react hooks.
+## My GSoC Proposal
 
-## Evaluation
-The evaluation was done very casually. I didn't prepare for it at all. All you have to do is just enjoy the GSoC event.
+My project was to add more features to mitmweb (mitmproxy's web UI) and make it easier to use. You can find my proposal
+[here](https://docs.google.com/document/d/1CqnkSsZUX9ZIzV3-YLwZ2YFDbYU50fYGuY57ohBmkPQ/). It's not perfect, but it might
+help you preparing yours. When you finish writing your proposal, you should show it to the mentors as soon as possible.
+You will receive feedback from them and you can polish your proposal, which will raise the possibility of being
+accepted.
 
-## Advice for later participants
-Even if you are not sure that you will be able to complete the GSoC, apply to GSoC anyway. The mentors will help you to complete your project. I'm a Japanese student and not proud of my English skill, but the mentor is very considerate of it. I could finish the project without falling behind. The schedule is flexible, so it's not a problem if GSoC conflicts with school events in some extent. 
+## Meeting My Mentor
+
+After I sent my draft proposal, I had a meeting with my mentor Maximilian Hils. It was really casual meeting. Also, he
+was very considerate of me being a non-native English speaker. I was really relaxed during the meeting. In the meeting,
+he asked me about some details in my proposal which he did not understand. I explained what I meant and clarified the
+proposal. Also, he proposed that we should integrate mitmproxy's command feature into mitmweb. While I first planned to
+work on a different idea, I realized that this looked more interesting and chose to do it.
+
+## Writing Code!
+
+[Here](https://gist.github.com/gorogoroumaru/32aec49d469d10be870953526e14d6ab#file-gsoc2021report-md) is an overview of
+my GSoC achievements. I developed easier ways to forward intercepted HTTP messages and to create interception rules.
+Also, I made a terminal where we can use mitmproxy commands. In addition, I transformed mitmweb from JavaScript into
+TypeScript and upgraded mitmweb's React version to be able to use React hooks.
+
+## GSoC Evalutions
+
+The evaluations during GSoC were done very casually. I didn't need to prepare for it at all. All you have to do is just
+to enjoy GSoC, if you work actively on your project there is nothing you need to worry about.
+
+## Should You Apply?
+
+Even if you are not sure that you are good enough for GSoC, apply to GSoC anyway. The mentors will help you to complete
+your project. I'm a Japanese student and not proud of my English skills, but the mentor was very considerate of it. I
+could finish the project without falling behind. The schedule is flexible, so it's not a problem if GSoC conflicts with
+school events in some extent. You only need to let your mentor know about all conflicts in your proposal.
 
 ## Acknowledgements
-Thanks to Maximilian Hils for being such a good mentor! I could not finish my project without his help. Finally, thanks to all the developers who have contributed to mitmproxy so far, and to Google for organizing the GSoC event.
+
+Thanks to Maximilian Hils for being such a good mentor! I could not finish my project without his help. Finally, thanks
+to all the developers who have contributed to mitmproxy so far, and to Google for organizing GSoC.
