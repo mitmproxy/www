@@ -4,6 +4,7 @@ date: 2020-07-23
 weight: 10
 tags: [
     "releases",
+    "gsoc"
 ]
 author:
   name: Martin Plattner
@@ -91,4 +92,3 @@ Thanks to our great contributors there are many other notable changes:
 * Add a JSON dump script: write data into a file or send to an endpoint as JSON (@emedvedev)
 * Fix console output formatting (@sarthak212)
 * Add example for proxy authentication using selenium (@anneborcherding and @weichweich)
-
