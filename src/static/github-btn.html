@@ -2,14 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- fork of https://github.com/mdo/github-buttons/pull/133 -->
+  <!-- fork of https://github.com/mdo/github-buttons/ -->
   <!-- using fetch() instead of JSONP for privacy and security reasons. -->
-  <style type="text/css">
+  <!-- add sponsors icon -->
+    <style>
+        .github-me .gh-ico {
+            margin-top: 2px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' viewBox='0 0 16 16' version='1.1' width='16' fill='%23bf3989'%3E%3Cpath fill-rule='evenodd' d='M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25zm0 0l.345.666a.752.752 0 01-.69 0L8 14.25z'%3E%3C/path%3E%3C/svg%3E");
+        }
+        .gh-ico {
+            margin-top: 1px;
+            margin-right: 6px !important;
+        }
+    </style>
+  <style>
 body {
   padding: 0;
   margin: 0;
-  font: bold 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
 }
 .github-btn {
   height: 20px;
@@ -31,13 +45,8 @@ body {
 }
 .gh-btn {
   background-color: #eee;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), color-stop(100%, #eee));
-  background-image: -webkit-linear-gradient(top, #fcfcfc 0, #eee 100%);
-  background-image: -moz-linear-gradient(top, #fcfcfc 0, #eee 100%);
-  background-image: -ms-linear-gradient(top, #fcfcfc 0, #eee 100%);
-  background-image: -o-linear-gradient(top, #fcfcfc 0, #eee 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), to(#eee));
   background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#eeeeee', GradientType=0);
   background-repeat: no-repeat;
   border: 1px solid #d5d5d5;
 }
@@ -45,28 +54,21 @@ body {
 .gh-btn:focus {
   text-decoration: none;
   background-color: #ddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(100%, #ddd));
-  background-image: -webkit-linear-gradient(top, #eee 0, #ddd 100%);
-  background-image: -moz-linear-gradient(top, #eee 0, #ddd 100%);
-  background-image: -ms-linear-gradient(top, #eee 0, #ddd 100%);
-  background-image: -o-linear-gradient(top, #eee 0, #ddd 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), to(#ddd));
   background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#dddddd', GradientType=0);
   border-color: #ccc;
 }
 .gh-btn:active {
-  background-image: none;
   background-color: #dcdcdc;
+  background-image: none;
   border-color: #b5b5b5;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15);
 }
 .gh-ico {
   width: 14px;
   height: 14px;
   margin-right: 4px;
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="12 12 40 40"%3E%3Cpath fill="%23333" d="M32 13.4c-10.5 0-19 8.5-19 19 0 8.4 5.5 15.5 13 18 1 .2 1.3-.4 1.3-.9v-3.2c-5.3 1.1-6.4-2.6-6.4-2.6-.9-2.1-2.1-2.7-2.1-2.7-1.7-1.2.1-1.1.1-1.1 1.9.1 2.9 2 2.9 2 1.7 2.9 4.5 2.1 5.5 1.6.2-1.2.7-2.1 1.2-2.6-4.2-.5-8.7-2.1-8.7-9.4 0-2.1.7-3.7 2-5.1-.2-.5-.8-2.4.2-5 0 0 1.6-.5 5.2 2 1.5-.4 3.1-.7 4.8-.7 1.6 0 3.3.2 4.7.7 3.6-2.4 5.2-2 5.2-2 1 2.6.4 4.6.2 5 1.2 1.3 2 3 2 5.1 0 7.3-4.5 8.9-8.7 9.4.7.6 1.3 1.7 1.3 3.5v5.2c0 .5.4 1.1 1.3.9 7.5-2.6 13-9.7 13-18.1 0-10.5-8.5-19-19-19z"/%3E%3C/svg%3E');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='12 12 40 40'%3e%3cpath fill='%23333' d='M32 13.4c-10.5 0-19 8.5-19 19 0 8.4 5.5 15.5 13 18 1 .2 1.3-.4 1.3-.9v-3.2c-5.3 1.1-6.4-2.6-6.4-2.6-.9-2.1-2.1-2.7-2.1-2.7-1.7-1.2.1-1.1.1-1.1 1.9.1 2.9 2 2.9 2 1.7 2.9 4.5 2.1 5.5 1.6.2-1.2.7-2.1 1.2-2.6-4.2-.5-8.7-2.1-8.7-9.4 0-2.1.7-3.7 2-5.1-.2-.5-.8-2.4.2-5 0 0 1.6-.5 5.2 2 1.5-.4 3.1-.7 4.8-.7 1.6 0 3.3.2 4.7.7 3.6-2.4 5.2-2 5.2-2 1 2.6.4 4.6.2 5 1.2 1.3 2 3 2 5.1 0 7.3-4.5 8.9-8.7 9.4.7.6 1.3 1.7 1.3 3.5v5.2c0 .5.4 1.1 1.3.9 7.5-2.6 13-9.7 13-18.1 0-10.5-8.5-19-19-19z'/%3e%3c/svg%3e") 0 0 / 100% 100% no-repeat;
 }
 .gh-count {
   position: relative;
@@ -77,26 +79,26 @@ body {
 }
 .gh-count:hover,
 .gh-count:focus {
-  color: #4183C4;
+  color: #0366d6;
 }
-.gh-count:before,
-.gh-count:after {
-  content: '';
+.gh-count::before,
+.gh-count::after {
   position: absolute;
   display: inline-block;
   width: 0;
   height: 0;
+  content: "";
   border-color: transparent;
   border-style: solid;
 }
-.gh-count:before {
+.gh-count::before {
   top: 50%;
   left: -3px;
   margin-top: -4px;
   border-width: 4px 4px 4px 0;
   border-right-color: #fafafa;
 }
-.gh-count:after {
+.gh-count::after {
   top: 50%;
   left: -4px;
   z-index: -1;
@@ -121,12 +123,12 @@ body {
 .github-btn-large .gh-count {
   margin-left: 6px;
 }
-.github-btn-large .gh-count:before {
+.github-btn-large .gh-count::before {
   left: -5px;
   margin-top: -6px;
   border-width: 6px 6px 6px 0;
 }
-.github-btn-large .gh-count:after {
+.github-btn-large .gh-count::after {
   left: -6px;
   margin-top: -7px;
   border-width: 7px 7px 7px 0;
@@ -142,129 +144,160 @@ body {
     <a class="gh-count" id="gh-count" href="#" rel="noopener" target="_blank" aria-label=""></a>
   </span>
   <script>
+(function() {
+  'use strict';
 
-// Read a page's GET URL variables and return them as an associative array.
-// Source: http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
-var params = (function () {
-  var vars = [];
-  var hash;
-  var location = window.location;
-  var hashes = location.href.slice(location.href.indexOf('?') + 1).split('&');
+  // Read a page's GET URL variables and return them as an associative array.
+  // Source: https://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
+  function getUrlParameters() {
+    var vars = [];
+    var hash;
+    var location = window.location;
+    var hashes = location.href.slice(location.href.indexOf('?') + 1).split('&');
 
-  for (var i = 0, len = hashes.length; i < len; i++) {
-    hash = hashes[i].split('=');
-    vars.push(hash[0]);
-    vars[hash[0]] = hash[1];
+    for (var i = 0, len = hashes.length; i < len; i++) {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+
+    return vars;
   }
 
-  return vars;
-}());
+  // Add commas to numbers
+  function addCommas(n) {
+    return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+  }
 
-var user = params.user;
-var repo = params.repo;
-var type = params.type;
-var count = params.count;
-var size = params.size;
-var v = params.v;
-var head = document.getElementsByTagName('head')[0];
-var button = document.getElementById('gh-btn');
-var mainButton = document.getElementById('github-btn');
-var text = document.getElementById('gh-text');
-var counter = document.getElementById('gh-count');
-var labelSuffix = ' on GitHub';
+  var parameters = getUrlParameters();
 
-var GH_DOT_COM = 'https://github.com/';
-var REPO_URL = GH_DOT_COM + user + '/' + repo;
+  // Parameters
+  var user = parameters.user;
+  var repo = parameters.repo;
+  var type = parameters.type;
+  var count = parameters.count;
+  var size = parameters.size;
+  var v = parameters.v;
 
-// Add commas to numbers
-function addCommas(n) {
-  return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
-}
+  // Elements
+  var button = document.querySelector('.gh-btn');
+  var mainButton = document.querySelector('.github-btn');
+  var text = document.querySelector('.gh-text');
+  var counter = document.querySelector('.gh-count');
 
-window.callback = function(obj) {
+  // Constants
+  var LABEL_SUFFIX = ' on GitHub';
+  var GITHUB_URL = 'https://github.com/';
+  var API_URL = 'https://api.github.com/';
+  var REPO_URL = GITHUB_URL + user + '/' + repo;
+  var USER_REPO = user + '/' + repo;
+
+  window.callback = function(obj) {
+    if (obj.data.message === 'Not Found') {
+      return;
+    }
+
+    switch (type) {
+      case 'watch':
+        if (v === '2') {
+          counter.textContent = obj.data.subscribers_count && addCommas(obj.data.subscribers_count);
+          counter.setAttribute('aria-label', counter.textContent + ' watchers' + LABEL_SUFFIX);
+        } else {
+          counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
+          counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
+        }
+
+        break;
+      case 'star':
+        counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
+        counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
+        break;
+      case 'fork':
+        counter.textContent = obj.data.network_count && addCommas(obj.data.network_count);
+        counter.setAttribute('aria-label', counter.textContent + ' forks' + LABEL_SUFFIX);
+        break;
+      case 'follow':
+        counter.textContent = obj.data.followers && addCommas(obj.data.followers);
+        counter.setAttribute('aria-label', counter.textContent + ' followers' + LABEL_SUFFIX);
+        break;
+    }
+
+    // Show the count if asked and if it's not empty
+    if (count === 'true' && counter.textContent !== '') {
+      counter.style.display = 'block';
+      counter.removeAttribute('aria-hidden');
+    }
+  };
+
+  // Set href to be URL for repo
+  button.href = REPO_URL;
+
+  var title;
+
+  // Add the class, change the text label, set count link href
   switch (type) {
     case 'watch':
       if (v === '2') {
-        counter.innerHTML = addCommas(obj.data.subscribers_count);
-        counter.setAttribute('aria-label', counter.innerHTML + ' watchers' + labelSuffix);
+        mainButton.className += ' github-watchers';
+        text.textContent = 'Watch';
+        counter.href = REPO_URL + '/watchers';
       } else {
-        counter.innerHTML = addCommas(obj.data.stargazers_count);
-        counter.setAttribute('aria-label', counter.innerHTML + ' stargazers' + labelSuffix);
+        mainButton.className += ' github-stargazers';
+        text.textContent = 'Star';
+        counter.href = REPO_URL + '/stargazers';
       }
+
+      title = text.textContent + ' ' + USER_REPO;
       break;
     case 'star':
-      counter.innerHTML = addCommas(obj.data.stargazers_count);
-      counter.setAttribute('aria-label', counter.innerHTML + ' stargazers' + labelSuffix);
+      mainButton.className += ' github-stargazers';
+      text.textContent = 'Star';
+      counter.href = REPO_URL + '/stargazers';
+      title = text.textContent + ' ' + USER_REPO;
       break;
     case 'fork':
-      counter.innerHTML = addCommas(obj.data.network_count);
-      counter.setAttribute('aria-label', counter.innerHTML + ' forks' + labelSuffix);
+      mainButton.className += ' github-forks';
+      text.textContent = 'Fork';
+      button.href = REPO_URL + '/fork';
+      counter.href = REPO_URL + '/network';
+      title = text.textContent + ' ' + USER_REPO;
       break;
     case 'follow':
-      counter.innerHTML = addCommas(obj.data.followers);
-      counter.setAttribute('aria-label', counter.innerHTML + ' followers' + labelSuffix);
+      mainButton.className += ' github-me';
+      text.textContent = 'Follow @' + user;
+      button.href = GITHUB_URL + user;
+      counter.href = GITHUB_URL + user + '?tab=followers';
+      title = text.textContent;
+      break;
+    case 'sponsor':
+      mainButton.className += ' github-me';
+      text.textContent = 'Sponsor';
+      button.href = GITHUB_URL + 'sponsors/' + user;
+      title = text.textContent;
       break;
   }
 
-  // Show the count if asked
-  if (count === 'true' && counter.innerHTML !== 'undefined') {
-    counter.style.display = 'block';
+  button.setAttribute('aria-label', title + LABEL_SUFFIX);
+  document.title = title + LABEL_SUFFIX;
+
+  // Change the size if requested
+  if (size === 'large') {
+    mainButton.className += ' github-btn-large';
   }
-}
 
-// Set href to be URL for repo
-button.href = 'https://github.com/' + user + '/' + repo;
+  // If count is not requested or type is sponsor,
+  // there's no need to make an API call
+  if (count !== 'true' || type === 'sponsor') {
+    return;
+  }
 
-// Add the class, change the text label, set count link href
-switch (type) {
-  case 'watch':
-    if (v === '2') {
-      mainButton.className += ' github-watchers';
-      text.innerHTML = 'Watch';
-      counter.href = REPO_URL + '/watchers';
-    } else {
-      mainButton.className += ' github-stargazers';
-      text.innerHTML = 'Star';
-      counter.href = REPO_URL + '/stargazers';
-    }
-    break;
-  case 'star':
-    mainButton.className += ' github-stargazers';
-    text.innerHTML = 'Star';
-    counter.href = REPO_URL;
-    break;
-  case 'fork':
-    mainButton.className += ' github-forks';
-    text.innerHTML = 'Fork';
-    button.href = REPO_URL + '/fork';
-    counter.href = REPO_URL + '/network';
-    break;
-  case 'follow':
-    mainButton.className += ' github-me';
-    text.innerHTML = 'Follow @' + user;
-    button.href = GH_DOT_COM + user;
-    counter.href = GH_DOT_COM + user + '/followers';
-    break;
-  case 'sponsor':
-    mainButton.className += ' github-me';
-    text.innerHTML = 'Sponsor @' + user;
-    button.href = 'https://github.com/users/' + user + '/sponsorship';
-    counter.href = 'https://github.com/' + user + '/followers';
-    break;
-}
+  fetch(
+      'https://api.github.com/repos/' + user + '/' + repo,
+      {credentials: "omit", referrerPolicy: "no-referrer"}
+  ).then(function(response) { return response.json() }
+  ).then(function(json) { callback({data: json}) })
+})();
 
-button.setAttribute('aria-label', text.innerHTML + labelSuffix);
-
-// Change the size
-if (size === 'large') {
-  mainButton.className += ' github-btn-large';
-}
-
-fetch(
-	'https://api.github.com/repos/' + user + '/' + repo,
-	{credentials: "omit", referrerPolicy: "no-referrer"}
-).then(function(response) { return response.json() }
-).then(function(json) { callback({data: json}) })
 </script>
 </body>
 </html>
