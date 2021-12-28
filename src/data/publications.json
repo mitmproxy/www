@@ -1,5 +1,13 @@
 [
   {
+    "url": "https://doi.org/10.1145/3460120.3484569",
+    "title": "All your Credentials are Belong to Us: On Insecure WPA2-Enterprise Configurations",
+    "author": "Man Hong Hue, Joyanta Debnath, Kin Man Leung, Li Li, Mohsen Minaei, M. Hammad Mazhar, Kailiang Xian, Endadul Hoque, Omar Chowdhury, and Sze Yiu Chau",
+    "conference": "CCS'21",
+    "date": "Nov 2021",
+    "type": "research"
+  },
+  {
     "url": "https://github.blog/2021-08-05-release-radar-jun-jul-2021/",
     "title": "GitHub Release Radar - Mid-year 2021 Edition",
     "author": "Michelle Mannering, GitHub",
