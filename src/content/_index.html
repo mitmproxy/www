@@ -176,7 +176,7 @@ title: "mitmproxy - an interactive HTTPS proxy"
         flow.request.host = <span class="str">"mitmproxy.org"</span>
     <span class="comment"># answer from proxy</span>
     <span class="keyword">elif</span> flow.request.path.endswith(<span class="str">"/brew"</span>):
-    	flow.response = http.HTTPResponse.make(
+    	flow.response = http.Response.make(
             <span class="num">418</span>, <strong>b</strong><span class="str">"I'm a teapot"</span>,
         )</pre>
                         </div>
