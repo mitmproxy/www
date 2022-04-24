@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.dinofizzotti.com/blog/2022-04-24-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-4/",
+    "title": "Running a man-in-the-middle proxy on a Raspberry Pi 4",
+    "author": "Dino Fizzotti",
+    "date": "Apr 2022",
+    "type": "blog post"
+  },
+  {
     "url": "https://doi.org/10.1145/3460120.3484569",
     "title": "All your Credentials are Belong to Us: On Insecure WPA2-Enterprise Configurations",
     "author": "Man Hong Hue, Joyanta Debnath, Kin Man Leung, Li Li, Mohsen Minaei, M. Hammad Mazhar, Kailiang Xian, Endadul Hoque, Omar Chowdhury, and Sze Yiu Chau",
