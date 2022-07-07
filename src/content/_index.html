@@ -323,7 +323,7 @@ title: "mitmproxy - an interactive HTTPS proxy"
         }, 1000)
     });
 
-    getLatestRelease("-windows-installer.exe").then(function (url) {
+    getLatestRelease("-windows-x64-installer.exe").then(function (url) {
         document.getElementById("install-windows").href = url;
     })
     getLatestRelease("-linux.tar.gz").then(function (url) {
