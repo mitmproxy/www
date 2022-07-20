@@ -207,14 +207,11 @@ title: "mitmproxy - an interactive HTTPS proxy"
                         <div style="margin: 0 auto">
                             <p class="is-size-5"><i class="fab fa-twitter has-text-info"></i> Latest
                                 Tweets</p>
-                            <a class="twitter-timeline"
-                               href="https://twitter.com/mitmproxy/favorites"
-                               data-dnt="true"
-                               data-width="430"
-                               data-height="500"
-                               data-chrome="nofooter noheader"
-                            ></a>
-                            <script async defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <div style="max-height: 500px; overflow-y: auto">
+                                <a href="https://twitter.com/mitmproxy/likes" target="_blank">
+                                <img style="width: 100%; max-width: 430px" alt="A screenshot of the latest liked tweets by @mitmproxy." src="/data/twitter-timeline.png" loading="lazy">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="column">

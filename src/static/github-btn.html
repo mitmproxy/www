@@ -292,7 +292,7 @@ body {
   }
 
   fetch(
-      'https://api.github.com/repos/' + user + '/' + repo,
+      '/data/github-stats.json',
       {credentials: "omit", referrerPolicy: "no-referrer"}
   ).then(function(response) { return response.json() }
   ).then(function(json) { callback({data: json}) })
