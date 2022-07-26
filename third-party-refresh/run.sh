@@ -41,11 +41,12 @@ while true; do
 	npx playwright screenshot \
 		--wait-for-timeout 30000 \
 		--full-page \
+		--device="Desktop Chrome HiDPI" \
 		--viewport-size "430,500" \
 		https://uploads.hi.ls/2022-07/render.html \
 		twitter-timeline.png
 	pngquant twitter-timeline.png -o twitter-timeline.png -f
 	s3Upload twitter-timeline.png image/png
-	echo "Done. Sleeping for six hours."
-	sleep 6h
+	echo "Done. Sleeping for one hour."
+	sleep 1h
 done
