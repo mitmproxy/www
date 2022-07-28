@@ -19,11 +19,24 @@ title: "mitmproxy - an interactive HTTPS proxy"
                             </h1>
                             <br>
                             <div id="install" role="navigation" aria-label="Installation">
-                                <a id="install-windows"
+                                <a id="install-windows-classic"
                                    class="button is-hidden is-primary is-medium"
                                    href="/downloads">
                                     Download Windows Installer
                                 </a>
+                                <div>
+                                <a id="install-windows-store" class="button is-hidden is-black" href="ms-windows-store://pdp/?ProductId=9NWNDLQMNZD7">
+                                    <span class="icon">
+                                    <svg width=20 height=20 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+                                        <path fill="#f35325" d="M1 1h10v10H1z"/>
+                                        <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                                        <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                                        <path fill="#ffba08" d="M12 12h10v10H12z"/>
+                                    </svg>
+                                    </span>
+                                    <span>Get from Microsoft Store</span>
+                                </a>
+                                </div>
                                 <a id="install-linux"
                                    class="button is-hidden is-primary is-medium"
                                    href="/downloads">
@@ -37,7 +50,7 @@ title: "mitmproxy - an interactive HTTPS proxy"
                                 <a id="install-docker"
                                    class="button is-hidden is-link is-medium"
                                    href="https://hub.docker.com/r/mitmproxy/mitmproxy/">
-                                    DockerHub
+                                    Docker Hub
                                 </a>
                                 <a id="install-more"
                                    class="button is-hidden is-info is-medium"
@@ -61,15 +74,6 @@ title: "mitmproxy - an interactive HTTPS proxy"
                                 </a>
                                 </span>
                             </p>
-                            <!--
-                            <br>
-                            <p>
-                                <a class="button is-primary is-outlined is-small"
-                                   href="/downloads/#branches/main/">
-                                    Try the beta!
-                                </a>
-                            </p>
-                            -->
                         </div>
                     </div>
                 </div>
@@ -209,7 +213,7 @@ title: "mitmproxy - an interactive HTTPS proxy"
                                 Tweets</p>
                             <div style="max-height: 500px; overflow-y: auto">
                                 <a href="https://twitter.com/mitmproxy/likes" target="_blank" aria-label="Open latest liked tweets by mitmproxy in new window.">
-                                <img style="width: 100%; max-width: 430px" alt="A screenshot of the latest liked tweets by @mitmproxy." src="/data/twitter-timeline.png" loading="lazy">
+                                <img style="width: 100%; max-width: 430px" alt="A screenshot of the latest liked tweets by @mitmproxy." src="/data/twitter-timeline.png" loading="lazy" title="🖼️ This is a screenshot to protect your privacy. ✨">
                                 </a>
                             </div>
                         </div>
@@ -321,30 +325,24 @@ title: "mitmproxy - an interactive HTTPS proxy"
     });
 
     getLatestRelease("-windows-x64-installer.exe").then(function (url) {
-        document.getElementById("install-windows").href = url;
+        document.getElementById("install-windows-classic").href = url;
     })
     getLatestRelease("-linux.tar.gz").then(function (url) {
         document.getElementById("install-linux").href = url;
     })
 
     // OS Detection
-    let platform = window.navigator.platform.toLowerCase(),
-        platformButton;
+    let platform = window.navigator.platform.toLowerCase();
     if (platform.includes("win")) {
-        platformButton = document.getElementById("install-windows");
-        let linux = document.getElementById("install-linux")
-        linux.textContent += " (WSL)";
-        linux.classList.remove("is-hidden");
-        linux.classList.add("is-outlined");
-    } else if (platform.includes("linux") && !platform.includes("android")) {
-        platformButton = document.getElementById("install-linux");
-
-    } else if (platform.includes("mac") && !platform.includes("iPhone") && !platform.includes("iPad")) {
-        platformButton = document.getElementById("install-macos");
-    }
-    if (platformButton) {
-        platformButton.classList.remove("is-hidden");
         document.getElementById("install-default").classList.add("is-hidden");
+        document.getElementById("install-windows-classic").classList.remove("is-hidden");
+        document.getElementById("install-windows-store").classList.remove("is-hidden");
+    } else if (platform.includes("linux") && !platform.includes("android")) {
+        document.getElementById("install-default").classList.add("is-hidden");
+        document.getElementById("install-linux").classList.remove("is-hidden");
+    } else if (platform.includes("mac") && !platform.includes("iPhone") && !platform.includes("iPad")) {
+        document.getElementById("install-default").classList.add("is-hidden");
+        document.getElementById("install-macos").classList.remove("is-hidden");
     }
 
     let install = document.querySelector("#install");
