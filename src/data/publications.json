@@ -1,9 +1,23 @@
 [
   {
+    "url": "https://hiphish.github.io/blog/2022/06/12/fake-web-backend-with-mitmproxy/",
+    "title": "Fake web backend with mitmproxy",
+    "author": "HiPhish",
+    "date": "Jun 2022",
+    "type": "blog post"
+  },
+  {
     "url": "https://www.dinofizzotti.com/blog/2022-04-24-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-4/",
     "title": "Running a man-in-the-middle proxy on a Raspberry Pi 4",
     "author": "Dino Fizzotti",
     "date": "Apr 2022",
+    "type": "blog post"
+  },
+  {
+    "url": "https://hiphish.github.io/blog/2022/03/19/securing-quicklisp-through-mitmproxy/",
+    "title": "Securing Quicklisp through mitmproxy",
+    "author": "HiPhish",
+    "date": "Mar 2022",
     "type": "blog post"
   },
   {
