@@ -10,3 +10,6 @@ relativeURLs = true
 
 [indexes]
   tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe = true
