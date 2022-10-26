@@ -1,6 +1,6 @@
 ---
 title: "A more user-friendly transparent mode, based on WireGuard"
-date: 2022-09-23
+date: 2022-10-28
 weight: 10
 tags: [tech]
 author:
@@ -8,7 +8,7 @@ author:
     twitter: decathorpe
 ---
 
-The next release of mitmproxy is slated to ship with a new proxy mode based on [WireGuard](https://www.wireguard.com/). 
+mitmproxy 9 release ships with a new experimental proxy mode based on [WireGuard®](https://www.wireguard.com/). 
 This new mode makes it incredibly easy to set up proxying for other devices in your network,
 and allows you to only proxy specific apps on Android.
 
@@ -22,7 +22,7 @@ in the mitmweb interface:
 <video controls>
     <source src="mitmweb-wireguard-android.mp4#t=0.4" type="video/mp4">
 </video>
-<figcaption>Setting up an Android smartphone (right) to use mitmweb (left).</figcaption>
+<figcaption>Setting up an Android smartphone (right) to use mitmweb (left).<br>The mitmproxy CA certificate has been preinstalled for this demo.</figcaption>
 </figure>
 
 ## How it works
