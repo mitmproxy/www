@@ -1,52 +1,29 @@
 #!/usr/bin/bash
 
 set -e
+set -x
 
-s3Key=
-s3Secret=
-bucket=www.mitmproxy.org
-subdir=data/
-
-s3Upload () {
-	file=$1
-	contentType=$2
-	resource="/${bucket}/${subdir}${file}"
-	dateValue=`date -R`
-	stringToSign="PUT\n\n${contentType}\n${dateValue}\n${resource}"
-	signature=`echo -en ${stringToSign} | openssl sha1 -hmac ${s3Secret} -binary | base64`
-	curl -X PUT -T "${file}" \
-	  -H "Host: ${bucket}.s3.amazonaws.com" \
-	  -H "Date: ${dateValue}" \
-	  -H "Content-Type: ${contentType}" \
-	  -H "Authorization: AWS ${s3Key}:${signature}" \
-	  https://s3.amazonaws.com/${subdir}${file}
-
-	# same, but for www-test
-	resource="/www-test.mitmproxy.org/${subdir}${file}"
-	stringToSign="PUT\n\n${contentType}\n${dateValue}\n${resource}"
-	signature=`echo -en ${stringToSign} | openssl sha1 -hmac ${s3Secret} -binary | base64`
-        curl -X PUT -T "${file}" \
-          -H "Host: www-test.mitmproxy.org.s3.amazonaws.com" \
-          -H "Date: ${dateValue}" \
-          -H "Content-Type: ${contentType}" \
-          -H "Authorization: AWS ${s3Key}:${signature}" \
-          https://s3-us-west-2.amazonaws.com/${subdir}${file}
-	echo "${file}: S3 upload complete."
-}
-
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
 
 while true; do
-	curl https://api.github.com/repos/mitmproxy/mitmproxy -o github-stats.json
-	s3Upload github-stats.json application/json
-	npx playwright screenshot \
-		--wait-for-timeout 30000 \
-		--full-page \
-		--device="Desktop Chrome HiDPI" \
-		--viewport-size "430,500" \
-		https://uploads.hi.ls/2022-07/render.html \
-		twitter-timeline.png
-	pngquant twitter-timeline.png -o twitter-timeline.png -f
-	s3Upload twitter-timeline.png image/png
-	echo "Done. Sleeping for one hour."
-	sleep 1h
+        curl https://api.github.com/repos/mitmproxy/mitmproxy -o /data/github-stats.json
+
+        npx playwright screenshot \
+                --wait-for-timeout 30000 \
+                --full-page \
+                --device="Desktop Chrome HiDPI" \
+                --viewport-size "430,500" \
+                https://uploads.hi.ls/2022-07/render.html \
+                /data/twitter-timeline.png
+        pngquant /data/twitter-timeline.png -o /data/twitter-timeline.png -f
+
+        aws s3 sync /data s3://www-test.mitmproxy.org/data
+        aws cloudfront create-invalidation --distribution-id E3UCZ4MLN4TO7U --paths "/data/*"
+
+        aws s3 sync /data s3://www.mitmproxy.org/data
+        aws cloudfront create-invalidation --distribution-id E18EVZZRMM1SSD --paths "/data/*"
+
+        echo "Done. Sleeping for one hour."
+        sleep 1h
 done

@@ -8,7 +8,7 @@ author:
     twitter: decathorpe
 ---
 
-mitmproxy 9 release ships with a new experimental proxy mode based on [WireGuard®](https://www.wireguard.com/). 
+[mitmproxy 9]({{< relref "releases/mitmproxy9" >}}) ships with a new experimental proxy mode based on [WireGuard®](https://www.wireguard.com/). 
 This new mode makes it incredibly easy to set up proxying for other devices in your network,
 and allows you to only proxy specific apps on Android.
 
@@ -29,7 +29,7 @@ in the mitmweb interface:
 
 The core of this feature is implemented in the [mitmproxy-wireguard](https://pypi.org/project/mitmproxy-wireguard/)
 Python package, which provides a user space implementation of a WireGuard server. It is a new dependency of mitmproxy
-and will be included by default with the next release.
+and ships with the latest release.
 
 Because the WireGuard protocol operates by transmitting IP packets, this also involves running a network stack in
 user space to parse incoming IP packets, construct outgoing IP packets, handle TCP connections, and process UDP

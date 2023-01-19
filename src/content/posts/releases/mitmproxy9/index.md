@@ -55,6 +55,9 @@ may learn something new! 🎉
 
 ### Full Changelog
 
+Since the last release, the project has had 187 commits by 31 contributors, resulting in 89 closed issues and 108 
+closed pull requests, all of this in just over 165 days.
+
 * Mitmproxy binaries now ship with Python 3.11.
   ([#5678](https://github.com/mitmproxy/mitmproxy/issues/5678), @mhils)
 * One mitmproxy instance can now spawn multiple proxy servers.
