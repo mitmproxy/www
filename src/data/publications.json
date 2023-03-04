@@ -1,643 +1,715 @@
 [
-  {
-    "url": "https://hiphish.github.io/blog/2022/06/12/fake-web-backend-with-mitmproxy/",
-    "title": "Fake web backend with mitmproxy",
-    "author": "HiPhish",
-    "date": "Jun 2022",
-    "type": "blog post"
-  },
-  {
-    "url": "https://www.dinofizzotti.com/blog/2022-04-24-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-4/",
-    "title": "Running a man-in-the-middle proxy on a Raspberry Pi 4",
-    "author": "Dino Fizzotti",
-    "date": "Apr 2022",
-    "type": "blog post"
-  },
-  {
-    "url": "https://hiphish.github.io/blog/2022/03/19/securing-quicklisp-through-mitmproxy/",
-    "title": "Securing Quicklisp through mitmproxy",
-    "author": "HiPhish",
-    "date": "Mar 2022",
-    "type": "blog post"
-  },
-  {
-    "url": "https://doi.org/10.1145/3460120.3484569",
-    "title": "All your Credentials are Belong to Us: On Insecure WPA2-Enterprise Configurations",
-    "author": "Man Hong Hue, Joyanta Debnath, Kin Man Leung, Li Li, Mohsen Minaei, M. Hammad Mazhar, Kailiang Xian, Endadul Hoque, Omar Chowdhury, and Sze Yiu Chau",
-    "conference": "CCS'21",
-    "date": "Nov 2021",
-    "type": "research"
-  },
-  {
-    "url": "https://github.blog/2021-08-05-release-radar-jun-jul-2021/",
-    "title": "GitHub Release Radar - Mid-year 2021 Edition",
-    "author": "Michelle Mannering, GitHub",
-    "date": "Aug 2021",
-    "type": "blog post"
-  },
-  {
-    "url": "https://zerforschung.org/posts/gorillas-en/",
-    "title": "Gorillas: Special offer - unicorn slices, 150g",
-    "author": "Zerforschung",
-    "date": "May 2021",
-    "type": "blog post"
-  },
-  {
-    "url": "https://sufiyanyasa.com/blog/mitmproxy-better-filters/",
-    "title": "mitmproxy filters that will make you a better developer",
-    "author": "Sufiyan Yasa",
-    "date": "Feb 2021",
-    "type": "blog post"
-  },
-  {
-    "url": "https://publications.cispa.saarland/3400/",
-    "title": "Share First, Ask Later (or Never?) - Studying Violations of GDPR's Explicit Consent in Android Apps",
-    "author": "Trung Tin Nguyen, Michael Backes, Ninja Marnau, and Ben Stock",
-    "conference": "USENIX'21",
-    "date": "May 2021",
-    "type": "research"
-  },
-  {
-    "url": "https://dl.acm.org/doi/10.1145/3433210.3437510",
-    "title": "Careful Who You Trust: Studying the Pitfalls of Cross-Origin Communication",
-    "author": "Gordon Meiser, Pierre Laperdrix, and Ben Stock",
-    "conference": "AsiaCCS'21",
-    "date": "May 2021",
-    "type": "research"
-  },
-  {
-    "url": "https://dl.acm.org/doi/10.1145/3433210.3453088",
-    "title": "Click This, Not That: Extending Web Authentication with Deception",
-    "author": "Timothy Barron, Johnny So, Nick Nikiforakis",
-    "conference": "AsiaCCS'21",
-    "date": "May 2021",
-    "type": "research"
-  },
-  {
-    "url": "https://ieeexplore.ieee.org/abstract/document/9374407",
-    "title": "Web Browser Privacy: What Do Browsers Say When They Phone Home?",
-    "author": "Douglas J. Leith",
-    "conference": "IEEE Access 9",
-    "date": "Mar 2021",
-    "type": "research"
-  },
-  {
-    "url": "https://www.scss.tcd.ie/Doug.Leith/pubs/opentrace_privacy.pdf",
-    "title": "Coronavirus Contact Tracing App Privacy: What Data Is Shared By The Singapore OpenTrace App?",
-    "author": "Douglas J. Leith and Stephen Farrell",
-    "conference": "SecureComm 2020",
-    "date": "Dec 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://doi.org/10.1016/j.jss.2020.110775",
-    "title": "A Large Scale Analysis of Android — Web Hybridization",
-    "author": "Abhishek Tiwari, Jyoti Prakash, Sascha Groß, and Christian Hammer",
-    "conference": "Journal of Systems and Software 170",
-    "date": "Dec 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://webthesis.biblio.polito.it/16756/1/tesi.pdf",
-    "title": "Home IoT devices: analysis of the communication protocols",
-    "author": "Marco Andrea Greco",
-    "conference": "Master Thesis",
-    "date": "Dec 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://ieeexplore.ieee.org/abstract/document/9249434",
-    "title": "On Manually Reverse Engineering Communication Protocols of Linux-Based IoT Systems",
-    "author": "Kaizheng Liu, Ming Yang, Zhen Ling, Huaiyu Yan, Yue Zhang, Xinwen Fu, and Wei Zhao",
-    "conference": "IEEE Internet of Things Journal 8(8)",
-    "date": "Nov 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://ieeexplore.ieee.org/abstract/document/9314799",
-    "title": "Traffic Characterization of Instant Messaging Apps: A Campus-Level View",
-    "author": "Sina Keshvadi, Mehdi Karamollahi, and Carey Williamson",
-    "conference": "LCN 2020",
-    "date": "Nov 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://www.proquest.com/openview/2fe76b59ca5836dc3224d30d23daaac3/",
-    "title": "Addressing the Imbalance between Attackers and Defenders Using Cyber Deception",
-    "author": "Timothy Barron",
-    "conference": "Dissertation",
-    "date": "Aug 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://seancoates.com/blogs/how-i-helped-fix-canadas-covid-alert-app",
-    "title": "How I helped fix Canada's COVID Alert app",
-    "author": "Sean Coates",
-    "date": "Aug 2020",
-    "type": "blog post"
-  },
-  {
-    "url": "https://dl.acm.org/doi/10.1145/3403947",
-    "title": "The Seven Deadly Sins of the HTML5 WebAPI: A Large-scale Study on the Risks of Mobile Sensor-based Attacks",
-    "author": "Michalis Diamantaris, Francesco Marcantoni, Sotiris Ioannidis, and Jason Polakis",
-    "conference": "ACM Transactions on Privacy and Security 23(4)",
-    "date": "Jul 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://ieeexplore.ieee.org/abstract/document/9162163",
-    "title": "Towards a Believable Decoy System: Replaying Network Activities from Real System",
-    "author": "Jianhua Sun, Kun Sun, and Qi Li",
-    "conference": "CNS 2020",
-    "date": "Jun 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://arxiv.org/abs/2001.02564",
-    "title": "Watching the Weak Link into Your Home: An Inspection and Monitoring Toolkit for TR-069",
-    "author": "Maximilian Hils and Rainer Böhme",
-    "conference": "ACNS'20",
-    "date": "Jun 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://oxr463.github.io/pentesting-guide/setup/tools/mitmproxy",
-    "title": "Penetration Testing Guide",
-    "author": "Lucas Ramage",
-    "date": "May 2020",
-    "type": "blog post"
-  },
-  {
-    "url": "https://ieeexplore.ieee.org/abstract/document/9283861",
-    "title": "Never Ending Story: Authentication and Access Control Design Flaws in Shared IoT Devices",
-    "author": "Blake Janes, Heather Crawford, and TJ OConnor",
-    "conference": "SPW 2020",
-    "date": "May 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://dl.acm.org/doi/10.1145/3366423.3380173",
-    "title": "Valve: Securing Function Workflows on Serverless Computing Platforms",
-    "author": "Pubali Datta, Prabuddha Kumar, Tristan Morris, Michael Grace, Amir Rahmati, and Adam Bates",
-    "conference": "WWW'20",
-    "date": "Apr 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://lucaslegname.github.io/mitmproxy/2020/04/10/mitmproxy.html",
-    "title": "How to inspect network traffic using mitmproxy",
-    "author": "Lucas Legname",
-    "date": "Apr 2020",
-    "type": "blog post"
-  },
-  {
-    "url": "https://dl.acm.org/doi/10.1145/3358960.3375796",
-    "title": "MoVIE: A Measurement Tool for Mobile Video Streaming on Smartphones",
-    "author": "Sina Keshvadi and Carey Williamson",
-    "conference": "ICPE'20",
-    "date": "Apr 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://doi.org/10.1007/978-3-030-43605-6_17",
-    "title": "Building a Low-Cost and State-of-the-Art IoT Security Hands-On Laboratory",
-    "author": "Bryan Pearson, Lan Luo, Cliff Zou, Jacob Crain, Yier Jin, and Xinwen Fu",
-    "conference": "IFIPIoT 2019",
-    "date": "Oct 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://www.youtube.com/watch?v=lGDETbe0b6w",
-    "title": "A Billion Open Interfaces for Eve and Mallory: MitM, DoS, and Tracking Attacks on iOS and macOS Through Apple Wireless Direct Link",
-    "author": "Milan Stute, Sashank Narain, Alex Mariotto, Alexander Heinrich, David Kreitschmann, Guevara Noubir, and Matthias Hollick",
-    "conference": "USENIX'19",
-    "date": "Aug 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://www.youtube.com/watch?v=lGDETbe0b6w",
-    "title": "Attacking own APIs to find security bugs",
-    "author": "Daniel Neagaru, mytaxi",
-    "date": "Jun 2019",
-    "type": "talk"
-  },
-  {
-    "url": "https://ieeexplore.ieee.org/abstract/document/8812782",
-    "title": "Analysis of YouTube DASH Traffic",
-    "author": "Kamila Ragimova, Vyacheslav Loginov, and Evgeny Khorov",
-    "conference": "BlackSeaCom 2019",
-    "date": "Jun 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://dl.acm.org/doi/10.1145/3308558.3314143",
-    "title": "UNVEIL: Capture and Visualise WiFi Data Leakages",
-    "author": "Shubham Jain, Eden Bensaid, and Yves-Alexandre de Montjoye",
-    "conference": "WWW'19",
-    "date": "May 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://medium.com/hulu-tech-blog/automating-mitmproxy-and-improving-hulus-build-loading-tool-for-roku-629e7f763682",
-    "title": "Automating mitmproxy and Improving Hulu’s Build Loading Tool for Roku",
-    "author": "Chandler Underwood, Hulu Tech",
-    "date": "Apr 2019",
-    "type": "blog post"
-  },
-  {
-    "url": "https://ieeexplore.ieee.org/abstract/document/8443103/",
-    "title": "Security and Privacy Analyses of Internet of Things Children's Toys",
-    "author": "Gordon Chu, Noah Apthorpe, and Nick Feamster",
-    "conference": "IEEE Internet of Things Journal 6(1)",
-    "date": "Feb 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://singularity.be/public/papers/latexgloves.pdf",
-    "title": "Latex Gloves: Protecting Browser Extensions from Probing and Revelation Attacks",
-    "author": "Alexander Sjösten, Steven Van Acker, Pablo Picazo-Sanchez, and Andrei Sabelfeld",
-    "conference": "NDSS'19",
-    "date": "Feb 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3319284",
-    "title": "Web Privacy Measurement in Real-Time Bidding Systems. A Graph-Based Approach to RTB System Classification",
-    "author": "Rob van Eijk",
-    "conference": "Dissertation",
-    "date": "Jan 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/",
-    "title": "Running a man-in-the-middle proxy on a Raspberry Pi 3",
-    "author": "Dino Fizzotti",
-    "date": "Jan 2019",
-    "type": "blog post"
-  },
-  {
-    "url": "https://www.nytimes.com/2018/12/11/realestate/spying-on-the-dog-or-cat.html",
-    "title": "Spying on the Dog (or Cat)",
-    "author": "Michelle Higgins, The New York Times",
-    "date": "Dec 2018",
-    "type": "media"
-  },
-  {
-    "url": "https://dl.acm.org/doi/10.1145/3274694.3274701",
-    "title": "Raising the Bar: Evaluating Origin-wide Security Manifests",
-    "author": "Steven Van Acker, Daniel Hausknecht, and Andrei Sabelfeld",
-    "conference": "ACSAC'18",
-    "date": "Dec 2020",
-    "type": "research"
-  },
-  {
-    "url": "https://dl.acm.org/doi/10.1145/3301326.3301371",
-    "title": "A Campus-Level View of Outlook Email Traffic",
-    "author": "Zhengping Zhang and Carey Williamson",
-    "conference": "ICNCC 2018",
-    "date": "Dec 2018",
-    "type": "research"
-  },
-  {
-    "url": "https://www.abc.net.au/news/2018-10-25/my-phone-is-spying-on-me-so-i-decided-to-spy-on-my-phone/10306586",
-    "title": "My phone is spying on me, so I decided to spy on it",
-    "author": "Simon Elvery, ABC",
-    "date": "Oct 2018",
-    "type": "media"
-  },
-  {
-    "url": "https://hausknecht.se/papers/doctoral_thesis.pdf",
-    "title": "Web Application Content Security",
-    "author": "Daniel Hausknecht",
-    "conference": "Dissertation",
-    "date": "Aug 2018",
-    "type": "research"
-  },
-  {
-    "url": "https://blog.apify.com/using-a-man-in-the-middle-proxy-to-scrape-data-from-a-mobile-app-api-e954915f979d",
-    "title": "Using a man-in-the-middle proxy to scrape data from a mobile app API",
-    "author": "Petr Patek",
-    "date": "Jul 2019",
-    "type": "blog post"
-  },
-  {
-    "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1336796&dswid=-5272",
-    "title": "Security evaluation of smart door locks",
-    "author": "Arvid Viderberg",
-    "conference": "Master Thesis",
-    "date": "Jul 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://link.springer.com/chapter/10.1007/978-3-030-22479-0_7",
-    "title": "Droids in Disarray: Detecting Frame Confusion in Hybrid Android Apps",
-    "author": "Davide Caputo, Luca Verderame, Simone Aonzo, and Alessio Merlo",
-    "conference": "DBSec 2019",
-    "date": "Jun 2019",
-    "type": "research"
-  },
-  {
-    "url": "https://medium.com/@blakeface/spying-on-apps-c42bece94fa0",
-    "title": "Spying on Apps: How to Sleuth Back",
-    "author": "Blake Netzeband",
-    "date": "Sep 2018",
-    "type": "blog post"
-  },
-  {
-    "url": "https://www.cron.dk/grabbing-media-with-mitmproxy",
-    "title": "Grabbing multimedia content with mitmproxy",
-    "author": "Alex Skov Jensen",
-    "date": "Jul 2018",
-    "type": "blog post"
-  },
-  {
-    "url": "https://github.blog/2018-06-12-release-radar-may-2018/",
-    "title": "GitHub Release Radar - May 2018",
-    "author": "Lee Reilly, GitHub",
-    "date": "Jul 2018",
-    "type": "blog post"
-  },
-  {
-    "url": "https://content.iospress.com/articles/journal-of-computer-security/jcs16891",
-    "title": "Invalid certificates in modern browsers: A socio-technical analysis",
-    "author": "Rosarioa Giustolisi, Giampaolob Bella, and Gabrielec Lenzini",
-    "conference": "Journal of Computer Security 26(4)",
-    "date": "Jul 2018",
-    "type": "research"
-  },
-  {
-    "url": "https://aaltodoc.aalto.fi/handle/123456789/32484",
-    "title": "Analysis of cheat detection and prevention techniques in mobile games",
-    "author": "Oskari Teittinen",
-    "conference": "Master Thesis",
-    "date": "Jun 2018",
-    "type": "research"
-  },
-  {
-    "url": "https://mediatum.ub.tum.de/1439446",
-    "title": "Assessing the Impact of Data Practices on User Privacy",
-    "author": "Ashwini Rao",
-    "conference": "Dissertation",
-    "date": "Apr 2018",
-    "type": "research"
-  },
-  {
-    "url": "https://www.plightofbyte.com/tools/2018/03/13/make-believe-using-proxy",
-    "title": "Playing make-believe using proxy server",
-    "author": "Sumit Gupta",
-    "date": "Mar 2018",
-    "type": "blog post"
-  },
-  {
-    "url": "https://dl.acm.org/citation.cfm?id=3274752",
-    "title": "Why Johnny Can't Make Money With His Contents: Pitfalls of Designing and Implementing Content Delivery Apps",
-    "author": "Sze Yiu Chau, Bincheng Wang, Jianxiong Wang, Omar Chowdhury, Aniket Kate, and Ninghui Li",
-    "conference": "ACSAC'18",
-    "date": "Dec 2018",
-    "type": "research"
-  },
-  {
-    "url": "https://doi.org/10.1109/ISCC.2018.8538564",
-    "title": "An SFC-enabled approach for processing SSL/TLS encrypted traffic in Future Enterprise Networks",
-    "author": "Vitor A. Cunha, Marcio B. Carvalho, Daniel Corujo, Joao P. Barraca, Diogo Gomes, Alberto E. Schaeffer-Filho, Carlos R. P. dos Santos, Lisandro Z. Granville, and Rui L. Aguiar",
-    "conference": "IEEE ISCC 2018",
-    "date": "Jun 2018",
-    "type": "research"
-  },
-  {
-    "url": "https://dl.acm.org/doi/abs/10.1145/3296979.3192376",
-    "title": "BLeak: Automatically Debugging Memory Leaks in Web Applications",
-    "author": "John Vilk and Emery Berger",
-    "conference": "PLDI 2018",
-    "date": "Jun 2018",
-    "type": "research"
-  },
-  {
-    "url": "https://www.ingentaconnect.com/contentone/ist/ei/2017/00002017/00000006/art00010",
-    "title": "Investigation of security relevant aspects of Android eHealthApps: permissions, storage properties and data transmission",
-    "author": "Jenny Knackmuss, Eric Clausing, and Reiner Creutzburg",
-    "conference": "Electronic Imaging 2017(6)",
-    "date": "Jun 2017",
-    "type": "research"
-  },
-  {
-    "url": "https://ora.ox.ac.uk/objects/uuid:6f9b0185-b4c1-4c4c-9ece-d4e2a2d2ef23/datastreams/ATTACHMENT01",
-    "title": "Better the Devil You Know: Exposing the Data Sharing Practices of Smartphone Apps",
-    "author": "Max Van Kleek, Ilaria Liccardi, Reuben Binns, Jun Zhao, Daniel J. Weitzner, and Nigel Shadbolt",
-    "conference": "CHI'17",
-    "date": "May 2017",
-    "type": "research"
-  },
-  {
-    "url": "https://ieeexplore.ieee.org/abstract/document/8072022",
-    "title": "A look into the information your smartphone leaks",
-    "author": "Timothy A. Chadza, Francisco J. Aparicio-Navarro, Konstantinos G. Kyriakopoulos, and Jonathon A. Chambers",
-    "conference": "ISNCC 2017",
-    "date": "May 2017",
-    "type": "research"
-  },
-  {
-    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2851997",
-    "title": "Privacy on Adult Websites",
-    "author": "Ibrahim Altaweel, Maximillian Hils, and Chris Jay Hoofnagle",
-    "conference": "ConPro'17",
-    "date": "Mar 2017",
-    "type": "research"
-  },
-  {
-    "url": "https://medium.com/@jacobajit/how-i-gained-access-to-tmobiles-national-network-for-free-f9aaf9273dea",
-    "title": "How I gained access to TMobile’s national network for free",
-    "author": "Jacob Ajit",
-    "date": "Sep 2016",
-    "type": "blog post"
-  },
-  {
-    "url": "https://www.sba-research.org/wp-content/uploads/publications/TLSnotaries_preprint.pdf",
-    "title": "Whom You Gonna Trust? A Longitudinal Study on TLS Notary Services",
-    "author": "Georg Merzdovnik, Klaus Falb, Martin Schmiedecker, Artemios G. Voyiatzis, and Edgar Weippl",
-    "conference": "IFIP SEC'16",
-    "date": "Jul 2016",
-    "type": "research"
-  },
-  {
-    "url": "https://duo.com/blog/out-of-box-exploitation-a-security-analysis-of-oem-updaters",
-    "title": "Out-of-Box Exploitation: A Security Analysis of OEM Updaters",
-    "author": "Darren Kemp, Mikhail Davidov, and Chris Czub",
-    "conference": "Whitepaper",
-    "date": "May 2016",
-    "type": "research"
-  },
-  {
-    "url": "https://jis-eurasipjournals.springeropen.com/articles/10.1186/s13635-016-0030-7",
-    "title": "HTTPS traffic analysis and client identification using passive SSL/TLS fingerprinting",
-    "author": "Martin Husák, Milan Čermák, Tomáš Jirsík, and Pavel Čeleda",
-    "conference": "EURASIP 2016(1)",
-    "date": "Jan 2016",
-    "type": "research"
-  },
-  {
-    "url": "https://www.youtube.com/watch?v=Jm_o81n6qYA",
-    "title": "Demonstration of Python HTTP/2 using Hyper-h2 with Twisted and mitmproxy",
-    "author": "Cory Benfield",
-    "date": "Jan 2016",
-    "type": "talk"
-  },
-  {
-    "url": "https://techscience.org/a/2015103001/",
-    "title": "Who Knows What About Me? A Survey of Behind the Scenes Personal Data Sharing to Third Parties by Mobile Apps",
-    "author": "Jinyan Zang, Krysta Dummit, James Graves, Paul Lisker, and Latanya Sweeney",
-    "conference": "Technology Science 30",
-    "date": "Oct 2015",
-    "type": "research"
-  },
-  {
-    "url": "https://medium.com/@maxgreenwald/mitmproxy-your-d-i-y-private-eye-57e6be2a1273",
-    "title": "Mitmproxy: Your D.I.Y. Private Eye",
-    "author": "Max Greenwald",
-    "date": "Sep 2015",
-    "type": "blog post"
-  },
-  {
-    "url": "https://cyber.jotwell.com/an-internet-x-ray-machine-for-the-masses/",
-    "title": "An Internet X-Ray Machine for the Masses",
-    "author": "Paul Ohm",
-    "date": "Jun 2015",
-    "type": "blog post"
-  },
-  {
-    "url": "https://jeffhuang.com/extracting_data_from_tracking_devices/",
-    "title": "Extracting My Data from the Microsoft Band",
-    "author": "Jeff Huang",
-    "date": "Dec 2014",
-    "type": "blog post"
-  },
-  {
-    "url": "https://www.shubhro.com/2014/12/18/reverse-engineering-kayak-mitmproxy/",
-    "title": "Reverse-engineering the Kayak app with mitmproxy",
-    "author": "Shubhro Saha",
-    "date": "Dec 2014",
-    "type": "blog post"
-  },
-  {
-    "url": "https://pem-musing.blogspot.com/2014/12/debugging-server-side-rest-calls-with.html",
-    "title": "Debugging server side REST calls with mitmproxy in Meteor",
-    "author": "Pierre-Eric Marchandet",
-    "date": "Dec 2014",
-    "type": "blog post"
-  },
-  {
-    "url": "https://blog.attify.com/2014/12/26/quizup-ios-app-security-vulnerability-win-quiz/",
-    "title": "WIN any quiz : QuizUp iOS App Security Vulnerability",
-    "author": "attify",
-    "date": "Dec 2014",
-    "type": "blog post"
-  },
-  {
-    "url": "https://cobweb.cs.uga.edu/~kangli/src/ccs2014.pdf",
-    "title": "ClickMiner: Towards Forensic Reconstruction of User-Browser Interactions from Network Traces",
-    "author": "Christopher Neasbitt, Roberto Perdisci, Kang Li, and Terry Nelms",
-    "conference": "CCS'14",
-    "date": "Dec 2014",
-    "type": "research"
-  },
-  {
-    "url": "https://www.youtube.com/watch?v=hPuOtJbxJT8",
-    "title": "Mitmproxy Demo at Honeynet Workshop 2014",
-    "author": "Maximilian Hils",
-    "date": "Feb 2014",
-    "type": "talk"
-  },
-  {
-    "url": "https://dx.doi.org/10.1108/IJPCC-04-2015-0020",
-    "title": "Security and privacy of smartphone messaging applications",
-    "author": "Robin Mueller, Sebastian Schrittwieser, Peter Fruehwirt, Peter Kieseberg, and Edgar Weippl",
-    "conference": "International Journal of Pervasive Computing and Communications 11(2)",
-    "date": "Jun 2015",
-    "type": "research"
-  },
-  {
-    "url": "https://cweiske.de/tagebuch/ouya-is-watching.htm",
-    "title": "OUYA is watching you",
-    "author": "Christian Weiske",
-    "date": "Oct 2013",
-    "type": "blog post"
-  },
-  {
-    "url": "https://blog.marxy.org/2013/08/reverse-engineering-network-traffic.html",
-    "title": "Reverse engineering network traffic with a Raspberry Pi",
-    "author": "Peter B Marks",
-    "date": "Aug 2013",
-    "type": "blog post"
-  },
-  {
-    "url": "https://www.cs.ru.nl/bachelors-theses/2013/Martijn_Terpstra___0814962___WhatsApp_and_privacy.pdf",
-    "title": "WhatsApp & Privacy",
-    "author": "Martijn Terpstra",
-    "conference": "Bachelor Thesis",
-    "date": "Jul 2013",
-    "type": "research"
-  },
-  {
-    "url": "https://blogs.wsj.com/digits/2012/12/07/sites-sharing-personal-details-the-journal-methodology/",
-    "title": "Sites Sharing Personal Details: The Journal’s Tests",
-    "author": "Jeremy Singer-Vine and Jennifer Valentino-DeVries, Wall Street Journal",
-    "date": "Dec 2012",
-    "type": "media"
-  },
-  {
-    "url": "https://holgr.com/apple-starts-using-their-own-mapping-service-ditching-google-maps/",
-    "title": "Apple starts using their own mapping service, ditches Google Maps",
-    "author": "Holger Eilhard",
-    "date": "Mar 2012",
-    "type": "blog post"
-  },
-  {
-    "url": "https://blog.markchang.net/post/17244167951/hipster-uploads-part-of-your-iphone-address-book",
-    "title": "Hipster uploads part of your iPhone address book to its servers",
-    "author": "Mark L. Chang",
-    "date": "Feb 2012",
-    "type": "blog post"
-  },
-  {
-    "url": "https://www.theverge.com/2012/2/7/2782947/path-ios-app-user-information-collected-privacy",
-    "title": "Path uploads your entire iPhone address book to its servers",
-    "author": "Arun Thampi, The Verge",
-    "date": "Feb 2012",
-    "type": "media"
-  },
-  {
-    "url": "https://www.youtube.com/watch?v=kQ1-0G90lQg",
-    "title": "mitmproxy - use and abuse of a hackable SSL-capable man-in-the-middle proxy",
-    "author": "Jim Cheetham",
-    "date": "Jan 2012",
-    "type": "talk"
-  },
-  {
-    "url": "https://corte.si/posts/security/skout/index.html",
-    "title": "Skout: a devastating privacy vulnerability",
-    "author": "Aldo Cortesi",
-    "date": "Sept 2011",
-    "type": "blog post"
-  },
-  {
-    "url": "https://corte.si/posts/security/apple-udid-survey/index.html",
-    "title": "How UDIDs are used: a survey",
-    "author": "Aldo Cortesi",
-    "date": "May 2011",
-    "type": "blog post"
-  },
-  {
-    "url": "https://corte.si/posts/security/udid-must-die/index.html",
-    "title": "Why the Apple UDID had to die",
-    "author": "Aldo Cortesi",
-    "date": "May 2011",
-    "type": "blog post"
-  },
-  {
-    "url": "https://corte.si/posts/security/openfeint-udid-deanonymization/index.html",
-    "title": "De-anonymizing Apple UDIDs with OpenFeint",
-    "author": "Aldo Cortesi",
-    "date": "May 2011",
-    "type": "blog post"
-  }
+    {
+        "url": "https://www.ndss-symposium.org/wp-content/uploads/2023/02/ndss2023_f169_paper.pdf",
+        "title": "ReScan: A Middleware Framework for Realistic and Robust Black-box Web Application Scanning",
+        "author": "Kostas Drakonakis, Sotiris Ioannidis, and Jason Polakis",
+        "conference": "NDSS'23",
+        "date": "Mar 2023",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/3548606.3560564",
+        "title": "Freely Given Consent? Studying Consent Notice of Third-Party Tracking and Its Violations of GDPR in Android Apps",
+        "author": "Trung Tin Nguyen, Michael Backes, and Ben Stock",
+        "conference": "CCS'22",
+        "date": "Nov 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/3550358",
+        "title": "JSAnalyzer: A Web Developer Tool for Simplifying Mobile Web Pages through Non-critical JavaScript Elimination",
+        "author": "Moumena Chaqfeh, Russell Coke, Jacinta Hu, Waleed Hashmi, Lakshmi Subramanian, Talal Rahwan, and Yasir Zaki",
+        "conference": "ACM Trans. Web 16 (4)",
+        "date": "Nov 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/3551349.3561343",
+        "title": "Privacy Analysis of Period Tracking Mobile Apps in the Post-Roe v. Wade Era",
+        "author": "Zikan Dong, Liu Wang, Hao Xie, Guoai Xu, and Haoyu Wang",
+        "conference": "ASE'22",
+        "date": "Oct 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://arxiv.org/pdf/2104.09828.pdf",
+        "title": "Passive, Transparent, and Selective TLS Decryption for Network Security Monitoring",
+        "author": "Florian Wilkens, Steffen Haas, Johanna Amann, and Mathias Fischer",
+        "conference": "IFIP SEC'22",
+        "date": "Jun 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://hiphish.github.io/blog/2022/06/12/fake-web-backend-with-mitmproxy/",
+        "title": "Fake web backend with mitmproxy",
+        "author": "HiPhish",
+        "date": "Jun 2022",
+        "type": "blog post"
+    },
+    {
+        "url": "https://eprint.iacr.org/2022/595.pdf",
+        "title": "On the Cryptographic Fragility of the Telegram Ecosystem",
+        "author": "Theo von Arx and Kenneth G. Paterson",
+        "conference": "Cryptology ePrint Archive",
+        "date": "May 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/3485447.3512216",
+        "title": "A View into YouTube View Fraud",
+        "author": "Dhruv Kuchhal and Frank Li",
+        "conference": "WWW'22",
+        "date": "Apr 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://www.dinofizzotti.com/blog/2022-04-24-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-4/",
+        "title": "Running a man-in-the-middle proxy on a Raspberry Pi 4",
+        "author": "Dino Fizzotti",
+        "date": "Apr 2022",
+        "type": "blog post"
+    },
+    {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/3478431.3499404",
+        "title": "HELO DarkSide: Breaking Free From Katas and Embracing the Adversarial Mindset in Cybersecurity Education",
+        "author": "TJ OConnor",
+        "conference": "SIGCSE'22",
+        "date": "Mar 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://hiphish.github.io/blog/2022/03/19/securing-quicklisp-through-mitmproxy/",
+        "title": "Securing Quicklisp through mitmproxy",
+        "author": "HiPhish",
+        "date": "Mar 2022",
+        "type": "blog post"
+    },
+    {
+        "url": "https://petsymposium.org/popets/2022/popets-2022-0012.pdf",
+        "title": "OmniCrawl: Comprehensive Measurement of Web Tracking With Real Desktop and Mobile Browsers",
+        "author": "Darion Cassel, Su-Chin Lin, Alessio Buraggina, William Wang, Andrew Zhang, Lujo Bauer, Hsu-Chun Hsiao, Limin Jia, and Timothy Libert",
+        "conference": "PETS'22",
+        "date": "Jan 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://doi.org/10.1145/3460120.3484569",
+        "title": "All your Credentials are Belong to Us: On Insecure WPA2-Enterprise Configurations",
+        "author": "Man Hong Hue, Joyanta Debnath, Kin Man Leung, Li Li, Mohsen Minaei, M. Hammad Mazhar, Kailiang Xian, Endadul Hoque, Omar Chowdhury, and Sze Yiu Chau",
+        "conference": "CCS'21",
+        "date": "Nov 2021",
+        "type": "research"
+    },
+    {
+        "url": "https://github.blog/2021-08-05-release-radar-jun-jul-2021/",
+        "title": "GitHub Release Radar - Mid-year 2021 Edition",
+        "author": "Michelle Mannering, GitHub",
+        "date": "Aug 2021",
+        "type": "blog post"
+    },
+    {
+        "url": "https://zerforschung.org/posts/gorillas-en/",
+        "title": "Gorillas: Special offer - unicorn slices, 150g",
+        "author": "Zerforschung",
+        "date": "May 2021",
+        "type": "blog post"
+    },
+    {
+        "url": "https://sufiyanyasa.com/blog/mitmproxy-better-filters/",
+        "title": "mitmproxy filters that will make you a better developer",
+        "author": "Sufiyan Yasa",
+        "date": "Feb 2021",
+        "type": "blog post"
+    },
+    {
+        "url": "https://publications.cispa.saarland/3400/",
+        "title": "Share First, Ask Later (or Never?) - Studying Violations of GDPR's Explicit Consent in Android Apps",
+        "author": "Trung Tin Nguyen, Michael Backes, Ninja Marnau, and Ben Stock",
+        "conference": "USENIX'21",
+        "date": "May 2021",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/10.1145/3433210.3437510",
+        "title": "Careful Who You Trust: Studying the Pitfalls of Cross-Origin Communication",
+        "author": "Gordon Meiser, Pierre Laperdrix, and Ben Stock",
+        "conference": "AsiaCCS'21",
+        "date": "May 2021",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/10.1145/3433210.3453088",
+        "title": "Click This, Not That: Extending Web Authentication with Deception",
+        "author": "Timothy Barron, Johnny So, Nick Nikiforakis",
+        "conference": "AsiaCCS'21",
+        "date": "May 2021",
+        "type": "research"
+    },
+    {
+        "url": "https://ieeexplore.ieee.org/abstract/document/9374407",
+        "title": "Web Browser Privacy: What Do Browsers Say When They Phone Home?",
+        "author": "Douglas J. Leith",
+        "conference": "IEEE Access 9",
+        "date": "Mar 2021",
+        "type": "research"
+    },
+    {
+        "url": "https://www.scss.tcd.ie/Doug.Leith/pubs/opentrace_privacy.pdf",
+        "title": "Coronavirus Contact Tracing App Privacy: What Data Is Shared By The Singapore OpenTrace App?",
+        "author": "Douglas J. Leith and Stephen Farrell",
+        "conference": "SecureComm 2020",
+        "date": "Dec 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://doi.org/10.1016/j.jss.2020.110775",
+        "title": "A Large Scale Analysis of Android — Web Hybridization",
+        "author": "Abhishek Tiwari, Jyoti Prakash, Sascha Groß, and Christian Hammer",
+        "conference": "Journal of Systems and Software 170",
+        "date": "Dec 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://webthesis.biblio.polito.it/16756/1/tesi.pdf",
+        "title": "Home IoT devices: analysis of the communication protocols",
+        "author": "Marco Andrea Greco",
+        "conference": "Master Thesis",
+        "date": "Dec 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://ieeexplore.ieee.org/abstract/document/9249434",
+        "title": "On Manually Reverse Engineering Communication Protocols of Linux-Based IoT Systems",
+        "author": "Kaizheng Liu, Ming Yang, Zhen Ling, Huaiyu Yan, Yue Zhang, Xinwen Fu, and Wei Zhao",
+        "conference": "IEEE Internet of Things Journal 8(8)",
+        "date": "Nov 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://ieeexplore.ieee.org/abstract/document/9314799",
+        "title": "Traffic Characterization of Instant Messaging Apps: A Campus-Level View",
+        "author": "Sina Keshvadi, Mehdi Karamollahi, and Carey Williamson",
+        "conference": "LCN 2020",
+        "date": "Nov 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://www.proquest.com/openview/2fe76b59ca5836dc3224d30d23daaac3/",
+        "title": "Addressing the Imbalance between Attackers and Defenders Using Cyber Deception",
+        "author": "Timothy Barron",
+        "conference": "Dissertation",
+        "date": "Aug 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://seancoates.com/blogs/how-i-helped-fix-canadas-covid-alert-app",
+        "title": "How I helped fix Canada's COVID Alert app",
+        "author": "Sean Coates",
+        "date": "Aug 2020",
+        "type": "blog post"
+    },
+    {
+        "url": "https://dl.acm.org/doi/10.1145/3403947",
+        "title": "The Seven Deadly Sins of the HTML5 WebAPI: A Large-scale Study on the Risks of Mobile Sensor-based Attacks",
+        "author": "Michalis Diamantaris, Francesco Marcantoni, Sotiris Ioannidis, and Jason Polakis",
+        "conference": "ACM Transactions on Privacy and Security 23(4)",
+        "date": "Jul 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://ieeexplore.ieee.org/abstract/document/9162163",
+        "title": "Towards a Believable Decoy System: Replaying Network Activities from Real System",
+        "author": "Jianhua Sun, Kun Sun, and Qi Li",
+        "conference": "CNS 2020",
+        "date": "Jun 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://arxiv.org/abs/2001.02564",
+        "title": "Watching the Weak Link into Your Home: An Inspection and Monitoring Toolkit for TR-069",
+        "author": "Maximilian Hils and Rainer Böhme",
+        "conference": "ACNS'20",
+        "date": "Jun 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://oxr463.github.io/pentesting-guide/setup/tools/mitmproxy",
+        "title": "Penetration Testing Guide",
+        "author": "Lucas Ramage",
+        "date": "May 2020",
+        "type": "blog post"
+    },
+    {
+        "url": "https://ieeexplore.ieee.org/abstract/document/9283861",
+        "title": "Never Ending Story: Authentication and Access Control Design Flaws in Shared IoT Devices",
+        "author": "Blake Janes, Heather Crawford, and TJ OConnor",
+        "conference": "SPW 2020",
+        "date": "May 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/10.1145/3366423.3380173",
+        "title": "Valve: Securing Function Workflows on Serverless Computing Platforms",
+        "author": "Pubali Datta, Prabuddha Kumar, Tristan Morris, Michael Grace, Amir Rahmati, and Adam Bates",
+        "conference": "WWW'20",
+        "date": "Apr 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://lucaslegname.github.io/mitmproxy/2020/04/10/mitmproxy.html",
+        "title": "How to inspect network traffic using mitmproxy",
+        "author": "Lucas Legname",
+        "date": "Apr 2020",
+        "type": "blog post"
+    },
+    {
+        "url": "https://dl.acm.org/doi/10.1145/3358960.3375796",
+        "title": "MoVIE: A Measurement Tool for Mobile Video Streaming on Smartphones",
+        "author": "Sina Keshvadi and Carey Williamson",
+        "conference": "ICPE'20",
+        "date": "Apr 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://doi.org/10.1007/978-3-030-43605-6_17",
+        "title": "Building a Low-Cost and State-of-the-Art IoT Security Hands-On Laboratory",
+        "author": "Bryan Pearson, Lan Luo, Cliff Zou, Jacob Crain, Yier Jin, and Xinwen Fu",
+        "conference": "IFIPIoT 2019",
+        "date": "Oct 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=lGDETbe0b6w",
+        "title": "A Billion Open Interfaces for Eve and Mallory: MitM, DoS, and Tracking Attacks on iOS and macOS Through Apple Wireless Direct Link",
+        "author": "Milan Stute, Sashank Narain, Alex Mariotto, Alexander Heinrich, David Kreitschmann, Guevara Noubir, and Matthias Hollick",
+        "conference": "USENIX'19",
+        "date": "Aug 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=lGDETbe0b6w",
+        "title": "Attacking own APIs to find security bugs",
+        "author": "Daniel Neagaru, mytaxi",
+        "date": "Jun 2019",
+        "type": "talk"
+    },
+    {
+        "url": "https://ieeexplore.ieee.org/abstract/document/8812782",
+        "title": "Analysis of YouTube DASH Traffic",
+        "author": "Kamila Ragimova, Vyacheslav Loginov, and Evgeny Khorov",
+        "conference": "BlackSeaCom 2019",
+        "date": "Jun 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/10.1145/3308558.3314143",
+        "title": "UNVEIL: Capture and Visualise WiFi Data Leakages",
+        "author": "Shubham Jain, Eden Bensaid, and Yves-Alexandre de Montjoye",
+        "conference": "WWW'19",
+        "date": "May 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://medium.com/hulu-tech-blog/automating-mitmproxy-and-improving-hulus-build-loading-tool-for-roku-629e7f763682",
+        "title": "Automating mitmproxy and Improving Hulu’s Build Loading Tool for Roku",
+        "author": "Chandler Underwood, Hulu Tech",
+        "date": "Apr 2019",
+        "type": "blog post"
+    },
+    {
+        "url": "https://ieeexplore.ieee.org/abstract/document/8443103/",
+        "title": "Security and Privacy Analyses of Internet of Things Children's Toys",
+        "author": "Gordon Chu, Noah Apthorpe, and Nick Feamster",
+        "conference": "IEEE Internet of Things Journal 6(1)",
+        "date": "Feb 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://singularity.be/public/papers/latexgloves.pdf",
+        "title": "Latex Gloves: Protecting Browser Extensions from Probing and Revelation Attacks",
+        "author": "Alexander Sjösten, Steven Van Acker, Pablo Picazo-Sanchez, and Andrei Sabelfeld",
+        "conference": "NDSS'19",
+        "date": "Feb 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3319284",
+        "title": "Web Privacy Measurement in Real-Time Bidding Systems. A Graph-Based Approach to RTB System Classification",
+        "author": "Rob van Eijk",
+        "conference": "Dissertation",
+        "date": "Jan 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/",
+        "title": "Running a man-in-the-middle proxy on a Raspberry Pi 3",
+        "author": "Dino Fizzotti",
+        "date": "Jan 2019",
+        "type": "blog post"
+    },
+    {
+        "url": "https://www.nytimes.com/2018/12/11/realestate/spying-on-the-dog-or-cat.html",
+        "title": "Spying on the Dog (or Cat)",
+        "author": "Michelle Higgins, The New York Times",
+        "date": "Dec 2018",
+        "type": "media"
+    },
+    {
+        "url": "https://dl.acm.org/doi/10.1145/3274694.3274701",
+        "title": "Raising the Bar: Evaluating Origin-wide Security Manifests",
+        "author": "Steven Van Acker, Daniel Hausknecht, and Andrei Sabelfeld",
+        "conference": "ACSAC'18",
+        "date": "Dec 2020",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/10.1145/3301326.3301371",
+        "title": "A Campus-Level View of Outlook Email Traffic",
+        "author": "Zhengping Zhang and Carey Williamson",
+        "conference": "ICNCC 2018",
+        "date": "Dec 2018",
+        "type": "research"
+    },
+    {
+        "url": "https://www.abc.net.au/news/2018-10-25/my-phone-is-spying-on-me-so-i-decided-to-spy-on-my-phone/10306586",
+        "title": "My phone is spying on me, so I decided to spy on it",
+        "author": "Simon Elvery, ABC",
+        "date": "Oct 2018",
+        "type": "media"
+    },
+    {
+        "url": "https://hausknecht.se/papers/doctoral_thesis.pdf",
+        "title": "Web Application Content Security",
+        "author": "Daniel Hausknecht",
+        "conference": "Dissertation",
+        "date": "Aug 2018",
+        "type": "research"
+    },
+    {
+        "url": "https://blog.apify.com/using-a-man-in-the-middle-proxy-to-scrape-data-from-a-mobile-app-api-e954915f979d",
+        "title": "Using a man-in-the-middle proxy to scrape data from a mobile app API",
+        "author": "Petr Patek",
+        "date": "Jul 2019",
+        "type": "blog post"
+    },
+    {
+        "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1336796&dswid=-5272",
+        "title": "Security evaluation of smart door locks",
+        "author": "Arvid Viderberg",
+        "conference": "Master Thesis",
+        "date": "Jul 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-22479-0_7",
+        "title": "Droids in Disarray: Detecting Frame Confusion in Hybrid Android Apps",
+        "author": "Davide Caputo, Luca Verderame, Simone Aonzo, and Alessio Merlo",
+        "conference": "DBSec 2019",
+        "date": "Jun 2019",
+        "type": "research"
+    },
+    {
+        "url": "https://medium.com/@blakeface/spying-on-apps-c42bece94fa0",
+        "title": "Spying on Apps: How to Sleuth Back",
+        "author": "Blake Netzeband",
+        "date": "Sep 2018",
+        "type": "blog post"
+    },
+    {
+        "url": "https://www.cron.dk/grabbing-media-with-mitmproxy",
+        "title": "Grabbing multimedia content with mitmproxy",
+        "author": "Alex Skov Jensen",
+        "date": "Jul 2018",
+        "type": "blog post"
+    },
+    {
+        "url": "https://github.blog/2018-06-12-release-radar-may-2018/",
+        "title": "GitHub Release Radar - May 2018",
+        "author": "Lee Reilly, GitHub",
+        "date": "Jul 2018",
+        "type": "blog post"
+    },
+    {
+        "url": "https://content.iospress.com/articles/journal-of-computer-security/jcs16891",
+        "title": "Invalid certificates in modern browsers: A socio-technical analysis",
+        "author": "Rosarioa Giustolisi, Giampaolob Bella, and Gabrielec Lenzini",
+        "conference": "Journal of Computer Security 26(4)",
+        "date": "Jul 2018",
+        "type": "research"
+    },
+    {
+        "url": "https://aaltodoc.aalto.fi/handle/123456789/32484",
+        "title": "Analysis of cheat detection and prevention techniques in mobile games",
+        "author": "Oskari Teittinen",
+        "conference": "Master Thesis",
+        "date": "Jun 2018",
+        "type": "research"
+    },
+    {
+        "url": "https://mediatum.ub.tum.de/1439446",
+        "title": "Assessing the Impact of Data Practices on User Privacy",
+        "author": "Ashwini Rao",
+        "conference": "Dissertation",
+        "date": "Apr 2018",
+        "type": "research"
+    },
+    {
+        "url": "https://www.plightofbyte.com/tools/2018/03/13/make-believe-using-proxy",
+        "title": "Playing make-believe using proxy server",
+        "author": "Sumit Gupta",
+        "date": "Mar 2018",
+        "type": "blog post"
+    },
+    {
+        "url": "https://dl.acm.org/citation.cfm?id=3274752",
+        "title": "Why Johnny Can't Make Money With His Contents: Pitfalls of Designing and Implementing Content Delivery Apps",
+        "author": "Sze Yiu Chau, Bincheng Wang, Jianxiong Wang, Omar Chowdhury, Aniket Kate, and Ninghui Li",
+        "conference": "ACSAC'18",
+        "date": "Dec 2018",
+        "type": "research"
+    },
+    {
+        "url": "https://doi.org/10.1109/ISCC.2018.8538564",
+        "title": "An SFC-enabled approach for processing SSL/TLS encrypted traffic in Future Enterprise Networks",
+        "author": "Vitor A. Cunha, Marcio B. Carvalho, Daniel Corujo, Joao P. Barraca, Diogo Gomes, Alberto E. Schaeffer-Filho, Carlos R. P. dos Santos, Lisandro Z. Granville, and Rui L. Aguiar",
+        "conference": "IEEE ISCC 2018",
+        "date": "Jun 2018",
+        "type": "research"
+    },
+    {
+        "url": "https://dl.acm.org/doi/abs/10.1145/3296979.3192376",
+        "title": "BLeak: Automatically Debugging Memory Leaks in Web Applications",
+        "author": "John Vilk and Emery Berger",
+        "conference": "PLDI 2018",
+        "date": "Jun 2018",
+        "type": "research"
+    },
+    {
+        "url": "https://www.ingentaconnect.com/contentone/ist/ei/2017/00002017/00000006/art00010",
+        "title": "Investigation of security relevant aspects of Android eHealthApps: permissions, storage properties and data transmission",
+        "author": "Jenny Knackmuss, Eric Clausing, and Reiner Creutzburg",
+        "conference": "Electronic Imaging 2017(6)",
+        "date": "Jun 2017",
+        "type": "research"
+    },
+    {
+        "url": "https://ora.ox.ac.uk/objects/uuid:6f9b0185-b4c1-4c4c-9ece-d4e2a2d2ef23/datastreams/ATTACHMENT01",
+        "title": "Better the Devil You Know: Exposing the Data Sharing Practices of Smartphone Apps",
+        "author": "Max Van Kleek, Ilaria Liccardi, Reuben Binns, Jun Zhao, Daniel J. Weitzner, and Nigel Shadbolt",
+        "conference": "CHI'17",
+        "date": "May 2017",
+        "type": "research"
+    },
+    {
+        "url": "https://ieeexplore.ieee.org/abstract/document/8072022",
+        "title": "A look into the information your smartphone leaks",
+        "author": "Timothy A. Chadza, Francisco J. Aparicio-Navarro, Konstantinos G. Kyriakopoulos, and Jonathon A. Chambers",
+        "conference": "ISNCC 2017",
+        "date": "May 2017",
+        "type": "research"
+    },
+    {
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2851997",
+        "title": "Privacy on Adult Websites",
+        "author": "Ibrahim Altaweel, Maximillian Hils, and Chris Jay Hoofnagle",
+        "conference": "ConPro'17",
+        "date": "Mar 2017",
+        "type": "research"
+    },
+    {
+        "url": "https://medium.com/@jacobajit/how-i-gained-access-to-tmobiles-national-network-for-free-f9aaf9273dea",
+        "title": "How I gained access to TMobile’s national network for free",
+        "author": "Jacob Ajit",
+        "date": "Sep 2016",
+        "type": "blog post"
+    },
+    {
+        "url": "https://www.sba-research.org/wp-content/uploads/publications/TLSnotaries_preprint.pdf",
+        "title": "Whom You Gonna Trust? A Longitudinal Study on TLS Notary Services",
+        "author": "Georg Merzdovnik, Klaus Falb, Martin Schmiedecker, Artemios G. Voyiatzis, and Edgar Weippl",
+        "conference": "IFIP SEC'16",
+        "date": "Jul 2016",
+        "type": "research"
+    },
+    {
+        "url": "https://duo.com/blog/out-of-box-exploitation-a-security-analysis-of-oem-updaters",
+        "title": "Out-of-Box Exploitation: A Security Analysis of OEM Updaters",
+        "author": "Darren Kemp, Mikhail Davidov, and Chris Czub",
+        "conference": "Whitepaper",
+        "date": "May 2016",
+        "type": "research"
+    },
+    {
+        "url": "https://jis-eurasipjournals.springeropen.com/articles/10.1186/s13635-016-0030-7",
+        "title": "HTTPS traffic analysis and client identification using passive SSL/TLS fingerprinting",
+        "author": "Martin Husák, Milan Čermák, Tomáš Jirsík, and Pavel Čeleda",
+        "conference": "EURASIP 2016(1)",
+        "date": "Jan 2016",
+        "type": "research"
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=Jm_o81n6qYA",
+        "title": "Demonstration of Python HTTP/2 using Hyper-h2 with Twisted and mitmproxy",
+        "author": "Cory Benfield",
+        "date": "Jan 2016",
+        "type": "talk"
+    },
+    {
+        "url": "https://techscience.org/a/2015103001/",
+        "title": "Who Knows What About Me? A Survey of Behind the Scenes Personal Data Sharing to Third Parties by Mobile Apps",
+        "author": "Jinyan Zang, Krysta Dummit, James Graves, Paul Lisker, and Latanya Sweeney",
+        "conference": "Technology Science 30",
+        "date": "Oct 2015",
+        "type": "research"
+    },
+    {
+        "url": "https://medium.com/@maxgreenwald/mitmproxy-your-d-i-y-private-eye-57e6be2a1273",
+        "title": "Mitmproxy: Your D.I.Y. Private Eye",
+        "author": "Max Greenwald",
+        "date": "Sep 2015",
+        "type": "blog post"
+    },
+    {
+        "url": "https://cyber.jotwell.com/an-internet-x-ray-machine-for-the-masses/",
+        "title": "An Internet X-Ray Machine for the Masses",
+        "author": "Paul Ohm",
+        "date": "Jun 2015",
+        "type": "blog post"
+    },
+    {
+        "url": "https://jeffhuang.com/extracting_data_from_tracking_devices/",
+        "title": "Extracting My Data from the Microsoft Band",
+        "author": "Jeff Huang",
+        "date": "Dec 2014",
+        "type": "blog post"
+    },
+    {
+        "url": "https://www.shubhro.com/2014/12/18/reverse-engineering-kayak-mitmproxy/",
+        "title": "Reverse-engineering the Kayak app with mitmproxy",
+        "author": "Shubhro Saha",
+        "date": "Dec 2014",
+        "type": "blog post"
+    },
+    {
+        "url": "https://pem-musing.blogspot.com/2014/12/debugging-server-side-rest-calls-with.html",
+        "title": "Debugging server side REST calls with mitmproxy in Meteor",
+        "author": "Pierre-Eric Marchandet",
+        "date": "Dec 2014",
+        "type": "blog post"
+    },
+    {
+        "url": "https://blog.attify.com/2014/12/26/quizup-ios-app-security-vulnerability-win-quiz/",
+        "title": "WIN any quiz : QuizUp iOS App Security Vulnerability",
+        "author": "attify",
+        "date": "Dec 2014",
+        "type": "blog post"
+    },
+    {
+        "url": "https://cobweb.cs.uga.edu/~kangli/src/ccs2014.pdf",
+        "title": "ClickMiner: Towards Forensic Reconstruction of User-Browser Interactions from Network Traces",
+        "author": "Christopher Neasbitt, Roberto Perdisci, Kang Li, and Terry Nelms",
+        "conference": "CCS'14",
+        "date": "Dec 2014",
+        "type": "research"
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=hPuOtJbxJT8",
+        "title": "Mitmproxy Demo at Honeynet Workshop 2014",
+        "author": "Maximilian Hils",
+        "date": "Feb 2014",
+        "type": "talk"
+    },
+    {
+        "url": "https://dx.doi.org/10.1108/IJPCC-04-2015-0020",
+        "title": "Security and privacy of smartphone messaging applications",
+        "author": "Robin Mueller, Sebastian Schrittwieser, Peter Fruehwirt, Peter Kieseberg, and Edgar Weippl",
+        "conference": "International Journal of Pervasive Computing and Communications 11(2)",
+        "date": "Jun 2015",
+        "type": "research"
+    },
+    {
+        "url": "https://cweiske.de/tagebuch/ouya-is-watching.htm",
+        "title": "OUYA is watching you",
+        "author": "Christian Weiske",
+        "date": "Oct 2013",
+        "type": "blog post"
+    },
+    {
+        "url": "https://blog.marxy.org/2013/08/reverse-engineering-network-traffic.html",
+        "title": "Reverse engineering network traffic with a Raspberry Pi",
+        "author": "Peter B Marks",
+        "date": "Aug 2013",
+        "type": "blog post"
+    },
+    {
+        "url": "https://www.cs.ru.nl/bachelors-theses/2013/Martijn_Terpstra___0814962___WhatsApp_and_privacy.pdf",
+        "title": "WhatsApp & Privacy",
+        "author": "Martijn Terpstra",
+        "conference": "Bachelor Thesis",
+        "date": "Jul 2013",
+        "type": "research"
+    },
+    {
+        "url": "https://blogs.wsj.com/digits/2012/12/07/sites-sharing-personal-details-the-journal-methodology/",
+        "title": "Sites Sharing Personal Details: The Journal’s Tests",
+        "author": "Jeremy Singer-Vine and Jennifer Valentino-DeVries, Wall Street Journal",
+        "date": "Dec 2012",
+        "type": "media"
+    },
+    {
+        "url": "https://holgr.com/apple-starts-using-their-own-mapping-service-ditching-google-maps/",
+        "title": "Apple starts using their own mapping service, ditches Google Maps",
+        "author": "Holger Eilhard",
+        "date": "Mar 2012",
+        "type": "blog post"
+    },
+    {
+        "url": "https://blog.markchang.net/post/17244167951/hipster-uploads-part-of-your-iphone-address-book",
+        "title": "Hipster uploads part of your iPhone address book to its servers",
+        "author": "Mark L. Chang",
+        "date": "Feb 2012",
+        "type": "blog post"
+    },
+    {
+        "url": "https://www.theverge.com/2012/2/7/2782947/path-ios-app-user-information-collected-privacy",
+        "title": "Path uploads your entire iPhone address book to its servers",
+        "author": "Arun Thampi, The Verge",
+        "date": "Feb 2012",
+        "type": "media"
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=kQ1-0G90lQg",
+        "title": "mitmproxy - use and abuse of a hackable SSL-capable man-in-the-middle proxy",
+        "author": "Jim Cheetham",
+        "date": "Jan 2012",
+        "type": "talk"
+    },
+    {
+        "url": "https://corte.si/posts/security/skout/index.html",
+        "title": "Skout: a devastating privacy vulnerability",
+        "author": "Aldo Cortesi",
+        "date": "Sept 2011",
+        "type": "blog post"
+    },
+    {
+        "url": "https://corte.si/posts/security/apple-udid-survey/index.html",
+        "title": "How UDIDs are used: a survey",
+        "author": "Aldo Cortesi",
+        "date": "May 2011",
+        "type": "blog post"
+    },
+    {
+        "url": "https://corte.si/posts/security/udid-must-die/index.html",
+        "title": "Why the Apple UDID had to die",
+        "author": "Aldo Cortesi",
+        "date": "May 2011",
+        "type": "blog post"
+    },
+    {
+        "url": "https://corte.si/posts/security/openfeint-udid-deanonymization/index.html",
+        "title": "De-anonymizing Apple UDIDs with OpenFeint",
+        "author": "Aldo Cortesi",
+        "date": "May 2011",
+        "type": "blog post"
+    }
 ]
