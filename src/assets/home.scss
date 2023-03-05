@@ -146,3 +146,16 @@
     }
   }
 }
+
+.sponsors {
+  img {
+    margin-right: .4em;
+    vertical-align:middle;
+    max-width: 48px;
+    max-height: 48px;
+    transition: all 100ms ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.1);
+  }
+}
