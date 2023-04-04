@@ -1,5 +1,5 @@
-const WEB_ROOT = "https://snapshots.mitmproxy.org/"
-const BUCKET_URL = "https://s3-us-west-2.amazonaws.com/snapshots.mitmproxy.org";
+const WEB_ROOT = "https://downloads.mitmproxy.org/"
+const BUCKET_URL = "https://downloads.mitmproxy.org/list";
 const EXCLUDE = {
     "index.html": true,
     "error.html": true,
