@@ -1,5 +1,12 @@
 [
     {
+        "url": "https://underxctrl.frama.io/wifilter/",
+        "title": "A WiFi filter box boosted by machine learning to protect your children from adult content",
+        "author": "underxctrl",
+        "date": "May 2023",
+        "type": "blog post"
+    },
+    {
         "url": "https://www.ndss-symposium.org/wp-content/uploads/2023/02/ndss2023_f169_paper.pdf",
         "title": "ReScan: A Middleware Framework for Realistic and Robust Black-box Web Application Scanning",
         "author": "Kostas Drakonakis, Sotiris Ioannidis, and Jason Polakis",
