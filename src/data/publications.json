@@ -1,5 +1,12 @@
 [
     {
+        "url": "https://johnelmlabs.com/posts/give-me-what-i-paid-for",
+        "title": "How I Jailbroke the language learning app that sucked",
+        "author": "John Elm",
+        "date": "Jul 2023",
+        "type": "blog post"
+    },
+    {
         "url": "https://www.ndss-symposium.org/wp-content/uploads/2023/02/ndss2023_f169_paper.pdf",
         "title": "ReScan: A Middleware Framework for Realistic and Robust Black-box Web Application Scanning",
         "author": "Kostas Drakonakis, Sotiris Ioannidis, and Jason Polakis",
