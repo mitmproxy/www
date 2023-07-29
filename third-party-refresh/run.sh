@@ -10,11 +10,11 @@ while true; do
         curl https://api.github.com/repos/mitmproxy/mitmproxy -o /data/github-stats.json
 
         npx playwright screenshot \
-                --wait-for-timeout 30000 \
+                --wait-for-timeout 120000 \
                 --full-page \
                 --device="Desktop Chrome HiDPI" \
                 --viewport-size "430,500" \
-                https://uploads.hi.ls/2022-07/render.html \
+                https://uploads.hi.ls/2023-02/render.html \
                 /data/twitter-timeline.png
         pngquant /data/twitter-timeline.png -o /data/twitter-timeline.png -f
 
