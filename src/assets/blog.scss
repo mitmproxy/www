@@ -1,10 +1,17 @@
 .blog {
     // this greatly improves legibility
     max-width: 700px;
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
 
 .blog article {
     margin: 4rem auto 2rem;
+
+    &:first-child {
+        margin-top: 5vh;
+    }
+
     font-size: 1.1rem;
 
     h1 > a {

@@ -45,7 +45,7 @@ Note that we are still working with bleeding-edge features here. Your cURL build
 likely won't have an `--http3-only` flag yet. Chromium-based browsers and Firefox 
 generally expect an HTTP/2 -> HTTP/3 upgrade path, which we still need to support properly.
 Running both TCP and UDP HTTP proxies simultaneously with 
-<small style="white-space: nowrap">`--mode reverse:http3://mitmproxy.org --mode reverse:https://mitmproxy.org`</small>
+`--mode reverse:http3://mitmproxy.org --mode reverse:https://mitmproxy.org`
 kind of works, but we still need to improve both reliability and UX here going forward.
 
 ### Peeking into QUIC Streams
