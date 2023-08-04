@@ -85,9 +85,9 @@ $ mitmdump --mode reverse:quic://mitmproxy.org --set flow_detail=3 \
     QPACK_BLOCKED_STREAMS:    0x0
 ```
 
-Last but not least, if you prefer to debug your connections in WireShark, mitmproxy's
+Last but not least, if you prefer to debug your connections in Wireshark, mitmproxy's
 QUIC proxying also supports [SSLKEYLOGFILE](https://docs.mitmproxy.org/stable/howto-wireshark-tls/).
-This allows you to decrypt QUIC traffic in WireShark for applications that do not support SSLKEYLOGFILE 
+This allows you to decrypt QUIC traffic in Wireshark for applications that do not support SSLKEYLOGFILE 
 natively.
 
 
