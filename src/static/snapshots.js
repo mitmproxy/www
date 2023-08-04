@@ -7,10 +7,15 @@ const EXCLUDE = {
 }
 
 function sortByName(a, b) {
-    // 5.0 > 4.0 > 1.0 > a > b > z
-    let invert = (/^[0-9]/.test(a.name) && /^[0-9]/.test(b.name)) ? -1 : 1;
-    if (a.name > b.name) return invert;
-    if (a.name < b.name) return -invert;
+    // >>> ["10.0.0","5.0.0","1.0.0","aaa","bbb"].map(x => ({name: x})).sort(sortByName).map(x => x.name)
+    // ['10.0.0', '5.0.0', '1.0.0', 'aaa', 'bbb']
+    aNum = parseInt(a.name);
+    bNum = parseInt(b.name);
+    if(!isNaN(aNum) && !isNaN(bNum)) {
+        return bNum - aNum;
+    }
+    if (a.name > b.name) return 1;
+    if (a.name < b.name) return -1;
     return 0;
 }
 

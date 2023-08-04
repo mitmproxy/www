@@ -1,6 +1,6 @@
 ---
 title: "Mitmproxy 10: First Bits of HTTP/3!"
-date: 2023-08-03
+date: 2023-08-04
 weight: 10
 tags: [
     "releases",
