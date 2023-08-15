@@ -7,19 +7,28 @@ const EXCLUDE = {
 }
 
 function sortByName(a, b) {
-    // >>> ["10.0.0","5.0.0","1.0.0","aaa","bbb"].map(x => ({name: x})).sort(sortByName).map(x => x.name)
-    // ['10.0.0', '5.0.0', '1.0.0', 'aaa', 'bbb']
-    aNum = parseInt(a.name);
-    bNum = parseInt(b.name);
-    if(!isNaN(aNum) && !isNaN(bNum)) {
-        return bNum - aNum;
+    // >>> ["10.0.0","5.0.1","5.0.0","1.0.0","aaa","bbb"].map(x => ({name: x})).sort(sortByName).map(x => x.name)
+    // ['10.0.0', '5.0.1', '5.0.0', '1.0.0', 'aaa', 'bbb']
+    a = a.name.match(/\d+|\D+/g);
+    b = b.name.match(/\d+|\D+/g);
+    for (let i = 0; i < Math.max(a.length, b.length); i++) {
+        let aNum = parseInt(a[i]);
+        let bNum = parseInt(b[i]);
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+            if (aNum !== bNum) {
+                return bNum - aNum;
+            }
+        } else if (a[i] > b[i]) {
+            return 1
+        } else if (a[i] < b[i]) {
+            return -1;
+        }
     }
-    if (a.name > b.name) return 1;
-    if (a.name < b.name) return -1;
     return 0;
 }
 
 let s3cache = {};
+
 function fetchS3(directory) {
     let url = BUCKET_URL + "?delimiter=/&prefix=" + directory;
     s3cache[url] = s3cache[url] || (fetch(url)
@@ -49,7 +58,7 @@ function fetchS3(directory) {
             })
             directories.sort(sortByName);
 
-            return { directory: directory, files: files, directories: directories };
+            return {directory: directory, files: files, directories: directories};
         }));
     return s3cache[url];
 }
