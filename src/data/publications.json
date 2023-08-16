@@ -1,11 +1,26 @@
 [
     {
+        "url": "https://www.usenix.org/system/files/usenixsecurity23-koch.pdf",
+        "title": "The OK Is Not Enough: A Large Scale Study of Consent Dialogs in Smartphone Applications",
+        "author": "Simon Koch, Benjamin Altpeter, Martin Johns",
+        "conference": "USENIX'23",        
+        "date": "Aug 2023",
+        "type": "research"
+    },
+    {
         "url": "https://www.ndss-symposium.org/wp-content/uploads/2023/02/ndss2023_f169_paper.pdf",
         "title": "ReScan: A Middleware Framework for Realistic and Robust Black-box Web Application Scanning",
         "author": "Kostas Drakonakis, Sotiris Ioannidis, and Jason Polakis",
         "conference": "NDSS'23",
         "date": "Mar 2023",
         "type": "research"
+    },
+    {
+        "url": "https://media.ccc.de/v/fire-shonks-2022-49115-tracking-in-apps-ist-das-legal-eine-bersicht-ber-die-mobile-trackinglandschaft",
+        "title": "Tracking in Apps: Ist das legal? Eine Übersicht über die mobile Trackinglandschaft",
+        "author": "Benjamin Altpeter, Lorenz Sieben, Malte Wessels",
+        "date": "Dec 2022",
+        "type": "talk"
     },
     {
         "url": "https://dl.acm.org/doi/pdf/10.1145/3548606.3560564",
@@ -29,6 +44,14 @@
         "author": "Zikan Dong, Liu Wang, Hao Xie, Guoai Xu, and Haoyu Wang",
         "conference": "ASE'22",
         "date": "Oct 2022",
+        "type": "research"
+    },
+    {
+        "url": "https://petsymposium.org/popets/2022/popets-2022-0119.pdf",
+        "title": "Keeping Privacy Labels Honest: Developer conformity to self declared data collection via Apple Privacy Labels",
+        "author": "Simon Koch, Malte Wessels, Benjamin Altpeter, Madita Olvermann, Martin Johns",
+        "conference": "PETS'22",        
+        "date": "Jul 2022",
         "type": "research"
     },
     {
