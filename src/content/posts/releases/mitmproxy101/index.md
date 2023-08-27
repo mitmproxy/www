@@ -8,7 +8,7 @@ tags: [
 ]
 author:
   name: Nathaniel Good
-  linkedin: Nathaniel Good
+  twitter: ngoodvi
 ---
 
 We are excited to announce the release of [mitmproxy 10.1](https://github.com/mitmproxy/mitmproxy/releases/tag/v5.2)! 
@@ -17,7 +17,7 @@ We are excited to announce the release of [mitmproxy 10.1](https://github.com/mi
 ##### *Editorial Note:*
 
 *Hi, my name is Nathaniel Good ([@stanleygvi](https://github.com/stanleygvi)) and i'm one of mitmproxy's [Google Summer of Code](https://summerofcode.withgoogle.com/) students this year.
-My task was to implement the import and export functionality for HAR files in mitmproxy.*
+My task was to implement the [import and export](https://github.com/mitmproxy/mitmproxy/commits?author=stanleygvi) functionality for HAR files in mitmproxy. Special thanks to my mentor [Maximilian Hils](@mhils) for his support and guidance throughout this project.*
 
 ## HAR files
 HTTP Archive (HAR) files, are used by a variety of tools to store a log of the interactions a web browser made with a site. Numerous tools like Chrome, Firefox, and Insomnia have the capability to work with HAR files, allowing users to move data between these tools. After this update, mitmproxy will be able to transfer data between these tools as well.
