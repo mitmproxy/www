@@ -1,5 +1,5 @@
 ---
-title: "La modalità trasparente si amplia, nuovo supporto a MacOS"
+title: "Transparent mode is growing, MacOS is now supported"
 date: 2023-08-23
 weight: 10
 tags: [tech, Rust, Swift]
