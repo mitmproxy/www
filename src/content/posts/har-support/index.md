@@ -1,5 +1,5 @@
 ---
-title: "Mitmproxy 10.1"
+title: "HAR Support"
 date: 2023-08-28
 weight: 10
 tags: [
