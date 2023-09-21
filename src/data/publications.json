@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://www.usenix.org/system/files/usenixsecurity23-wu-ka-lok.pdf",
+        "title": "Back to School: On the (In)Security of Academic VPNs",
+        "author": "Ka Lok Wu, Man Hong Hue, Ngai Man Poon, Kin Man Leung, Wai Yin Po, Kin Ting Wong, Sze Ho Hui, Sze Yiu Chau",
+        "conference": "USENIX Sec'23",        
+        "date": "Aug 2023",
+        "type": "research"
+    },
+    {
         "url": "https://www.usenix.org/system/files/usenixsecurity23-koch.pdf",
         "title": "The OK Is Not Enough: A Large Scale Study of Consent Dialogs in Smartphone Applications",
         "author": "Simon Koch, Benjamin Altpeter, Martin Johns",
@@ -7,6 +15,14 @@
         "date": "Aug 2023",
         "type": "research"
     },
+    {
+        "url": "https://dl.acm.org/doi/abs/10.1145/3558482.3590199",
+        "title": "The Devil is in the Details: Hidden Problems of Client-Side Enterprise Wi-Fi Configurators",
+        "author": "Ka Lok Wu, Man Hong Hue, Ka Fun Tang, Sze Yiu Chau",
+        "conference": "WiSec'23",
+        "date": "Jun 2023",
+        "type": "research"
+    },    
     {
         "url": "https://www.ndss-symposium.org/wp-content/uploads/2023/02/ndss2023_f169_paper.pdf",
         "title": "ReScan: A Middleware Framework for Realistic and Robust Black-box Web Application Scanning",
