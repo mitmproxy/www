@@ -55,17 +55,17 @@ For exporting flows into a HAR file, we created a new addon: `save.har`. This ad
 
 ### Exporting on exit
 
-There is also an option to export the files on exit, which can be used with mitmproxy, mitmdump or mitmweb. Either specify the hardump location when loading the script or you can assign it in the mitmproxy options.
+There is also an option to export the files on exit, which can be used with mitmproxy, mitmdump or mitmweb. Either specify the hardump location when loading the script, or you can assign it within the mitmproxy options.
 
 ```shell
-$ mitmdump -s ./path/to/savehar.py --set hardump=./dump.har  
+$ mitmdump --set hardump=dump.har  
 ```
 
 ### Print to console
 
 If the hardump option is set to "-" the HAR file will not be created but instead printed to console on exit.
 ```shell
-$ mitmdump -s ./path/to/savehar.py --set hardump=- 
+$ mitmdump --set hardump=- 
 ```
  
 [^1]: Tested tool representations include: Charles, Chrome, Firefox, Insomnia, Safari, Brave, and Edge
