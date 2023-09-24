@@ -91,7 +91,7 @@ This allows you to decrypt QUIC traffic in Wireshark for applications that do no
 natively.
 
 
-### This release is brought to you by... NLnet!
+## This release is brought to you by... NLnet!
 
 We are very happy to announce that this release kicks off a series of releases supported by the 
 [NGI0 Entrust fund](https://nlnet.nl/entrust/), a fund established by [NLnet](https://nlnet.nl/) with financial support 
@@ -101,7 +101,7 @@ We have always been very careful about accepting funding for mitmproxy.
 Be assured that this has not changed. We won't be adding telemetry, there won't be ads on the website, 
 and we won't take VC funding next. :-)
 
-### Full Changelog
+## Full Changelog
 
 * Add experimental support for HTTP/3 and QUIC.
   ([#5435](https://github.com/mitmproxy/mitmproxy/issues/5435), @meitinger)
@@ -149,7 +149,7 @@ and we won't take VC funding next. :-)
 * mitmproxy now requires Python 3.10 or above.
   ([#5954](https://github.com/mitmproxy/mitmproxy/pull/5954), @mhils)
 
-#### Deprecations
+### Deprecations
 
 * The `onboarding_port` option has been removed. The onboarding app now responds
   to all requests for the hostname specified in `onboarding_host`.

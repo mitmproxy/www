@@ -1,6 +1,6 @@
 ---
 title: "Intercepting macOS Applications"
-date: 2023-08-23
+date: 2023-09-30
 weight: 10
 tags: [ tech, Rust, Swift ]
 author:
