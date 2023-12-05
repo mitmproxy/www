@@ -1,6 +1,6 @@
 ---
 title: "Intercepting macOS Applications"
-date: 2023-12-04
+date: 2023-12-05
 weight: 10
 tags: [ tech, gsoc ]
 author:
