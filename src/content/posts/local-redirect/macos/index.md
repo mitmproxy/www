@@ -79,6 +79,14 @@ it hard to only process traffic from specific applications. We've since switched
 which, while limited to TCP and UDP only, allows us to leave some flows to the operating system to handle.
 
 
+## When is it available?
+
+Local redirect mode is already available in mitmproxy 10.1.5+!
+We're announcing it only now because we first needed to [figure out how to ship
+a signed and notarized system extension](https://github.com/Homebrew/homebrew-core/pull/145547#issuecomment-1732616565) 
+via Homebrew. But thanks to the fantastic Homebrew folks, 
+`brew install mitmproxy` now works!
+
 ## What about certificates?
 
 So far this post has focused on _redirecting_ the traffic to mitmproxy, but in many cases we still need to get the 
