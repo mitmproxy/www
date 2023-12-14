@@ -310,10 +310,10 @@ title: "mitmproxy - an interactive HTTPS proxy"
         }, 1000)
     });
 
-    getLatestRelease("-windows-x64-installer.exe").then(function (url) {
+    getLatestRelease("-windows-x86_64-installer.exe").then(function (url) {
         document.getElementById("install-windows-classic").href = url;
     })
-    getLatestRelease("-linux.tar.gz").then(function (url) {
+    getLatestRelease("-linux-x86_64.tar.gz").then(function (url) {
         document.getElementById("install-linux").href = url;
     })
 
