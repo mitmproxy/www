@@ -1,15 +1,15 @@
 ---
 title: "Intercepting Windows Applications"
-date: 2024-12-24
+date: 2024-01-04
 weight: 10
-tags: [ tech ]
+tags: [ tech, releases ]
 author:
   name: Maximilian Hils
   twitter: maximilianhils
 ---
 
-We're excited to share that local redirect mode is now available on Windows! This allows users
-to seamlessly intercept local applications without configuring proxy settings.
+We're excited to share that local redirect mode is now available on Windows in mitmproxy 10.2!
+This allows users to seamlessly intercept local applications without configuring proxy settings.
 
 <!--more-->
 
@@ -17,7 +17,7 @@ to seamlessly intercept local applications without configuring proxy settings.
 
 While mitmproxy's traditional proxying modes are all relatively platform-independent, 
 our new effort to transparently redirect traffic from the local machine is not.
-After debuting [local redirect mode for macOS]({{< relref "./macos" >}}) earlier this month,
+After debuting [local redirect mode for macOS]({{< relref "./macos" >}}) last month,
 we're happy to report that our Windows functionality is now ready for testing, too!
 
 While limited to CLI invocations for now, this paves the path for significant usability improvements 
@@ -57,7 +57,7 @@ TCP/IP stack to transform packets into streams, and then pass them on to mitmpro
 
 ## Next Steps
 
-As with the macOS version, local redirect mode for Windows is already available for users in mitmproxy 10.1.5+.
+Local redirect mode for Windows is now available for users in mitmproxy 10.2.
 We still intend to extend it with automated certificate installation, and more importantly a UI
 integration into mitmweb. If you are curious about contributing, please join us on [GitHub]!
 
