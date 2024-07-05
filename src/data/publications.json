@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://petsymposium.org/popets/2024/popets-2024-0099.php",
+        "title": "A Black-Box Privacy Analysis of Messaging Service Providers' Chat Message Processing",
+        "author": "Robin Kirchner, Simon Koch, Noah Kamangar, David Klein, Martin Johns",
+        "conference": "PETS'24",
+        "date": "Jul 2024",
+        "type": "research"
+    },
+    {
         "url": "https://www.usenix.org/system/files/usenixsecurity23-wu-ka-lok.pdf",
         "title": "Back to School: On the (In)Security of Academic VPNs",
         "author": "Ka Lok Wu, Man Hong Hue, Ngai Man Poon, Kin Man Leung, Wai Yin Po, Kin Ting Wong, Sze Ho Hui, Sze Yiu Chau",
