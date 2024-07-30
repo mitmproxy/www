@@ -7,6 +7,6 @@ set -o nounset
 
 aws configure set preview.cloudfront true
 aws --profile mitmproxy \
-    s3 sync --acl public-read ./public s3://www-test.mitmproxy.org/
+    s3 sync --acl public-read ./src/public s3://www-test.mitmproxy.org/
 aws --profile mitmproxy \
     cloudfront create-invalidation --distribution-id E3UCZ4MLN4TO7U --paths "/*"

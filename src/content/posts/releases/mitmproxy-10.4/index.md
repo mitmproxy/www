@@ -18,8 +18,8 @@ Work is still underway as part of this year's Google Summer of Code, but a first
 
 *Hi! My name is [Matteo Luppi], and I’m one of this year’s GSoC students for mitmproxy. Under the mentorship of [Maximilian Hils], my primary focus has been on enhancing mitmweb. In this blog post, I’ll introduce you to our new Capture tab page in mitmweb.*
 
-[Matteo Luppi]: {{< ref "authors/matteo-luppi" >}}
-[Maximilian Hils]:  {{< ref "authors/maximilian-hils" >}}
+[Matteo Luppi]: {{< ref "/authors/matteo-luppi" >}}
+[Maximilian Hils]:  {{< ref "/authors/maximilian-hils" >}}
 
 ## New Capture Tab
 

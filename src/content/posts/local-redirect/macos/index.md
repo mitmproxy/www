@@ -19,8 +19,8 @@ without fiddling with any proxy settings.
 mentored by [Maximilian Hils]. In this post I will present the implementation of a macOS Network Extension 
 to transparently intercept macOS traffic![^source]*
 
-[Emanuele Micheletti]: {{< ref "authors/emanuele-micheletti" >}}
-[Maximilian Hils]:  {{< ref "authors/maximilian-hils" >}}
+[Emanuele Micheletti]: {{< ref "/authors/emanuele-micheletti" >}}
+[Maximilian Hils]:  {{< ref "/authors/maximilian-hils" >}}
 [^source]: You can find the source code for this not in the main mitmproxy repository, but over at https://github.com/mitmproxy/mitmproxy_rs!
 
 ## The Problem: Transparent Proxies are Hard

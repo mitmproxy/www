@@ -17,7 +17,7 @@ We are excited to announce the release of [mitmproxy 5.3](https://github.com/mit
 With the recent release of Python 3.9, obviously we had to bump our list of
 supported Python versions and now fully support 3.6, 3.7, 3.8, and 3.9!
 
-As part of this years Google Summer of Code contribution from [Martin Plattner]({{< ref "authors/martin-plattner" >}}), we now have amazing
+As part of this years Google Summer of Code contribution from [Martin Plattner]({{< ref "/authors/martin-plattner" >}}), we now have amazing
 beginner tutorials as part of our documentation! And the best thing: it is made
 as [Tutorial as
 Code](https://github.com/mitmproxy/mitmproxy/blob/aca7284ab64783531193d013e3685864cac8f339/docs/scripts/clirecording/screenplays.py),
