@@ -2,13 +2,11 @@
 title: "A more user-friendly transparent mode, based on WireGuard"
 date: 2022-10-28
 weight: 10
-tags: [tech]
-author:
-    name: Fabio Valentini
-    twitter: decathorpe
+authors:
+  - fabio-valentini
 ---
 
-[mitmproxy 9]({{< relref "releases/mitmproxy9" >}}) ships with a new experimental proxy mode based on [WireGuard®](https://www.wireguard.com/). 
+[mitmproxy 9]({{< relref "releases/mitmproxy-9" >}}) ships with a new experimental proxy mode based on [WireGuard®](https://www.wireguard.com/).
 This new mode makes it incredibly easy to set up proxying for other devices in your network,
 and allows you to only proxy specific apps on Android.
 
@@ -94,7 +92,7 @@ This project would not have been possible if not for the great ecosystem of exis
 programming (tokio), low-level networking functionality (boringtun, smoltcp), and bridging the gap between Rust and
 Python (pyo3, pyo3-log, pyo3-asyncio, maturin).
 
-I would also like to thank [Maximilian Hils](https://twitter.com/maximilianhils) for his mentorship and for supervising
+I would also like to thank [Maximilian Hils]({{< ref "authors/maximilian-hils" >}}) for his mentorship and for supervising
 my Bachelor thesis --- which, coincidentally, will be about "Implementing a WireGuard frontend for mitmproxy". 🙃
 
 

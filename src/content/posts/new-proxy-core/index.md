@@ -5,10 +5,8 @@ summary: |
     technical details and architectural changes coming up.
 date: 2020-12-19  
 weight: 10  
-tags: [tech]  
-author:  
-    name: Maximilian Hils  
-    twitter: maximilianhils
+authors:
+  - maximilian-hils
 ---
 
 {{<

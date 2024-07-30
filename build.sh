@@ -8,7 +8,7 @@ set -o nounset
 cd src
 
 # check for valid JSON
-cat data/publications.json | jq empty
+cat assets/data/publications.json | jq empty
 
 # check for existing publication types
 allowed_types=$(cat <<-MOT
@@ -18,14 +18,14 @@ research
 talk
 MOT
 )
-types=$(cat data/publications.json | jq -r '.[].type' | sort | uniq)
+types=$(cat assets/data/publications.json | jq -r '.[].type' | sort | uniq)
 
 if [[ ${types} != ${allowed_types} ]]; then
   echo "Found invalid publication type!"
   exit 1
 fi
 
-conference_missing=$(cat data/publications.json | jq '.[] | select(.type =="research") | select(.conference == null)')
+conference_missing=$(cat assets/data/publications.json | jq '.[] | select(.type =="research") | select(.conference == null)')
 if [ -n "$conference_missing" ]; then
   echo "Research artifact without conference!"
   echo "$conference_missing"

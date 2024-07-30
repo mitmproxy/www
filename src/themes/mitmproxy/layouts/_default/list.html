@@ -1,9 +1,8 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 <div class="container blog content">
     {{ range (.Paginator 10).Pages }}
     {{ partial "summary" .}}
     {{ end }}
     {{ partial "pagination" .}}
 </div>
-
-{{ partial "footer.html" . }}
+{{ end }}

@@ -2,12 +2,10 @@
 title: "Google Summer of Code 2021"
 date: 2021-09-02
 weight: 10
-tags: [
-    "gsoc",
-]
-author:
-  name: Toshiaki Tanaka
-  twitter: gorogoroumaru
+tags:
+  - gsoc
+authors:
+  - toshiaki-tanaka
 ---
 
 {{< image src="gsoc.png" >}}

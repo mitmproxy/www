@@ -3,6 +3,11 @@
     max-width: 700px;
     padding-left: .5rem;
     padding-right: .5rem;
+
+    .author {
+        text-decoration: underline;
+        color: inherit;
+    }
 }
 
 .blog article {

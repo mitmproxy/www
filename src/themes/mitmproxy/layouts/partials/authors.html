@@ -1,0 +1,6 @@
+{{- range .Params.authors -}}
+    {{ $name := . }}
+    {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) -}}
+        , <a class="author" href="{{ .Permalink }}">{{ .Params.name | default $name }}</a>
+    {{ end }}
+{{ end }}

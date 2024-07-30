@@ -1,4 +1,4 @@
-{{ $data := getJSON "/data/publications.json" }}
+{{ $data := resources.Get "data/publications.json" | transform.Unmarshal }}
 <ul class="publications">
     {{ range where $data "type" "in" .Params }}
         <li>
