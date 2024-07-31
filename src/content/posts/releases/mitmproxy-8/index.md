@@ -16,7 +16,7 @@ We’re delighted to announce the release of mitmproxy 8, a free and open source
 
 {{< figure src="mitmweb.png" >}}
 
-This release includes a whole bunch of mitmweb improvements, contributed by our fantastic Google Summer of Code 2021 student, [Toshiaki Tanaka]({{< ref "/authors/toshiaki-tanaka" >}})! Mitmweb now renders TCP and WebSocket flows, offers direct cURL/HTTPie/raw HTTP export, has an experimental command bar, and generally received lots of fine-tuning. On the backend, the entire codebase has been converted to TypeScript. Check out Toshiaki's [blog post]({{< relref "gsoc2021" >}}) for more details!
+This release includes a whole bunch of mitmweb improvements, contributed by our fantastic Google Summer of Code 2021 student, [Toshiaki Tanaka]({{< relref "/authors/toshiaki-tanaka" >}})! Mitmweb now renders TCP and WebSocket flows, offers direct cURL/HTTPie/raw HTTP export, has an experimental command bar, and generally received lots of fine-tuning. On the backend, the entire codebase has been converted to TypeScript. Check out Toshiaki's [blog post]({{< relref "gsoc2021" >}}) for more details!
 
 We are happy to announce that we are again participating in the Google Summer of Code 2022 under the umbrella of the Honeynet project. If you'd like to hack on mitmproxy supported with a nice stipend, check out [#5048](https://github.com/mitmproxy/mitmproxy/issues/5048)!
 

@@ -92,7 +92,7 @@ This project would not have been possible if not for the great ecosystem of exis
 programming (tokio), low-level networking functionality (boringtun, smoltcp), and bridging the gap between Rust and
 Python (pyo3, pyo3-log, pyo3-asyncio, maturin).
 
-I would also like to thank [Maximilian Hils]({{< ref "/authors/maximilian-hils" >}}) for his mentorship and for supervising
+I would also like to thank [Maximilian Hils]({{< relref "/authors/maximilian-hils" >}}) for his mentorship and for supervising
 my Bachelor thesis --- which, coincidentally, will be about "Implementing a WireGuard frontend for mitmproxy". 🙃
 
 

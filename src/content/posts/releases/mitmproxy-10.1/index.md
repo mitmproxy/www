@@ -20,8 +20,8 @@ In the spirit of shipping more frequently, this release brings exactly one new m
 mentored by [Maximilian Hils]. My project was to implement the [import and export](https://github.com/mitmproxy/mitmproxy/commits?author=stanleygvi) 
 functionality for HAR files in mitmproxy.*
 
-[Nathaniel Good]: {{< ref "/authors/nathaniel-good" >}}
-[Maximilian Hils]:  {{< ref "/authors/maximilian-hils" >}}
+[Nathaniel Good]: {{< relref "/authors/nathaniel-good" >}}
+[Maximilian Hils]:  {{< relref "/authors/maximilian-hils" >}}
 
 ## Background: HAR files
 

@@ -60,7 +60,7 @@
     <h2>Articles</h2>
     <ul>
         {{ range .Data.Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ end }}
     </ul>
     </div>
