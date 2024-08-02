@@ -1,6 +1,6 @@
 ---
 title: "Mitmproxy 10.4: Mitmweb Capture Tab"
-date: 2024-07-25
+date: 2024-08-02
 weight: 10
 tags:
   - releases
