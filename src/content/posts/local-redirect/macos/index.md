@@ -2,10 +2,10 @@
 title: "Intercepting macOS Applications"
 date: 2023-12-05
 weight: 10
-tags: [ tech, gsoc ]
-author:
-  name: Emanuele Micheletti
-  twitter: emanuele_em_
+tags:
+  - gsoc
+authors:
+  - emanuele-micheletti
 ---
 
 mitmproxy can now transparently intercept traffic from macOS applications running on the same device, 
@@ -19,8 +19,8 @@ without fiddling with any proxy settings.
 mentored by [Maximilian Hils]. In this post I will present the implementation of a macOS Network Extension 
 to transparently intercept macOS traffic![^source]*
 
-[Emanuele Micheletti]: https://twitter.com/emanuele_em_
-[Maximilian Hils]:  https://twitter.com/maximilianhils
+[Emanuele Micheletti]: {{< relref "/authors/emanuele-micheletti" >}}
+[Maximilian Hils]:  {{< relref "/authors/maximilian-hils" >}}
 [^source]: You can find the source code for this not in the main mitmproxy repository, but over at https://github.com/mitmproxy/mitmproxy_rs!
 
 ## The Problem: Transparent Proxies are Hard

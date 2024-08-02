@@ -2,10 +2,10 @@
 title: "Intercepting Windows Applications"
 date: 2024-01-04
 weight: 10
-tags: [ tech, releases ]
-author:
-  name: Maximilian Hils
-  twitter: maximilianhils
+tags:
+  - releases
+authors:
+  - maximilian-hils
 ---
 
 We're excited to share that local redirect mode is now available on Windows in mitmproxy 10.2!

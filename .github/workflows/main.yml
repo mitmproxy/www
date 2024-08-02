@@ -2,14 +2,23 @@ name: CI
 
 on: [push, pull_request]
 
+permissions:
+  contents: read
+
 jobs:
-  docs:
+  build:
+    uses: mhils/workflows/.github/workflows/gh-pages-hugo.yml@v8
+    with:
+      deploy: false
+      working-directory: src
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.87.0/hugo_extended_0.87.0_Linux-64bit.deb
-          sudo dpkg -i hugo*.deb
       - run: |
           wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
           sudo mv jq-linux64 /usr/local/bin/jq

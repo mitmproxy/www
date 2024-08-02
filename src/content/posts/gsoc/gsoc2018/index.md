@@ -2,12 +2,10 @@
 title: "Google Summer of Code 2018"
 date: 2018-03-20
 weight: 10
-tags: [
-    "gsoc",
-]
-author:
-  name: Aldo Cortesi
-  twitter: cortesi
+tags:
+  - gsoc
+authors:
+  - aldo-cortesi
 ---
 
 {{< image src="gsoc.png" >}}
