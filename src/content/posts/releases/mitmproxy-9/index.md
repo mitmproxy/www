@@ -19,7 +19,7 @@ This release brings support for raw UDP and DTLS, a new WireGuard proxy mode, an
 {{< figure src="udp.png" alt="A UDP flow in the mitmweb UI" caption="Raw UDP packets passing through mitmproxy." >}}
 
 After adding [DNS support](https://docs.mitmproxy.org/dev/concepts-modes/#dns-server) in mitmproxy 8.1,
-[Manuel Meitinger (@meitinger)](https://github.com/meitinger) now brings us support for raw UDP flows! 
+[Manuel Meitinger]({{< relref "/authors/manuel-meitinger" >}}) now brings us support for raw UDP flows!
 Just like raw TCP mode, the new raw UDP mode allows you to 
 intercept and modify any UDP-based protocol. To spice things up, [Miguel Guarniz (@kckeiks)](https://github.com/kckeiks)
 added automatic DTLS detection and interception on top, which makes it possible to peek into many encrypted UDP protocols.

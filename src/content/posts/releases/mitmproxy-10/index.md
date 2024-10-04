@@ -34,7 +34,7 @@ $ curl --http3-only https://localhost:8080
 
 Running the command above will make mitmproxy listen for UDP packets on port 8080, 
 parse them as HTTP/3 over QUIC, and then establish an HTTP/3 connection upstream as well.
-[Manuel Meitinger](https://github.com/meitinger) laid the QUIC and HTTP/3
+[Manuel Meitinger]({{< relref "/authors/manuel-meitinger" >}}) laid the QUIC and HTTP/3
 foundations for this last year during Google Summer of Code, 
 and after a lot of testing, we are finally ready to ship things.
 
