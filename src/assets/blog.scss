@@ -1,6 +1,6 @@
 .blog {
     // this greatly improves legibility
-    max-width: 700px;
+    max-width: calc(min(700px, 100%));
     padding-left: .5rem;
     padding-right: .5rem;
 
