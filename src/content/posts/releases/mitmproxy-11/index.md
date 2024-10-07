@@ -1,6 +1,6 @@
 ---
 title: "Mitmproxy 11: Full HTTP/3 Support"
-date: 2024-09-27
+date: 2024-10-04
 weight: 10
 tags:
   - gsoc
