@@ -32,12 +32,11 @@ both TCP and UDP packets and handle all HTTP versions thrown at it:
 $ mitmproxy --mode reverse:https://http3.is
 ```
 
-Our transparent proxy modes now all support HTTP/3 as well:
+WireGuard and local mode now both support HTTP/3 as well:
 
 ```shell
 $ mitmproxy --mode wireguard
 $ mitmproxy --mode local
-$ mitmproxy --mode transparent
 ```
 
 We have successfully tested HTTP/3 support with Firefox, Chrome, various cURL builds, and other clients to iron out 
