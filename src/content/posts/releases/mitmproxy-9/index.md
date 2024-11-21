@@ -34,9 +34,9 @@ added automatic DTLS detection and interception on top, which makes it possible 
 </figure>
 
 [Fabio Valentini (@decathorpe)](https://github.com/decathorpe) has been working on an experimental new proxy mode based on WireGuard. 
-This new mode makes transparent proxying as easy as running <code style="white-space: nowrap">mitmweb -\-mode wireguard</code> connecting to a WireGuard VPN.
+This new mode makes transparent proxying as easy as running <code style="white-space: nowrap">mitmweb -\-mode wireguard</code> and connecting to a WireGuard VPN.
 
-This represents a significat usability improvement for transparent mode (no more iptables), and -- thanks to WireGuard's fantastic mobile 
+This represents a significant usability improvement for transparent mode (no more iptables), and -- thanks to WireGuard's fantastic mobile 
 support -- makes it possible to only proxy specific apps on Android. On top of that, it's the first feature in mitmproxy that is implemented in Rust.
 Head over to Fabio's [blog post]({{< relref "wireguard-mode" >}}) to learn more!
 
