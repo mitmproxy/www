@@ -7,6 +7,7 @@ tags:
   - gsoc
 authors:
   - matteo-luppi
+  - maximilian-hils
 ---
 
 Mitmweb now features a dedicated tab to configure traffic capture, enabling users to dynamically select their preferred proxy mode. 
@@ -40,6 +41,10 @@ This feature represents my work for the first part of GSoC, and there’s still 
 
 ## Acknowledgments
 
-I would like to thank my mentor Max, who has been incredibly supportive and helpful throughout this project, and [Google Summer of Code] for giving me this opportunity!
+This work supported by the [NGI0 Entrust fund](https://nlnet.nl/entrust/) established by [NLnet], and 
+[Google Summer of Code] under the umbrella of the [Honeynet&nbsp;Project].
+I would like to thank my mentor Max, who has been incredibly supportive and helpful throughout this project!
 
+[Honeynet&nbsp;Project]: https://www.honeynet.org/
 [Google Summer of Code]: https://summerofcode.withgoogle.com/
+[NLnet]: https://nlnet.nl/

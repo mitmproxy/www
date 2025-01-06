@@ -86,7 +86,7 @@ this in the far future).
 There's also a few things that do *not* work yet in this mode --- in particular, the support for IPv6 is still
 incomplete, which is why the provided configuration for WireGuard clients will only route IPv4 traffic to mitmproxy.
 
-## Acknowledgements
+## Acknowledgments
 
 This project would not have been possible if not for the great ecosystem of existing Rust libraries for asynchronous
 programming (tokio), low-level networking functionality (boringtun, smoltcp), and bridging the gap between Rust and

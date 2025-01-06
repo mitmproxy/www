@@ -62,7 +62,7 @@ your project. I'm a Japanese student and not proud of my English skills, but the
 could finish the project without falling behind. The schedule is flexible, so it's not a problem if GSoC conflicts with
 school events in some extent. You only need to let your mentor know about all conflicts in your proposal.
 
-## Acknowledgements
+## Acknowledgments
 
 Thanks to Maximilian Hils for being such a good mentor! I could not finish my project without his help. Finally, thanks
 to all the developers who have contributed to mitmproxy so far, and to Google for organizing GSoC.

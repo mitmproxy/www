@@ -4,8 +4,10 @@ date: 2023-12-05
 weight: 10
 tags:
   - gsoc
+  - local-capture
 authors:
   - emanuele-micheletti
+  - maximilian-hils
 ---
 
 mitmproxy can now transparently intercept traffic from macOS applications running on the same device, 
@@ -107,7 +109,7 @@ but we're only getting started here. There are three areas we're currently worki
 3. Last but not least, local redirect mode is bound to receive a UI integration into mitmweb.
    My work for the macOS bits of this is [in progress](https://github.com/mitmproxy/mitmproxy_rs/pull/118) as well!
 
-## Acknowledgements
+## Acknowledgments
 
 This work supported by [Google Summer of Code] under the umbrella of the [Honeynet&nbsp;Project], and the 
 [NGI0 Entrust fund](https://nlnet.nl/entrust/) established by [NLnet](https://nlnet.nl/).

@@ -199,7 +199,7 @@ also did not make it to the new implementation yet. Please let us know what we s
 
 &nbsp;
 
-##### Acknowledgements
+##### Acknowledgments
 
 This effort certainly wouldn't have been possible without the excellent sans-io libraries we depend on.  A particular 
 thank you goes to [Cory Benfield](https://twitter.com/lukasaoz), [Benno Rice](https://github.com/jeamland),

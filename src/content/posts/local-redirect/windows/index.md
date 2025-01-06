@@ -4,6 +4,7 @@ date: 2024-01-04
 weight: 10
 tags:
   - releases
+  - local-capture
 authors:
   - maximilian-hils
 ---
@@ -63,7 +64,7 @@ integration into mitmweb. If you are curious about contributing, please join us 
 
 [GitHub]: https://github.com/mitmproxy/mitmproxy/issues/6531
 
-## Acknowledgements
+## Acknowledgments
 
 This work supported by the [NGI0 Entrust fund] established by [NLnet].
 

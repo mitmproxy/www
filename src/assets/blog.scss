@@ -35,4 +35,8 @@
     figure {
         margin: 1rem 2rem !important;
     }
+
+    ol > li > ol {
+        list-style-type: lower-alpha !important;
+    }
 }

@@ -7,6 +7,7 @@ tags:
   - releases
 authors:
   - gaurav-jain
+  - maximilian-hils
 ---
 
 We are excited to announce the release of mitmproxy 11, which introduces full support for HTTP/3 in both transparent
@@ -132,10 +133,11 @@ handshake message with, and mitmproxy still learns the target domain and can con
 Of course, ECH adds complexity for us and sometimes makes mitmproxy harder to use for our users. Nonetheless, we are
 excited to see these privacy advancements being made for the rest of the web!
 
-## Acknowledgements
+## Acknowledgments
 
-This work supported by [Google Summer of Code] under the umbrella of the [Honeynet&nbsp;Project], and the
-[NGI0 Entrust fund](https://nlnet.nl/entrust/) established by [NLnet]. Thank you to my mentor [Maximilian Hils] for the
+This work supported by the [NGI0 Entrust fund](https://nlnet.nl/entrust/) established by [NLnet], and
+[Google Summer of Code] under the umbrella of the [Honeynet&nbsp;Project].
+Thank you to my mentor [Maximilian Hils] for the
 invaluable guidance and support.
 
 [Honeynet&nbsp;Project]: https://www.honeynet.org/
