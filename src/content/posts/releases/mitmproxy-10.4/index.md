@@ -26,7 +26,7 @@ Work is still underway as part of this year's Google Summer of Code, but a first
 
 ![the new capture tab](capture-tab.png)
 
-My GSoC work aims to improve the onboarding experience for new mitmproxy users and simplify the UX for those who enjoy using mitmweb. Enhancing the visibility and accessibility of proxy modes, in particular the new [local redirect mode]({{< relref "posts/local-redirect/windows" >}}), was a key goal.
+My GSoC work aims to improve the onboarding experience for new mitmproxy users and simplify the UX for those who enjoy using mitmweb. Enhancing the visibility and accessibility of proxy modes, in particular the new [local redirect mode]({{< relref "posts/local-capture/windows" >}}), was a key goal.
 
 In previous versions of mitmweb, changing the proxy mode was only possible deep down in the options editor or by restarting mitmweb with custom arguments. In either case, the functionality wasn't easy to discover. As you might imagine, this process could be quite confusing and obscure for first-time users. To address this, we designed a new Capture tab page where all the proxy modes are listed, allowing users to change modes easily and intuitively on the fly.
 

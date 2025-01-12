@@ -2,6 +2,8 @@
 title: "Intercepting Windows Applications"
 date: 2024-01-04
 weight: 10
+aliases:
+  - /posts/local-redirect/windows/
 tags:
   - releases
   - local-capture

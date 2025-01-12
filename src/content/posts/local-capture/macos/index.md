@@ -2,6 +2,8 @@
 title: "Intercepting macOS Applications"
 date: 2023-12-05
 weight: 10
+aliases:
+   - /posts/local-redirect/macos/
 tags:
   - gsoc
   - local-capture

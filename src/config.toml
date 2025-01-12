@@ -1,11 +1,11 @@
-baseURL = "https://mitmproxy.org/"
+baseURL = ""
 languageCode = "en-us"
 title = "mitmproxy.org"
 theme = "mitmproxy"
 relativeURLs = true
 
 [params]
-  version = "11.0.0"
+  version = "11.1.0"
 
 [indexes]
   tag = "tags"
