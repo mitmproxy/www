@@ -1,6 +1,6 @@
 ---
 title: "Mitmproxy 12: Interactive Contentviews"
-date: 2025-04-22
+date: 2025-04-29
 weight: 10
 tags:
   - releases
@@ -26,7 +26,12 @@ Now, with interactive contentviews, you can directly edit the human-readable, pr
 and mitmproxy will handle the task of re-encoding it back into its binary form.
 This dramatically simplifies tinkering with unknown binary protocols such as gRPC/Protobuf or MsgPack.
 
-(protobuf gif)
+<figure>
+<video controls>
+    <source src="grpc.mp4" type="video/mp4">
+</video>
+<figcaption>Modifying a gRPC message on the fly (without knowing its schema).</figcaption>
+</figure>
 
 [introduced in 2011]: https://github.com/mitmproxy/mitmproxy/commit/93ef691badcdaa1b7a5801eb40982c69f9b89534
 [#764]: https://github.com/mitmproxy/mitmproxy/pull/764
@@ -43,7 +48,9 @@ whether you have access to the Protobuf definitions (`.proto` files) or not.
 - **Unknown Protobufs:** You won't have field names, but you can still interactively modify primitive values 
   (strings, integers, nested messages) and mitmproxy will re-encode your changes.
 
-(screenshot of example gRPC with and without definitions)
+{{< figure src="grpc.png" 
+    alt="A screenshot of mitmproxy's gRPC rendering, both with and without protobuf definitions" 
+    caption="gRPC with (left) and without (right) Protobuf definitions." >}}
 
 [`protobuf_definitions`]: https://docs.mitmproxy.org/stable/concepts/options/#protobuf_definitions
 
@@ -52,27 +59,47 @@ whether you have access to the Protobuf definitions (`.proto` files) or not.
 Underpinning this interactivity is a revamped and drastically simpler Contentview API. 
 Instead of returning a list of lines with inline markup, 
 the new [`prettify`] method simply takes `bytes` and returns `str`, and then [`reencode`] does the reverse.
-As a simple example, here's what mitmproxy's builtin contentview for DNS messages looks like:
+As an example, here's a simple interactive contentview that dumps and parses data as hex:
 
-(DNS example snippet)
+```python
+from mitmproxy import contentviews
 
-Check out our [new contentview documentation] for more examples!
+class Hex(contentviews.InteractiveContentview):
+    def prettify(
+        self, 
+        data: bytes,
+        metadata: contentviews.Metadata
+    ) -> str:
+        return data.hex()
+
+    def reencode(
+        self,
+        prettified: str,
+        metadata: contentviews.Metadata
+    ) -> bytes:
+        return bytes.fromhex(prettified)
+
+contentviews.add(Hex)
+```
+
+Adding this to mitmproxy is as easy as `mitmproxy -s example.py`,
+please check out our [new contentview documentation] for more examples!
 
 [`prettify`]: https://docs.mitmproxy.org/stable/api/mitmproxy/contentviews.html#Contentview.prettify
 [`reencode`]: https://docs.mitmproxy.org/stable/api/mitmproxy/contentviews.html#Contentview.reencode
 [new contentview documentation]: https://docs.mitmproxy.org/stable/addons/contentviews/
 
-## Rust-based Contentviews
+## Rust-based Contentviews 🦀
 
-With the new API, we're also increasing our investment in Rust to deliver safe and performant contentviews:
+With the new Contentview API, we're also increasing our investment in Rust:
 
-- **Built-in contentviews can now also be written in Rust.** In fact, the gRPC, Protobuf, and MsgPack contentviews
-  are all Rust-based. The [MsgPack implementation] is a great example to demonstrate how access to the crates.io 
-  ecosystem and the [serde] framework in particular makes writing contentviews super easy.
-- **Syntax highlighting is now done in Rust.** For mitmproxy and mitmweb, the [mitmproxy-highlight] crate does all the
-  work (using [tree-sitter] under the hood).
+- **Contentviews can now be written in Rust.** 
+  Access to the crates.io ecosystem (and [Serde] in particular) makes it easy to write safe and performant
+  contentviews. The new gRPC, Protobuf, and MsgPack contentviews are all Rust-based.
+- **Syntax highlighting is now done centrally in Rust.** For mitmproxy and mitmweb, the [mitmproxy-highlight] crate does
+  all the work (using [tree-sitter] under the hood). Contentviews only need to declare their output format.
+  This is much more efficient than the previous implementation, where every contentview had to do highlighting itself.
 
-[MsgPack implementation]: https://github.com/mitmproxy/mitmproxy_rs/blob/5ec05682b122a2c1ee6584b4fe57a698eef573fd/mitmproxy-contentviews/src/msgpack.rs
-[serde]: https://serde.rs/
+[Serde]: https://serde.rs/
 [mitmproxy-highlight]: https://github.com/mitmproxy/mitmproxy_rs/tree/main/mitmproxy-highlight
 [tree-sitter]: https://tree-sitter.github.io/tree-sitter/
