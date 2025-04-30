@@ -103,3 +103,45 @@ With the new Contentview API, we're also increasing our investment in Rust:
 [Serde]: https://serde.rs/
 [mitmproxy-highlight]: https://github.com/mitmproxy/mitmproxy_rs/tree/main/mitmproxy-highlight
 [tree-sitter]: https://tree-sitter.github.io/tree-sitter/
+
+# Other Changes in mitmproxy 12
+
+- Added support for selecting multiple flows in mitmweb using Ctrl+Click and Shift+Click.
+  Multi-selection is now supported for deleting, duplicating, marking, reverting, replaying ,resuming, and aborting flows.
+  ([#7319](https://github.com/mitmproxy/mitmproxy/pull/7319), @lups2000, @mhils)
+- Add a new feature to store streamed bodies for requests and responses.
+  ([#7637](https://github.com/mitmproxy/mitmproxy/pull/7637), @mkiami)
+- Add support for TLS 1.3 Post Handshake Authentication.
+  ([#7576](https://github.com/mitmproxy/mitmproxy/pull/7576), @mhils, @cataggar)
+- Add search functionality to the documentation.
+  ([#7603](https://github.com/mitmproxy/mitmproxy/pull/7603), @mhils)
+- Introduce a new theme for docs.mitmproxy.org.
+  ([#7593](https://github.com/mitmproxy/mitmproxy/pull/7593), @mhils)
+- Add CRL entries to dummy cert when the upstream certificate has some.
+  ([#7609](https://github.com/mitmproxy/mitmproxy/pull/7609), @Yepoleb, @JordanPlayz158)
+- Fix a bug where mitmproxy would incorrectly send empty HTTP/2 data frames.
+  ([#7574](https://github.com/mitmproxy/mitmproxy/pull/7574), @mhils, @Dieken)
+- Enhance homebrew installation command for Brewfile users.
+  ([#7566](https://github.com/mitmproxy/mitmproxy/pull/7566), @AntoineJT)
+- Fix a bug where mitmdump would exit prematurely in server replay mode.
+  ([#7571](https://github.com/mitmproxy/mitmproxy/pull/7571), @mhils)
+- Fix a bug where WebSocket Messages view jumps to top when a message is received
+  ([#7572](https://github.com/mitmproxy/mitmproxy/pull/7572), @DenizenB)
+- Create content view for Socket.IO over WebSocket transport
+  ([#7570](https://github.com/mitmproxy/mitmproxy/pull/7570), @DenizenB)
+- Correctly forward HTTP_1_1_REQUIRED errors in HTTP/2 streams.
+  ([#7575](https://github.com/mitmproxy/mitmproxy/pull/7575), @mhils)
+- Fix a bug where HAR export would crash for malformed flows.
+  ([#7666](https://github.com/mitmproxy/mitmproxy/pull/7666), @mhils)
+- Fix a bug where mitmweb would crash when viewing flows with undefined headers.
+  ([#7595](https://github.com/mitmproxy/mitmproxy/pull/7595), @emanuele-em)
+- Fix a bug where mitmproxy does not listen on IPv4 and IPv6 by default in wireguard mode.
+  ([#7589](https://github.com/mitmproxy/mitmproxy/pull/7589), @errorxyz)
+- Adjust popover placement for browsers that support anchor positioning (Chrome, Edge)
+  ([#7642](https://github.com/mitmproxy/mitmproxy/pull/7642), @lups2000)
+- Fix mitmweb crash when searching or highlighting using ~h, ~hq, or ~hs.
+  ([#7652](https://github.com/mitmproxy/mitmproxy/pull/7652), @lups2000)
+- `mitmproxy.dns.Message` has been renamed to `mitmproxy.dns.DNSMessage`
+  ([#7670](https://github.com/mitmproxy/mitmproxy/pull/7670), @mhils)
+
+[tree-sitter]: https://tree-sitter.github.io/tree-sitter/
