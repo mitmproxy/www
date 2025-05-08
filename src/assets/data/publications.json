@@ -1,5 +1,21 @@
 [
     {
+        "url": "https://www.usenix.org/conference/usenixsecurity25/presentation/wessels",
+        "title": "HyTrack: Resurrectable and Persistent Tracking Across Android Apps and the Web",
+        "author": "Malte Wessels, Simon Koch, Jan Drescher, Louis Bettels, David Klein, Martin Johns",
+        "conference": "USENIX Sec'25",
+        "date": "Aug 2025",
+        "type": "research"
+    },
+    {
+        "url": "https://petsymposium.org/popets/2025/popets-2025-0042.php",
+        "title": "The Impact of Default Mobile SDK Usage on Privacy and Data Protection",
+        "author": "Simon Koch, Manuel Karl, Robin Kirchner, Malte Wessels, Anne Paschke, Martin Johns",
+        "conference": "PETS'25",
+        "date": "Jul 2025",
+        "type": "research"
+    },
+    {
         "url": "https://petsymposium.org/popets/2024/popets-2024-0099.php",
         "title": "A Black-Box Privacy Analysis of Messaging Service Providers' Chat Message Processing",
         "author": "Robin Kirchner, Simon Koch, Noah Kamangar, David Klein, Martin Johns",
