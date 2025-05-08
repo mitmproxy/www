@@ -35,7 +35,7 @@
         "url": "https://www.usenix.org/system/files/usenixsecurity23-koch.pdf",
         "title": "The OK Is Not Enough: A Large Scale Study of Consent Dialogs in Smartphone Applications",
         "author": "Simon Koch, Benjamin Altpeter, Martin Johns",
-        "conference": "USENIX'23",        
+        "conference": "USENIX Sec'23",
         "date": "Aug 2023",
         "type": "research"
     },
@@ -188,7 +188,7 @@
         "url": "https://publications.cispa.saarland/3400/",
         "title": "Share First, Ask Later (or Never?) - Studying Violations of GDPR's Explicit Consent in Android Apps",
         "author": "Trung Tin Nguyen, Michael Backes, Ninja Marnau, and Ben Stock",
-        "conference": "USENIX'21",
+        "conference": "USENIX Sec'21",
         "date": "May 2021",
         "type": "research"
     },
@@ -342,10 +342,10 @@
         "type": "research"
     },
     {
-        "url": "https://www.youtube.com/watch?v=lGDETbe0b6w",
+        "url": "https://www.usenix.org/conference/usenixsecurity19/presentation/stute",
         "title": "A Billion Open Interfaces for Eve and Mallory: MitM, DoS, and Tracking Attacks on iOS and macOS Through Apple Wireless Direct Link",
         "author": "Milan Stute, Sashank Narain, Alex Mariotto, Alexander Heinrich, David Kreitschmann, Guevara Noubir, and Matthias Hollick",
-        "conference": "USENIX'19",
+        "conference": "USENIX Sec' 19",
         "date": "Aug 2019",
         "type": "research"
     },
