@@ -5,7 +5,7 @@ theme = "mitmproxy"
 relativeURLs = true
 
 [params]
-  version = "12.2.0"
+  version = "12.3.0"
 
 [indexes]
   tag = "tags"
